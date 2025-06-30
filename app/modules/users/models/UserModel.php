@@ -1,10 +1,10 @@
-/*
+<!--
 Modelo de gestión de usuarios del sistema
 
 Este modelo permite consultar, registrar, editar, activar/desactivar y
 listar usuarios del sistema. Incluye operaciones conjuntas con la tabla 
 personas y roles, siguiendo relaciones foráneas.
-*/
+-->
 <?php
 
 require_once(__DIR__ . '/../../../core/Model.php');

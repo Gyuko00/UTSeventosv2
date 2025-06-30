@@ -1,10 +1,10 @@
-/*                                                                        
+<!--                                                                        
 Router.php                                                                 
 
 Clase Router encargada de interpretar la URL y dirigirla al controlador    
 y método correspondiente. Compatible con subcarpetas, maneja errores,      
-e invoca controladores con inyección de conexión a BD.                                                          
-*/                                                                        
+e invoca controladores con inyección de conexión a BD.                     
+-->
 
 <?php
 

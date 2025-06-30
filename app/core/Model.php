@@ -1,4 +1,4 @@
-/*
+<!--
 Core Model
 
 Clase base Model que proporciona funciones reutilizables para cualquier
@@ -7,7 +7,7 @@ de errores, sanitización y trazabilidad básica.
 
 Uso: Heredar esta clase desde los modelos de cada módulo.
 Ejemplo: class Usuario extends Model
-*/
+-->
 
 <?php
 

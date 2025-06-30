@@ -1,9 +1,9 @@
-/*
+<!--
 Request.php
 
 Clase para manejar todas las solicitudes HTTP entrantes: GET, POST,
 PUT, DELETE y parámetros. Centraliza el acceso y validación de datos.
-*/
+-->
 
 <?php
 

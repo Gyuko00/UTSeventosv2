@@ -1,10 +1,10 @@
-/*
+<!--
 Modelo de autenticación para el sistema de eventos
 
 Este modelo maneja el registro y login de usuarios, validando la unicidad
 de documento y nombre de usuario. Se asegura de registrar a la persona y
 el usuario con rol de invitado (id_rol = 3), encriptando la contraseña.
-*/
+-->
 
 <?php
 

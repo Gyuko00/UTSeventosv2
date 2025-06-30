@@ -1,10 +1,10 @@
-/*
+<!--
 Auth.php
 
 Clase Auth para gestionar la autenticación de usuarios, inicio/cierre de
 sesión, verificación de login y roles. Útil para controlar el acceso a
 rutas y vistas protegidas.
-*/
+-->
 
 <?php
 

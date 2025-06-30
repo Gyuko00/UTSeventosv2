@@ -1,10 +1,10 @@
-/*
+<!--
 Controlador de Autenticación (Login y Registro)
 
 Este controlador gestiona las operaciones de autenticación del sistema,
 incluyendo el registro de nuevos invitados y el login de usuarios.
 Utiliza el modelo AuthModel y renderiza vistas mediante View.
-*/
+-->
 <?php
 
 require_once (__DIR__ . '/../models/AuthModel.php');
