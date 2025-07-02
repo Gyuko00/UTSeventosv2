@@ -1,11 +1,13 @@
-<!--
+
+<?php
+
+/*
 Controlador de Autenticación (Login y Registro)
 
 Este controlador gestiona las operaciones de autenticación del sistema,
 incluyendo el registro de nuevos invitados y el login de usuarios.
 Utiliza el modelo AuthModel y renderiza vistas mediante View.
--->
-<?php
+*/
 
 require_once (__DIR__ . '/../models/AuthModel.php');
 require_once (__DIR__ . '/../../../core/View.php');
@@ -47,6 +49,8 @@ class AuthController
             echo json_encode(['status' => 'error', 'message' => 'Método no permitido.']);
             return;
         }
+
+        header('Content-Type: application/json');
 
         // Validar y sanitizar entrada
         $persona = [
@@ -105,7 +109,7 @@ class AuthController
             $_SESSION['nombre'] = $result['nombre_completo'];
             $_SESSION['rol'] = $result['rol'];
 
-            echo json_encode(['status' => 'success', 'message' => 'Inicio de sesión exitoso.']);
+            echo json_encode(['status' => 'success', 'message' => 'Inicio de sesión exitoso.', 'rol' => $result['rol']]);
         } else {
             echo json_encode($result);
         }

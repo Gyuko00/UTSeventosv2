@@ -1,16 +1,18 @@
 <!--
 auth.layout.php
 
-Layout principal del módulo de autenticación. Incluye el header y el footer
-específicos del módulo auth, y renderiza contenido dinámico en el centro.
+Layout principal del módulo de autenticación.
+Solo muestra el contenido dinámico (por ejemplo: login o registro).
 -->
 
 <?php require __DIR__ . '/header.layout.php'; ?>
 
-<main class="flex-grow">
-  <div class="max-w-3xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+<main class="min-h-screen flex bg-white">
+  <div class="w-full flex flex-col justify-center px-6 py-12">
     <?= $content ?>
   </div>
 </main>
 
-<?php require __DIR__ . '/footer.layout.php'; ?>
+<?php require __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..' . 
+  DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'core' . 
+  DIRECTORY_SEPARATOR . 'footer.layout.php'; ?>

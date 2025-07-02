@@ -1,11 +1,11 @@
-<!--
+<?php
+
+/*
 Response.php
 
 Clase para gestionar respuestas HTTP: redirecciones, headers, JSON,
  estados de error, etc. Permite centralizar la salida del servidor.
--->
-
-<?php
+*/
 
 class Response
 {

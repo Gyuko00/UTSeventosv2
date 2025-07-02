@@ -5,23 +5,30 @@ Utiliza TailwindCSS y colores asociados a la identidad UTS.
 Incluye navegación entre Login y Registro. Responsive y accesible.
 -->
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Sistema de gestión de eventos - UTSeventos" />
-  <meta name="author" content="Unidades Tecnológicas de Santander" />
-  <title>UTSeventos</title>
-  <link rel="stylesheet" href="/src/output.css" />
-</head>
-<body class="bg-white text-gray-800">
-  <header class="bg-[#c9d230] shadow-md">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-[#2e7d32]">UTSeventos</h1>
-      <nav class="space-x-4">
-        <a href="/auth/login" class="text-[#2e7d32] font-medium hover:underline">Inicio de sesión</a>
-        <a href="/auth/register" class="text-[#2e7d32] font-medium hover:underline">Registrarse</a>
+<?php require __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..' . 
+  DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'core' . 
+  DIRECTORY_SEPARATOR . 'Index.layout.php'; ?>
+
+<header class="bg-[#c9d230] shadow-md">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+    
+    <!-- Versión MÓVIL: Solo visible en pantallas MUY pequeñas -->
+    <div class="block md:hidden text-center">
+      <h1 class="text-2xl font-bold text-[#2e7d32] mb-3">UTSeventos</h1>
+      <nav class="space-y-2">
+        <a href="<?= URL_PATH ?>/auth/loginForm" class="text-[#2e7d32] font-medium hover:underline block">Inicio de sesión</a>
+        <a href="<?= URL_PATH ?>/auth/registerForm" class="text-[#2e7d32] font-medium hover:underline block">Registrarse</a>
       </nav>
     </div>
-  </header>
+    
+    <!-- Versión DESKTOP: Solo visible en pantallas medianas y grandes -->
+    <div class="hidden md:flex md:justify-between md:items-center">
+      <h1 class="text-2xl font-bold text-[#2e7d32]">UTSeventos</h1>
+      <nav class="space-x-4">
+        <a href="<?= URL_PATH ?>/auth/loginForm" class="text-[#2e7d32] font-medium hover:underline">Inicio de sesión</a>
+        <a href="<?= URL_PATH ?>/auth/registerForm" class="text-[#2e7d32] font-medium hover:underline">Registrarse</a>
+      </nav>
+    </div>
+    
+  </div>
+</header>

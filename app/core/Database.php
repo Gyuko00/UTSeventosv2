@@ -1,13 +1,13 @@
-<!--
+<?php
+
+/*
 Core Database Connection
 
 Clase para manejar la conexión PDO a la base de datos MySQL.
 Centraliza la configuración y permite el acceso seguro a través
 del método getConnection(). Incluye manejo de errores y soporte
 para UTF-8 y atributos PDO seguros.
--->
-
-<?php
+*/
 
 class Database
 {
