@@ -15,4 +15,4 @@ Solo muestra el contenido dinámico (por ejemplo: eventos, mis eventos, perfil).
 
 <?php require __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..'
     . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'core'
-    . DIRECTORY_SEPARATOR . 'footer.layout.php'; ?>
+    . DIRECTORY_SEPARATOR . 'layouts' . DIRECTORY_SEPARATOR . 'footer.layout.php'; ?>

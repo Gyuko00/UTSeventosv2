@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
           let redirectUrl = "/";
           switch (parseInt(result.rol)) {
             case 1: redirectUrl = "/utseventos/admin/home"; break;
-            case 2: redirectUrl = "/utseventos/speaker/home"; break;
+            case 2: redirectUrl = "/utseventos/speakers/home"; break;
             case 3: redirectUrl = "/utseventos/user/home"; break;
             default: redirectUrl = "/"; break;
           }

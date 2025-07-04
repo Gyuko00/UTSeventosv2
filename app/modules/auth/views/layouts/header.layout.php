@@ -7,7 +7,7 @@ Incluye navegación entre Login y Registro. Responsive y accesible.
 
 <?php require __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..' . 
   DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'core' . 
-  DIRECTORY_SEPARATOR . 'Index.layout.php'; ?>
+  DIRECTORY_SEPARATOR . 'layouts' . DIRECTORY_SEPARATOR . 'Index.layout.php'; ?>
 
 <header class="bg-[#c9d230] shadow-md">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">

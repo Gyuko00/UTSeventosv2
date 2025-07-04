@@ -38,14 +38,12 @@ Muestra el logo de UTS y una manzana verde al lado, con estilos modernos.
       <button type="button" id="togglePassword"
               class="absolute inset-y-0 right-0 flex items-center px-3 text-gray-500 hover:text-gray-700">
 
-        <!-- Ícono ojo cerrado (inicialmente oculto) -->
         <svg id="eyeClosed" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 " fill="none"
              viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round"
                 d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.542-7a10.04 10.04 0 012.614-4.362M6.153 6.153A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.542 7a10.05 10.05 0 01-4.422 5.225M6.153 6.153L3 3m0 0l18 18" />
         </svg>
 
-        <!-- Ícono ojo abierto por defecto -->
         <svg id="eyeOpen" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" fill="none"
              viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round"

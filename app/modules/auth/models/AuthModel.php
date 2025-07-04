@@ -20,18 +20,14 @@ class AuthModel extends Model
     public function existeDocumento($numeroDocumento)
     {
         $sql = 'SELECT id_persona FROM personas WHERE numero_documento = :numero_documento';
-        $stmt = $this->db->prepare($sql);
-        $stmt->bindParam(':numero_documento', $numeroDocumento, PDO::PARAM_STR);
-        $stmt->execute();
+        $stmt = $this->query($sql, [':numero_documento' => $numeroDocumento]);
         return $stmt->fetch(PDO::FETCH_ASSOC) !== false;
     }
 
     public function existeUsuario($usuario)
     {
         $sql = 'SELECT id_usuario FROM usuarios WHERE usuario = :usuario';
-        $stmt = $this->db->prepare($sql);
-        $stmt->bindParam(':usuario', $usuario, PDO::PARAM_STR);
-        $stmt->execute();
+        $stmt = $this->query($sql, [':usuario' => $usuario]);
         return $stmt->fetch(PDO::FETCH_ASSOC) !== false;
     }
 
@@ -78,10 +74,7 @@ class AuthModel extends Model
                 FROM usuarios u
                 JOIN personas p ON u.id_persona = p.id_persona
                 WHERE u.usuario = :usuario';
-        $stmt = $this->db->prepare($sql);
-        $stmt->bindParam(':usuario', $usuario, PDO::PARAM_STR);
-        $stmt->execute();
-
+        $stmt = $this->query($sql, [':usuario' => $usuario]);
         $usuarioEncontrado = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($usuarioEncontrado && password_verify($contrasenia, $usuarioEncontrado['contrasenia'])) {

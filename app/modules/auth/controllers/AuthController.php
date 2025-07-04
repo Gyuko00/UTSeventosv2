@@ -6,42 +6,38 @@ Controlador de Autenticación (Login y Registro)
 
 Este controlador gestiona las operaciones de autenticación del sistema,
 incluyendo el registro de nuevos invitados y el login de usuarios.
-Utiliza el modelo AuthModel y renderiza vistas mediante View.
+Utiliza el modelo AuthModel y renderiza vistas mediante Render.
 */
 
 require_once (__DIR__ . '/../models/AuthModel.php');
-require_once (__DIR__ . '/../../../core/View.php');
+require_once (__DIR__ . '/../../../core/Render.php');
 
 class AuthController
 {
     private $model;
-    private $view;
+    private $render;
 
     public function __construct(PDO $db)
     {
         $this->model = new AuthModel($db);
-        $this->view = new View();
+        $this->render = new Render();
     }
 
-    /**
-     * Muestra el formulario de login.
-     */
     public function loginForm()
     {
-        $this->view->render('auth/login', [], 'auth');
+        $this->render->render('auth/login', [], 'auth');
     }
 
-    /**
-     * Muestra el formulario de registro.
-     */
     public function registerForm()
     {
-        $this->view->render('auth/register', [], 'auth');
+        $this->render->render('auth/register', [], 'auth');
     }
 
-    /**
-     * Procesa el registro de un nuevo invitado.
-     */
+    public function accesoDenegado()
+    {
+        $this->render->render('auth/acceso_denegado', [], 'auth');
+    }
+
     public function register()
     {
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -81,9 +77,6 @@ class AuthController
         echo json_encode($response);
     }
 
-    /**
-     * Procesa el inicio de sesión.
-     */
     public function login()
     {
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -115,9 +108,6 @@ class AuthController
         }
     }
 
-    /**
-     * Cierra sesión del usuario.
-     */
     public function logout()
     {
         session_start();

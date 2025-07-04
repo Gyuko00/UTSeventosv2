@@ -1,11 +1,7 @@
-<!--
-Tabla de eventos
+<!-- Vista: Lista de eventos disponibles para inscripción -->
 
-Muestra una tabla con los eventos disponibles para inscribirse.
--->
-
-<table class="w-full text-sm text-left text-gray-700 border border-gray-200 shadow-sm">
-  <thead class="bg-gray-100 text-gray-600 uppercase text-xs">
+<table class="w-full text-sm text-left text-gray-800 border border-green-300 shadow-sm rounded">
+  <thead class="bg-green-100 text-green-900 uppercase text-xs">
     <tr>
       <th class="px-4 py-3">Evento</th>
       <th class="px-4 py-3">Fecha</th>
@@ -18,35 +14,65 @@ Muestra una tabla con los eventos disponibles para inscribirse.
   <tbody>
     <?php if (empty($eventos)): ?>
       <tr>
-        <td colspan="6" class="px-4 py-4 text-center text-gray-500">No hay eventos disponibles en este momento.</td>
+        <td colspan="6" class="px-4 py-4 text-center text-gray-500 italic">
+          No hay eventos disponibles en este momento.
+        </td>
       </tr>
     <?php else: ?>
       <?php foreach ($eventos as $evento): ?>
-        <tr class="border-t border-gray-200 hover:bg-gray-50">
-          <td class="px-4 py-3 font-medium"><?= htmlspecialchars($evento['nombre']) ?></td>
+        <?php
+        $yaFinalizo = strtotime($evento['fecha']) < strtotime(date('Y-m-d'));
+        $disponibles = max(0, $evento['cupo_maximo'] - $evento['inscritos']);
+        $estaInscrito = (int) $evento['inscrito'] === 1;
+        ?>
+        <tr class="border-t border-green-200 hover:bg-green-50 transition">
+          <td class="px-4 py-3 font-semibold"><?= htmlspecialchars($evento['nombre']) ?></td>
           <td class="px-4 py-3"><?= date('d/m/Y', strtotime($evento['fecha'])) ?></td>
           <td class="px-4 py-3"><?= date('H:i', strtotime($evento['hora_inicio'])) ?> - <?= date('H:i', strtotime($evento['hora_fin'])) ?></td>
           <td class="px-4 py-3"><?= htmlspecialchars($evento['lugar']) ?></td>
+          <td class="px-4 py-3"><?= $disponibles ?></td>
           <td class="px-4 py-3">
-            <?= $evento['cupo_maximo'] - $evento['inscritos'] ?>
-          </td>
-          <td class="px-4 py-2 flex justify-center gap-2">
-            <!-- Ver más -->
-            <a href="<?= URL_PATH ?>/user/evento?id_evento=<?= $evento['id_evento'] ?>" 
-               class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 text-sm">
-              Ver más
-            </a>
-            <!-- Formulario de inscripción -->
-            <form action="<?= URL_PATH ?>/user/inscribirse" method="POST" onsubmit="return confirm('¿Deseas inscribirte en este evento?');">
-              <input type="hidden" name="id_evento" value="<?= $evento['id_evento'] ?>">
-              <input type="hidden" name="cupo_maximo" value="<?= $evento['cupo_maximo'] ?>">
-              <button type="submit" class="bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600 text-sm">
-                Inscribirse
-              </button>
-            </form>
+            <?php if ($yaFinalizo): ?>
+              <span class="text-red-600 font-semibold text-sm">Evento finalizado</span>
+            <?php else: ?>
+              <div class="flex flex-wrap gap-2 justify-center">
+                <a href="<?= URL_PATH ?>/user/evento?id_evento=<?= $evento['id_evento'] ?>" 
+                   class="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded text-sm transition">
+                  Ver más
+                </a>
+
+                <?php if (!$estaInscrito): ?>
+                  <!-- Inscribirse -->
+                  <form action="<?= URL_PATH ?>/user/inscribirEvento" method="POST" class="form-inscribirse">
+                  <input type="hidden" name="id_evento" value="<?= $evento['id_evento'] ?>">
+                  <button type="submit" class="bg-lime-500 hover:bg-lime-600 text-white px-3 py-1 rounded text-sm transition">
+                    Inscribirse
+                  </button>
+                </form>
+
+                <?php else: ?>
+                  <!-- Descargar QR -->
+                  <a href="<?= URL_PATH ?>/ticket/generarQR?id_evento=<?= $evento['id_evento'] ?>" target="_blank"
+                     class="text-green-700 font-medium hover:underline">
+                    Descargar QR
+                  </a>
+
+                  <!-- Cancelar inscripción -->
+                  <form action="<?= URL_PATH ?>/user/cancelarInscripcion" method="POST" class="form-cancelar">
+                    <input type="hidden" name="id_evento" value="<?= $evento['id_evento'] ?>">
+                    <button type="submit" class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded text-sm transition">
+                      Cancelar inscripción
+                    </button>
+                  </form>
+                <?php endif; ?>
+              </div>
+            <?php endif; ?>
           </td>
         </tr>
       <?php endforeach; ?>
     <?php endif; ?>
   </tbody>
 </table>
+
+<script src="<?= URL_PATH ?>/app/modules/user/js/ValidateRegistration.js"></script>
+

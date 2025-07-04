@@ -97,7 +97,7 @@
   </div>
 </div>
 
-<script src="<?= URL_PATH ?>/app/modules/auth/js/ColombiaData.js"></script>
+<script src="<?= URL_PATH ?>/app/utils/ColombiaData.js"></script>
 <script src="<?= URL_PATH ?>/app/modules/auth/js/RegisterValidation.js"></script>
 
 

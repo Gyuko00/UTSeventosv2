@@ -1,13 +1,13 @@
 <?php
 
 /*
-View.php
+Render.php
 
 Clase para renderizar vistas organizadas por módulos con layouts generales.
 Permite utilizar rutas tipo 'modulo/vista' y pasar datos al layout principal.
 */
 
-class View
+class Render
 {
     public static function render(string $view, array $data = [], string $layout = 'main'): void
     {
@@ -20,9 +20,13 @@ class View
         [$module, $viewName] = $viewParts;
 
         // Rutas absolutas correctas usando DIRECTORY_SEPARATOR
-        $viewPath = __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'modules' . DIRECTORY_SEPARATOR . $module . DIRECTORY_SEPARATOR . 'views' . DIRECTORY_SEPARATOR . $viewName . '.view.php';
+        $viewPath = __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'modules' . 
+        DIRECTORY_SEPARATOR . $module . DIRECTORY_SEPARATOR . 'views' . DIRECTORY_SEPARATOR . 
+        $viewName . '.view.php';
 
-        $layoutPath = __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'modules' . DIRECTORY_SEPARATOR . $module . DIRECTORY_SEPARATOR . 'views' . DIRECTORY_SEPARATOR . 'layouts' . DIRECTORY_SEPARATOR . $layout . '.layout.php';
+        $layoutPath = __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'modules' . 
+        DIRECTORY_SEPARATOR . $module . DIRECTORY_SEPARATOR . 'views' . DIRECTORY_SEPARATOR . 
+        'layouts' . DIRECTORY_SEPARATOR . $layout . '.layout.php';
 
         if (!file_exists($viewPath)) {
             die("Error: Vista no encontrada ($viewPath)");
