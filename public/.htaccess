@@ -1,0 +1,14 @@
+# Archivo que configura las reglas de redirección para el servidor web.
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteBase /utseventos/public/
+
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+</IfModule>
+
+

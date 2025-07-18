@@ -1,0 +1,15 @@
+{
+    "name": "usuario/utseventos",
+    "autoload": {
+        "psr-4": {
+            "Usuario\\Utseventos\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "JodaHernandez",
+            "email": "135854874+Gyuko00@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
