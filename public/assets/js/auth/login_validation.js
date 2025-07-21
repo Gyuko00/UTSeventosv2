@@ -94,6 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         let redirectUrl = "/";
+        console.log(parseInt(result.rol))
         switch (parseInt(result.rol)) {
           case 1:
             redirectUrl = "/utseventos/public/admin/home";

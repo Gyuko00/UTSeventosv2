@@ -41,7 +41,8 @@ class AutenticateController extends Controller {
             http_response_code(200);
             echo json_encode([
                 'status' => 'success',
-                'message' => 'Login exitoso'
+                'message' => 'Login exitoso',
+                'rol' => $login['rol']
             ]);
             return;
         }

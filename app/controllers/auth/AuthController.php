@@ -34,6 +34,11 @@ class AuthController extends Controller {
         $this->autenticateController->autenticate();
     }
 
+    public function notFound() {
+        $data = [];
+        $this->view('auth/404', $data, 'blank');
+    }
+
     public function logout() {
         $this->authService->logout();
         $this->redirect('auth/login');

@@ -22,6 +22,12 @@ abstract class Model
         return $stmt;
     }
 
+    private function validateId(int $id): void {
+        if ($id <= 0) {
+            throw new InvalidArgumentException('ID inválido');
+        }
+    }
+
     public function getDB(): PDO
     {
         return $this->db;

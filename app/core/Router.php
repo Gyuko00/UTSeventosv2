@@ -4,8 +4,9 @@
  * Siempre busca el controlador {Modulo}Controller dentro de app/controllers/{modulo}/
  * Ejecuta el método solicitado con los parámetros de la URL.
  */
-class Router
+class Router 
 {
+
     private $module = 'auth';
     private $controller = 'AuthController';
     private $method = 'login';
@@ -55,16 +56,14 @@ class Router
         $controllerInstance = new $this->controller($pdo);
 
         if (!method_exists($controllerInstance, $this->method)) {
-            $this->error404("Método no encontrado: {$this->method} en {$this->controller}");
+            $this->error404();
         }
 
         call_user_func_array([$controllerInstance, $this->method], $this->params);
     }
 
-    private function error404($message)
+    private function error404()
     {
-        header('HTTP/1.0 404 Not Found');
-        echo "<h2>Error 404 - Ruta no encontrada</h2><p>{$message}</p>";
-        exit();
+        header('Location:' . URL_PATH . '/auth/notFound');
     }
 }

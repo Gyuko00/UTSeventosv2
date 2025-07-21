@@ -37,6 +37,5 @@ class LoginUserModel extends Model {
         $stmt = $this->query($sql, $personData);
         return $this->getDB()->lastInsertId();
     }
-
 }
 

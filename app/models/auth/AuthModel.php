@@ -13,30 +13,41 @@ class AuthModel extends Model {
         $this->loginUserModel = new LoginUserModel($db);
     }
 
-    public function register(array $personData, array $userData) {
+    public function register(array $personData, array $userData): array {
         try {
             if ($this->loginUserModel->userExist($userData['usuario'])) {
                 return [
                     'status' => 'error',
-                    'message' => 'Usuario ya existe'
+                    'code' => 'USER_EXISTS',
+                    'message' => 'El nombre de usuario ya existe'
                 ];
             }
+
             if ($this->loginUserModel->documentExist($personData['numero_documento'])) {
                 return [
                     'status' => 'error',
-                    'message' => 'Documento ya existe'
+                    'code' => 'DOCUMENT_EXISTS',
+                    'message' => 'El documento ya está registrado'
                 ];
             }
+
             $this->getDB()->beginTransaction();
+
             $personId = $this->loginUserModel->personRegister($personData);
+
             $userData['id_persona'] = $personId;
             $userData['id_rol'] = 3;
+            $userData['contrasenia'] = password_hash($userData['contrasenia'], PASSWORD_DEFAULT);
+
             $this->loginUserModel->userRegister($userData);
+
             $this->getDB()->commit();
+
             return [
                 'status' => 'success',
                 'message' => 'Usuario registrado exitosamente'
             ];
+
         } catch (Exception $e) {
             $this->getDB()->rollBack();
             return [
@@ -46,42 +57,55 @@ class AuthModel extends Model {
         }
     }
 
-    public function login($usuario, $contrasenia) {
-        $sql = "SELECT u.id_usuario, u.contrasenia, u.id_rol, p.nombres, p.apellidos
+    public function login(string $usuario, string $contrasenia): array {
+        if (empty(trim($usuario)) || empty(trim($contrasenia))) {
+            return [
+                'status' => 'error',
+                'code' => 'EMPTY_FIELDS',
+                'message' => 'El usuario y la contraseña son obligatorios'
+            ];
+        }
+
+        $sql = "SELECT u.id_usuario, u.contrasenia, u.id_rol, u.activo, p.nombres, p.apellidos
                 FROM usuarios u
                 JOIN personas p ON u.id_persona = p.id_persona
                 WHERE u.usuario = :usuario";
         $stmt = $this->query($sql, [':usuario' => $usuario]);
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
-        if ($user && password_verify($contrasenia, $user['contrasenia'])) {
-            return [
-                'status' => 'success',
-                'usuario' => $user['id_usuario'],
-                'rol' => $user['id_rol'],
-                'nombre' => $user['nombres'] . ' ' . $user['apellidos'],
-                'message' => 'Login exitoso'
-            ];
-        }
+
         if (!$user) {
             return [
                 'status' => 'error',
-                'message' => 'Usuario no encontrado'
+                'code' => 'USER_NOT_FOUND',
+                'message' => 'Credenciales inválidas'
             ];
         }
+
+        if (!password_verify($contrasenia, $user['contrasenia'])) {
+            return [
+                'status' => 'error',
+                'code' => 'INVALID_PASSWORD',
+                'message' => 'Credenciales inválidas'
+            ];
+        }
+
         return [
-            'status' => 'error',
-            'message' => 'Contraseña incorrecta'
+            'status' => 'success',
+            'usuario' => $user['id_usuario'],
+            'rol' => $user['id_rol'],
+            'nombre' => $user['nombres'] . ' ' . $user['apellidos'],
+            'message' => 'Login exitoso'
         ];
     }
 
-    public function logout() {
+    public function logout(): array {
         session_start();
         session_unset();
         session_destroy();
+
+        return [
+            'status' => 'success',
+            'message' => 'Sesión cerrada correctamente'
+        ];
     }
-
 }
-
-
-
-
