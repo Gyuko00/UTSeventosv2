@@ -22,10 +22,15 @@ class AuthService extends Service {
     }
 
     public function startSession(array $userData) {
-        session_start();
-        $_SESSION['id_usuario'] = $userData['usuario'];
-        $_SESSION['id_rol'] = $userData['rol'];
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+        
+        $_SESSION['id_usuario'] = $userData['id_usuario'];
+        $_SESSION['id_rol'] = $userData['id_rol'];
         $_SESSION['nombre'] = $userData['nombre'];
+        
+        error_log("Sesión iniciada: " . json_encode($_SESSION));
     }
     
     public function logout() {

@@ -4,9 +4,7 @@
  * Siempre busca el controlador {Modulo}Controller dentro de app/controllers/{modulo}/
  * Ejecuta el método solicitado con los parámetros de la URL.
  */
-class Router 
-{
-
+class Router {
     private $module = 'auth';
     private $controller = 'AuthController';
     private $method = 'login';
@@ -14,6 +12,10 @@ class Router
 
     public function __construct()
     {
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+        
         $this->parseUrl();
     }
 
@@ -43,15 +45,15 @@ class Router
         $controllerPath = __DIR__ . "/../controllers/{$this->module}/{$this->controller}.php";
 
         if (!file_exists($controllerPath)) {
-            $this->error404("Controlador no encontrado: {$this->controller} en módulo {$this->module}");
+            $this->error404();
         }
 
         require_once $controllerPath;
 
         if (!class_exists($this->controller)) {
-            $this->error404("Clase no encontrada: {$this->controller}");
+            $this->error404();
         }
-        
+
         $pdo = (new Database())->getConnection();
         $controllerInstance = new $this->controller($pdo);
 

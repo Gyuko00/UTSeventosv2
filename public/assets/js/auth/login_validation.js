@@ -93,9 +93,9 @@ document.addEventListener("DOMContentLoaded", () => {
           confirmButtonColor: "#3085d6",
         });
 
-        let redirectUrl = "/";
-        console.log(parseInt(result.rol))
-        switch (parseInt(result.rol)) {
+        let redirectUrl = "/utseventos/public/auth/login";
+        console.log(parseInt(result.id_rol))
+        switch (parseInt(result.id_rol)) {
           case 1:
             redirectUrl = "/utseventos/public/admin/home";
             break;
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
             redirectUrl = "/utseventos/public/user/home";
             break;
           default:
-            redirectUrl = "/";
+            redirectUrl = "/utseventos/public/auth/login";
         }
 
         window.location.href = redirectUrl;

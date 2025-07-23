@@ -62,21 +62,21 @@ class AdminSpeakerCRUDModel extends Model {
         }
     }
 
-    public function deleteSpeaker(int $id): array {
+    public function deleteSpeakerByPersonId(int $id_persona): array {
         try {
-            $this->validateId($id);
+            $this->validateId($id_persona);
 
             $this->getDB()->beginTransaction();
 
-            $sqlCheck = "SELECT COUNT(*) AS count FROM ponentes WHERE id_ponente = :id";
-            $stmt = $this->query($sqlCheck, [':id' => $id]);
+            $sqlCheck = "SELECT COUNT(*) AS count FROM ponentes WHERE id_persona = :id_persona";
+            $stmt = $this->query($sqlCheck, [':id_persona' => $id_persona]);
             $count = $stmt->fetch(PDO::FETCH_ASSOC)['count'] ?? 0;
 
             if ($count == 0) {
                 throw new InvalidArgumentException('Ponente no encontrado.');
             }
 
-            $this->query("DELETE FROM ponentes WHERE id_ponente = :id", [':id' => $id]);
+            $this->query("DELETE FROM ponentes WHERE id_persona = :id_persona", [':id_persona' => $id_persona]);
 
             $this->getDB()->commit();
 

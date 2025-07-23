@@ -17,9 +17,11 @@ class AdminGuestCRUDModel extends Model {
             $this->validator->validate($data);
 
             $sql = "INSERT INTO invitados 
-                    (id_persona, tipo_invitado, correo_institucional, programa_academico, nombre_carrera, jornada, facultad, cargo, sede_institucion)
+                    (id_persona, tipo_invitado, correo_institucional, programa_academico, 
+                    nombre_carrera, jornada, facultad, cargo, sede_institucion)
                     VALUES
-                    (:id_persona, :tipo_invitado, :correo_institucional, :programa_academico, :nombre_carrera, :jornada, :facultad, :cargo, :sede_institucion)";
+                    (:id_persona, :tipo_invitado, :correo_institucional, :programa_academico, 
+                    :nombre_carrera, :jornada, :facultad, :cargo, :sede_institucion)";
 
             $this->query($sql, $data);
 
@@ -58,18 +60,30 @@ class AdminGuestCRUDModel extends Model {
         }
     }
 
-    public function deleteGuest(int $id): array {
+    public function deleteGuestByPersonId(int $id_persona): array {
         try {
-            $this->validateId($id);
 
-            $sql = "DELETE FROM invitados WHERE id_invitado = :id";
+            $this->validateId($id_persona);
 
-            $this->query($sql, [':id' => $id]);
+            $this->getDB()->beginTransaction();
 
+            $sqlCheck = "SELECT COUNT(*) AS count FROM invitados WHERE id_persona = :id_persona";
+            $stmt = $this->query($sqlCheck, [':id_persona' => $id_persona]);
+            $count = $stmt->fetch(PDO::FETCH_ASSOC)['count'] ?? 0;
+
+            if ($count == 0) {
+                throw new InvalidArgumentException('Invitado no encontrado.');
+            }
+    
+            $sql = "DELETE FROM invitados WHERE id_persona = :id_persona";
+    
+            $this->query($sql, [':id_persona' => $id_persona]);
+    
             return ['status' => 'success', 'message' => 'Invitado eliminado correctamente.'];
-
+    
         } catch (Exception $e) {
             return ['status' => 'error', 'message' => $e->getMessage()];
         }
     }
+    
 }

@@ -11,5 +11,7 @@
             "email": "135854874+Gyuko00@users.noreply.github.com"
         }
     ],
-    "require": {}
+    "require": {
+        "mpdf/mpdf": "^6.1"
+    }
 }

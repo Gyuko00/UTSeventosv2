@@ -91,8 +91,8 @@ class AuthModel extends Model {
 
         return [
             'status' => 'success',
-            'usuario' => $user['id_usuario'],
-            'rol' => $user['id_rol'],
+            'id_usuario' => $user['id_usuario'],
+            'id_rol' => $user['id_rol'],
             'nombre' => $user['nombres'] . ' ' . $user['apellidos'],
             'message' => 'Login exitoso'
         ];

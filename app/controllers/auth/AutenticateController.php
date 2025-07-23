@@ -34,15 +34,15 @@ class AutenticateController extends Controller {
         $login = $this->authService->login($usuario, $contrasenia);
         if ($login['status'] === 'success') {
             $this->authService->startSession([
-                'usuario' => $login['usuario'],
-                'rol' => $login['rol'],
+                'id_usuario' => $login['id_usuario'],
+                'id_rol' => $login['id_rol'],
                 'nombre' => $login['nombre']
             ]);
             http_response_code(200);
             echo json_encode([
                 'status' => 'success',
                 'message' => 'Login exitoso',
-                'rol' => $login['rol']
+                'id_rol' => $login['id_rol']
             ]);
             return;
         }

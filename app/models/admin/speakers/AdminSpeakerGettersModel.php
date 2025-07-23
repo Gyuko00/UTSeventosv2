@@ -24,8 +24,8 @@ class AdminSpeakerGettersModel extends Model {
         ];
     }
 
-    public function getSpeakerById(int $id) {
-        $this->validateId($id);
+    public function getSpeakerByPersonId(int $id_persona) {
+        $this->validateId($id_persona);
         $sql = "SELECT p.id_ponente, p.tema, p.descripcion_biografica, p.especializacion, 
                 p.institucion_ponente,
                 per.id_persona, per.tipo_documento, per.numero_documento, per.nombres, 
@@ -33,8 +33,8 @@ class AdminSpeakerGettersModel extends Model {
                 per.municipio, per.direccion
                 FROM ponentes p
                 INNER JOIN personas per ON p.id_persona = per.id_persona 
-                WHERE p.id_ponente = :id";
-        $stmt = $this->query($sql, [':id' => $id]);
+                WHERE per.id_persona = :id_persona";
+        $stmt = $this->query($sql, [':id_persona' => $id_persona]);
         $speaker = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if (!$speaker) {
