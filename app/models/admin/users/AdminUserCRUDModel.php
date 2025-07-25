@@ -38,6 +38,9 @@ class AdminUserCRUDModel extends Model
 
     public function createUser(array $personData, array $userData)
     {
+        error_log('userData: ' . print_r($userData, true));
+        error_log('personData: ' . print_r($personData, true));
+
         try {
             $this->validatePersonData->validate($personData);
             $this->validateUserData->validate($userData);
@@ -69,7 +72,9 @@ class AdminUserCRUDModel extends Model
 
             return ['status' => 'success', 'message' => 'Usuario creado exitosamente'];
         } catch (Exception $e) {
-            $this->getDB()->rollBack();
+            if ($this->getDB()->inTransaction()) {
+                $this->getDB()->rollBack();
+            }
             return ['status' => 'error', 'message' => $e->getMessage()];
         }
     }

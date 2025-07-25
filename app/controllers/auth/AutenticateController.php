@@ -3,16 +3,18 @@
 /**
  * AutenticateController: controlador de autenticación para el sistema de gestión de eventos.
  */
-class AutenticateController extends Controller {
-
+class AutenticateController extends Controller
+{
     private AuthService $authService;
-    
-    public function __construct(PDO $db) {
+
+    public function __construct(PDO $db)
+    {
         parent::__construct($db);
         $this->authService = new AuthService($db);
     }
 
-    public function autenticate() {
+    public function autenticate()
+    {
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
             http_response_code(405);
             echo json_encode([
@@ -46,6 +48,15 @@ class AutenticateController extends Controller {
             ]);
             return;
         }
+        // DEBUGGING: Generar hash de la contraseña actual
+        $hash_from_db = '$2y$10$03S4X8r99Vl8Ot7dkybmee.p.2E64czeU2HIbBPENDDQnnNtrPpmK';
+        $new_hash = password_hash($contrasenia, PASSWORD_DEFAULT);
+
+        var_dump('Contraseña ingresada: ' . $contrasenia);
+        var_dump('Hash desde DB: ' . $hash_from_db);
+        var_dump('Nuevo hash generado: ' . $new_hash);
+        var_dump('Verify result: ' . (password_verify($contrasenia, $hash_from_db) ? 'true' : 'false'));
+
         http_response_code(401);
         echo json_encode([
             'status' => 'error',
@@ -53,5 +64,4 @@ class AutenticateController extends Controller {
         ]);
         return;
     }
-
 }

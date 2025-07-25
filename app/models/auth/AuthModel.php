@@ -1,19 +1,20 @@
 <?php
 
-/** 
- * AuthModel: modelo de autenticación para el sistema de gestión de eventos. 
+/**
+ * AuthModel: modelo de autenticación para el sistema de gestión de eventos.
  */
-
-class AuthModel extends Model {
-
+class AuthModel extends Model
+{
     private LoginUserModel $loginUserModel;
 
-    public function __construct(PDO $db) {
+    public function __construct(PDO $db)
+    {
         parent::__construct($db);
         $this->loginUserModel = new LoginUserModel($db);
     }
 
-    public function register(array $personData, array $userData): array {
+    public function register(array $personData, array $userData): array
+    {
         try {
             if ($this->loginUserModel->userExist($userData['usuario'])) {
                 return [
@@ -22,7 +23,7 @@ class AuthModel extends Model {
                     'message' => 'El nombre de usuario ya existe'
                 ];
             }
-
+    
             if ($this->loginUserModel->documentExist($personData['numero_documento'])) {
                 return [
                     'status' => 'error',
@@ -30,24 +31,22 @@ class AuthModel extends Model {
                     'message' => 'El documento ya está registrado'
                 ];
             }
-
+    
             $this->getDB()->beginTransaction();
-
+    
             $personId = $this->loginUserModel->personRegister($personData);
-
+    
             $userData['id_persona'] = $personId;
             $userData['id_rol'] = 3;
-            $userData['contrasenia'] = password_hash($userData['contrasenia'], PASSWORD_DEFAULT);
-
+    
             $this->loginUserModel->userRegister($userData);
-
+    
             $this->getDB()->commit();
-
+    
             return [
                 'status' => 'success',
                 'message' => 'Usuario registrado exitosamente'
             ];
-
         } catch (Exception $e) {
             $this->getDB()->rollBack();
             return [
@@ -57,7 +56,8 @@ class AuthModel extends Model {
         }
     }
 
-    public function login(string $usuario, string $contrasenia): array {
+    public function login(string $usuario, string $contrasenia): array
+    {
         if (empty(trim($usuario)) || empty(trim($contrasenia))) {
             return [
                 'status' => 'error',
@@ -66,10 +66,10 @@ class AuthModel extends Model {
             ];
         }
 
-        $sql = "SELECT u.id_usuario, u.contrasenia, u.id_rol, u.activo, p.nombres, p.apellidos
+        $sql = 'SELECT u.id_usuario, u.usuario, u.contrasenia, u.id_rol, u.activo, p.nombres, p.apellidos
                 FROM usuarios u
                 JOIN personas p ON u.id_persona = p.id_persona
-                WHERE u.usuario = :usuario";
+                WHERE u.usuario = :usuario';
         $stmt = $this->query($sql, [':usuario' => $usuario]);
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -77,7 +77,7 @@ class AuthModel extends Model {
             return [
                 'status' => 'error',
                 'code' => 'USER_NOT_FOUND',
-                'message' => 'Credenciales inválidas'
+                'message' => 'Usuario no encontrado'
             ];
         }
 
@@ -85,7 +85,7 @@ class AuthModel extends Model {
             return [
                 'status' => 'error',
                 'code' => 'INVALID_PASSWORD',
-                'message' => 'Credenciales inválidas'
+                'message' => 'Contraseña inválida'
             ];
         }
 
@@ -98,7 +98,8 @@ class AuthModel extends Model {
         ];
     }
 
-    public function logout(): array {
+    public function logout(): array
+    {
         session_start();
         session_unset();
         session_destroy();

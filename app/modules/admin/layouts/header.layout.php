@@ -13,8 +13,9 @@
     <div class="flex justify-between items-center">
       <h1 class="text-2xl font-bold text-[#2e7d32]">UTSeventos</h1>
       <nav class="hidden md:flex space-x-4">
-        <a href="<?= URL_PATH ?>/admin/home" class="text-[#2e7d32] font-medium hover:text-[#1b5e20]">Inicio de sesión</a>
-        <a href="<?= URL_PATH ?>/admin/listarUsuarios" class="text-[#2e7d32] font-medium hover:text-[#1b5e20]">Registrarse</a>
+        <a href="<?= URL_PATH ?>/admin/home" class="text-[#2e7d32] font-medium hover:text-[#1b5e20]">Inicio</a>
+        <a href="<?= URL_PATH ?>/admin/listarUsuarios" class="text-[#2e7d32] font-medium hover:text-[#1b5e20]">Gestionar Usuarios</a>
+        <a href="<?= URL_PATH ?>/admin/listarEventos" class="text-[#2e7d32] font-medium hover:text-[#1b5e20]">Gestionar Eventos</a>
         <a href="<?= URL_PATH ?>/admin/cerrarSesion" class="text-red-600 font-medium hover:underline">Cerrar sesión</a>
       </nav>
       <button id="menu-toggle" class="md:hidden focus:outline-none">
@@ -24,8 +25,10 @@
       </button>
     </div>
     <div id="menu" class="hidden md:hidden mt-3 space-y-2">
-      <a href="<?= URL_PATH ?>/auth/login" class="block text-[#2e7d32] font-medium hover:bg-[#a5c93a] px-3 py-2 rounded-md">Inicio de sesión</a>
-      <a href="<?= URL_PATH ?>/auth/register" class="block text-[#2e7d32] font-medium hover:bg-[#a5c93a] px-3 py-2 rounded-md">Registrarse</a>
+      <a href="<?= URL_PATH ?>/admin/home" class="block text-[#2e7d32] font-medium hover:bg-[#a5c93a] px-3 py-2 rounded-md">Inicio</a>
+      <a href="<?= URL_PATH ?>/admin/listarUsuarios" class="block text-[#2e7d32] font-medium hover:bg-[#a5c93a] px-3 py-2 rounded-md">Gestionar Usuarios</a>
+      <a href="<?= URL_PATH ?>/admin/listarEventos" class="block text-[#2e7d32] font-medium hover:bg-[#a5c93a] px-3 py-2 rounded-md">Gestionar Eventos</a>
+      <a href="<?= URL_PATH ?>/admin/cerrarSesion" class="block text-red-600 font-medium hover:underline">Cerrar sesión</a>
     </div>
   </div>
 </header>

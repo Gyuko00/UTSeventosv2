@@ -9,7 +9,7 @@ class ValidatePersonData {
             throw new InvalidArgumentException('El tipo de documento es obligatorio.');
         }
 
-        if (empty($personData['numero_documento']) || !preg_match('/^\d{8}$/', $personData['numero_documento'])) {
+        if (empty($personData['numero_documento']) || !preg_match('/^\d{5,10}$/', $personData['numero_documento'])) {
             throw new InvalidArgumentException('El número de documento es inválido o vacío.');
         }
 
@@ -17,7 +17,7 @@ class ValidatePersonData {
             throw new InvalidArgumentException('Los nombres y apellidos son obligatorios.');
         }
 
-        if (empty($personData['telefono']) || !preg_match('/^\d{8}$/', $personData['telefono'])) {
+        if (empty($personData['telefono']) || !preg_match('/^\d{7,13}$/', $personData['telefono'])) {
             throw new InvalidArgumentException('El teléfono es inválido o vacío.');
         }
 

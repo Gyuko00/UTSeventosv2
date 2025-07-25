@@ -7,12 +7,18 @@ class AdminCreateUserService extends Service
 {
     private AdminUserCRUDModel $crudModel;
     private AdminAuditLogModel $auditModel;
+    private AdminGuestCRUDModel $guestModel;
+    private AdminSpeakerCRUDModel $speakerModel;
+    private AdminUserGettersModel $gettersModel;
 
     public function __construct(PDO $db)
     {
         parent::__construct($db);
         $this->crudModel = new AdminUserCRUDModel($db);
         $this->auditModel = new AdminAuditLogModel($db);
+        $this->guestModel = new AdminGuestCRUDModel($db);
+        $this->speakerModel = new AdminSpeakerCRUDModel($db);
+        $this->gettersModel = new AdminUserGettersModel($db);
     }
 
     public function createUserWithRole(int $idUsuarioAdmin, array $personData, array $userData, array $roleSpecificData = []): array

@@ -25,7 +25,6 @@ class LoginUserModel extends Model {
     public function userRegister($userData) {
         $sql = 'INSERT INTO usuarios (usuario, contrasenia, id_rol, id_persona)
                 VALUES (:usuario, :contrasenia, :id_rol, :id_persona)';
-        $userData['contrasenia'] = password_hash($userData['contrasenia'], PASSWORD_DEFAULT);
         $this->query($sql, $userData);
     }
 

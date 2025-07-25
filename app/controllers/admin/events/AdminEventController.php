@@ -18,7 +18,7 @@ class AdminEventController extends Controller
         $this->verificarAccesoConRoles([1]);
 
         $eventos = $this->eventService->getAllEvents();
-        $this->view('admin/listar_eventos', ['eventos' => $eventos['data'] ?? []], 'admin');
+        $this->view('admin/eventos', ['eventos' => $eventos['data'] ?? []], 'admin');
     }
 
     public function detalleEvento(int $id)
@@ -28,7 +28,7 @@ class AdminEventController extends Controller
         $evento = $this->eventService->getEventById($id);
         if ($evento['status'] !== 'success') {
             $_SESSION['error_message'] = $evento['message'];
-            $this->redirect('admin/listar_eventos');
+            $this->redirect('admin/eventos');
         }
 
         $this->view('admin/detalle_evento', ['evento' => $evento['data']], 'admin');
@@ -45,7 +45,7 @@ class AdminEventController extends Controller
 
             if ($result['status'] === 'success') {
                 $_SESSION['success_message'] = 'Evento creado correctamente';
-                $this->redirect('admin/listar_eventos');
+                $this->redirect('admin/eventos');
             }
 
             $this->view('admin/crear_evento', ['error' => $result['message']], 'admin');
@@ -66,7 +66,7 @@ class AdminEventController extends Controller
 
             if ($result['status'] === 'success') {
                 $_SESSION['success_message'] = 'Evento actualizado correctamente';
-                $this->redirect('admin/listar_eventos');
+                $this->redirect('admin/eventos');
             }
 
             $this->view('admin/editar_evento', ['error' => $result['message']], 'admin');
@@ -76,7 +76,7 @@ class AdminEventController extends Controller
         $evento = $this->eventService->getEventById($id);
         if ($evento['status'] !== 'success') {
             $_SESSION['error_message'] = $evento['message'];
-            $this->redirect('admin/listar_eventos');
+            $this->redirect('admin/eventos');
         }
 
         $this->view('admin/editar_evento', ['evento' => $evento['data']], 'admin');
@@ -94,6 +94,6 @@ class AdminEventController extends Controller
             $_SESSION['error_message'] = $result['message'];
         }
 
-        $this->redirect('admin/listar_eventos');
+        $this->redirect('admin/eventos');
     }
 }
