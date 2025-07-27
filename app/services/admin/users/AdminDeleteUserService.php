@@ -8,11 +8,17 @@ class AdminDeleteUserService extends Service {
 
     private AdminUserCRUDModel $crudModel;
     private AdminAuditLogModel $auditModel;
+    private AdminUserGettersModel $gettersModel;
+    private AdminGuestCRUDModel $guestModel;
+    private AdminSpeakerCRUDModel $speakerModel;
 
     public function __construct(PDO $db) {
         parent::__construct($db);
         $this->crudModel = new AdminUserCRUDModel($db);
         $this->auditModel = new AdminAuditLogModel($db);
+        $this->gettersModel = new AdminUserGettersModel($db);
+        $this->guestModel = new AdminGuestCRUDModel($db);
+        $this->speakerModel = new AdminSpeakerCRUDModel($db);
     }
 
     public function deleteUser(int $idUsuarioAdmin, int $id): array {

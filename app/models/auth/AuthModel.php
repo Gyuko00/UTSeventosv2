@@ -55,8 +55,8 @@ class AuthModel extends Model
             ];
         }
     }
-
-    public function login(string $usuario, string $contrasenia): array
+    
+    public function login(string $usuario, string $contrasenia): array 
     {
         if (empty(trim($usuario)) || empty(trim($contrasenia))) {
             return [
@@ -65,14 +65,14 @@ class AuthModel extends Model
                 'message' => 'El usuario y la contraseña son obligatorios'
             ];
         }
-
+    
         $sql = 'SELECT u.id_usuario, u.usuario, u.contrasenia, u.id_rol, u.activo, p.nombres, p.apellidos
                 FROM usuarios u
                 JOIN personas p ON u.id_persona = p.id_persona
                 WHERE u.usuario = :usuario';
         $stmt = $this->query($sql, [':usuario' => $usuario]);
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
-
+    
         if (!$user) {
             return [
                 'status' => 'error',
@@ -80,7 +80,16 @@ class AuthModel extends Model
                 'message' => 'Usuario no encontrado'
             ];
         }
-
+    
+        // Validar que el usuario esté activo ANTES de verificar la contraseña
+        if (!$user['activo']) {
+            return [
+                'status' => 'error',
+                'code' => 'USER_INACTIVE',
+                'message' => 'Tu cuenta ha sido desactivada. Contacta al administrador para más información.'
+            ];
+        }
+    
         if (!password_verify($contrasenia, $user['contrasenia'])) {
             return [
                 'status' => 'error',
@@ -88,7 +97,7 @@ class AuthModel extends Model
                 'message' => 'Contraseña inválida'
             ];
         }
-
+    
         return [
             'status' => 'success',
             'id_usuario' => $user['id_usuario'],

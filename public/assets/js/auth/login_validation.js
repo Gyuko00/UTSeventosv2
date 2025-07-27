@@ -111,12 +111,53 @@ document.addEventListener("DOMContentLoaded", () => {
 
         window.location.href = redirectUrl;
       } else {
-        Swal.fire({
+        let alertConfig = {
           icon: "error",
           title: "Error",
           text: result.message || "Credenciales inválidas.",
           confirmButtonColor: "#d33",
-        });
+        };
+
+        switch (result.code) {
+          case 'USER_INACTIVE':
+            alertConfig = {
+              icon: "warning",
+              title: "Cuenta Desactivada",
+              text: result.message,
+              confirmButtonColor: "#f39c12",
+              footer: '<span style="color: #666;">Si crees que esto es un error, contacta al administrador.</span>'
+            };
+            break;
+          
+          case 'USER_NOT_FOUND':
+            alertConfig = {
+              icon: "error",
+              title: "Usuario No Encontrado",
+              text: result.message,
+              confirmButtonColor: "#d33"
+            };
+            break;
+          
+          case 'INVALID_PASSWORD':
+            alertConfig = {
+              icon: "error",
+              title: "Contraseña Incorrecta",
+              text: result.message,
+              confirmButtonColor: "#d33"
+            };
+            break;
+          
+          case 'EMPTY_FIELDS':
+            alertConfig = {
+              icon: "info",
+              title: "Campos Requeridos",
+              text: result.message,
+              confirmButtonColor: "#3085d6"
+            };
+            break;
+        }
+
+        Swal.fire(alertConfig);
       }
     } catch (err) {
       console.error("Error en fetch:", err);

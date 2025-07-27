@@ -62,26 +62,28 @@ class AdminGuestCRUDModel extends Model {
 
     public function deleteGuestByPersonId(int $id_persona): array {
         try {
-
             $this->validateId($id_persona);
-
+    
             $this->getDB()->beginTransaction();
-
+    
             $sqlCheck = "SELECT COUNT(*) AS count FROM invitados WHERE id_persona = :id_persona";
             $stmt = $this->query($sqlCheck, [':id_persona' => $id_persona]);
             $count = $stmt->fetch(PDO::FETCH_ASSOC)['count'] ?? 0;
-
+    
             if ($count == 0) {
+                $this->getDB()->rollBack(); 
                 throw new InvalidArgumentException('Invitado no encontrado.');
             }
     
             $sql = "DELETE FROM invitados WHERE id_persona = :id_persona";
-    
             $this->query($sql, [':id_persona' => $id_persona]);
+    
+            $this->getDB()->commit(); 
     
             return ['status' => 'success', 'message' => 'Invitado eliminado correctamente.'];
     
         } catch (Exception $e) {
+            $this->getDB()->rollBack();
             return ['status' => 'error', 'message' => $e->getMessage()];
         }
     }

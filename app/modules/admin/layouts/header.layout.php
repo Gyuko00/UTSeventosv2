@@ -32,3 +32,5 @@
     </div>
   </div>
 </header>
+
+<script src="<?= URL_PATH ?>/assets/js/admin/header_menu.js"></script>

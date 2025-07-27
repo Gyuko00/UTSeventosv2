@@ -28,7 +28,6 @@ class AdminController extends Controller
     {
         $this->verificarAccesoConRoles([1]);
 
-        // En este punto, puedes si quieres preparar algún dato inicial para el calendario JS.
         $data = [];
 
         $this->view('admin/home', $data, 'admin');
@@ -61,7 +60,7 @@ class AdminController extends Controller
         $this->userController->editarUsuario($id);
     }
 
-    public function eliminarUsuario(int $id)
+    public function eliminarUsuario($id = null)
     {
         $this->userController->eliminarUsuario($id);
     }
