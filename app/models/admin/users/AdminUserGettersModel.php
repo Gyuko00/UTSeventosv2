@@ -27,6 +27,7 @@ class AdminUserGettersModel extends Model{
             'data' => $stmt->fetchAll(PDO::FETCH_ASSOC)
         ];
     }
+    
     public function getUserById(int $idUsuario): array
     {
         try {

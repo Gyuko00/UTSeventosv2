@@ -1,4 +1,4 @@
-import { actualizarTablaUsuarios } from "./tabla.js";
+import { actualizarTablaUsuarios } from "../home/tabla.js";
 
 export async function confirmarEliminacion(idUsuario, nombreUsuario) {
   const resultado = await Swal.fire({

@@ -1,135 +1,11 @@
-import { limpiarErrores } from "./helpers.js"; 
-
-export async function manejarSubmitFormulario(e) {
-  e.preventDefault();
-  limpiarErrores();
-
-  const errores = validarFormulario();
-  if (errores.length > 0) {
-    mostrarErroresConSweetAlert(errores);
-    return;
-  }
-
-  const form = e.target;
-  const data = {
-    person: {
-      nombres: form.querySelector('[name="person[nombres]"]').value,
-      apellidos: form.querySelector('[name="person[apellidos]"]').value,
-      tipo_documento: form.querySelector('[name="person[tipo_documento]"]').value,
-      numero_documento: form.querySelector('[name="person[numero_documento]"]').value,
-      correo_personal: form.querySelector('[name="person[correo_personal]"]').value,
-      telefono: form.querySelector('[name="person[telefono]"]').value,
-      departamento: form.querySelector('[name="person[departamento]"]').value,
-      municipio: form.querySelector('[name="person[municipio]"]').value,
-      direccion: form.querySelector('[name="person[direccion]"]').value,
-    },
-    user: {
-      usuario: form.querySelector('[name="user[usuario]"]').value,
-      contrasenia: form.querySelector('[name="user[contrasenia]"]').value,
-      id_rol: form.querySelector('[name="user[id_rol]"]').value,
-    },
-    roleSpecific: {
-      tema: form.querySelector('[name="roleSpecific[tema]"]')?.value,
-      descripcion_biografica: form.querySelector('[name="roleSpecific[descripcion_biografica]"]')?.value,
-      especializacion: form.querySelector('[name="roleSpecific[especializacion]"]')?.value,
-      institucion_ponente: form.querySelector('[name="roleSpecific[institucion_ponente]"]')?.value,
-      tipo_invitado: form.querySelector('[name="roleSpecific[tipo_invitado]"]')?.value,
-      correo_institucional: form.querySelector('[name="roleSpecific[correo_institucional]"]')?.value,
-      programa_academico: form.querySelector('[name="roleSpecific[programa_academico]"]')?.value,
-      nombre_carrera: form.querySelector('[name="roleSpecific[nombre_carrera]"]')?.value,
-      jornada: form.querySelector('[name="roleSpecific[jornada]"]')?.value,
-      facultad: form.querySelector('[name="roleSpecific[facultad]"]')?.value,
-      cargo: form.querySelector('[name="roleSpecific[cargo]"]')?.value,
-      sede_institucion: form.querySelector('[name="roleSpecific[sede_institucion]"]')?.value,
-    },
-  };
-
-  try {
-    console.log("📤 Enviando datos:", data);
-    console.log("📍 URL destino:", form.action);
-
-    const response = await fetch(form.action, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Accept": "application/json"
-      },
-      body: JSON.stringify(data),
-    });
-
-    console.log("📥 Status de respuesta:", response.status);
-    console.log("📥 Headers de respuesta:", [...response.headers.entries()]);
-
-    // Obtener el texto completo de la respuesta
-    const responseText = await response.text();
-    console.log("📥 Respuesta completa del servidor:");
-    console.log(responseText);
-
-    // Verificar si es HTML (error de PHP)
-    if (responseText.trim().startsWith('<')) {
-      console.error("❌ El servidor devolvió HTML en lugar de JSON");
-      console.error("Contenido:", responseText.substring(0, 500) + "...");
-      
-      Swal.fire({
-        icon: "error",
-        title: "Error del servidor",
-        text: "El servidor devolvió un error. Revisa la consola para más detalles.",
-      });
-      return;
-    }
-
-    // Intentar parsear como JSON
-    let result;
-    try {
-      result = JSON.parse(responseText);
-      console.log("✅ JSON parseado correctamente:", result);
-    } catch (parseError) {
-      console.error("❌ Error parseando JSON:", parseError);
-      console.error("Respuesta recibida:", responseText);
-      
-      Swal.fire({
-        icon: "error",
-        title: "Error de formato",
-        text: "La respuesta del servidor no es válida.",
-      });
-      return;
-    }
-
-    if (result.status === "error") {
-      Swal.fire({ 
-        icon: "error", 
-        title: "Error", 
-        text: result.message 
-      });
-      return;
-    }
-
-    await Swal.fire({
-      icon: "success",
-      title: "Usuario creado",
-      text: "El usuario ha sido creado exitosamente",
-    });
-    
-    window.location.href = result.redirect;
-
-  } catch (error) {
-    console.error("❌ Error en fetch:", error);
-    Swal.fire({
-      icon: "error",
-      title: "Error de conexión",
-      text: "No se pudo conectar con el servidor: " + error.message,
-    });
-  }
-}
-
-function validar(id, mensaje, errores, regex = null) {
+export function validar(id, mensaje, errores, regex = null) {
   const val = document.getElementById(id).value.trim();
   if (!val || (regex && !regex.test(val))) {
     errores.push({ campo: id, mensaje });
   }
 }
 
-function validarFormulario() {
+export function validarFormulario() {
   const errores = [];
 
   validar("tipoDocumento", "Debe seleccionar un tipo de documento", errores);
@@ -194,7 +70,7 @@ function validarFormulario() {
   return errores;
 }
 
-function validarCamposPonente(errores) {
+export function validarCamposPonente(errores) {
   validar(
     "tema",
     "El tema debe tener entre 0 y 100 caracteres",
@@ -221,7 +97,7 @@ function validarCamposPonente(errores) {
   );
 }
 
-function validarCamposInvitado(errores) {
+export function validarCamposInvitado(errores) {
   validar("tipoInvitado", "Debe seleccionar un tipo de invitado", errores);
   validar(
     "correoInstitucional",
@@ -260,7 +136,7 @@ function validarCamposInvitado(errores) {
   }
 }
 
-function mostrarErroresConSweetAlert(errores) {
+export function mostrarErroresConSweetAlert(errores) {
   const listaErrores = errores.map((err) => `<li>${err.mensaje}</li>`).join("");
   Swal.fire({
     icon: "error",

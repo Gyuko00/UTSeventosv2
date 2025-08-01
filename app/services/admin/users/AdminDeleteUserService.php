@@ -21,46 +21,54 @@ class AdminDeleteUserService extends Service {
         $this->speakerModel = new AdminSpeakerCRUDModel($db);
     }
 
-    public function deleteUser(int $idUsuarioAdmin, int $id): array {
+    public function deleteUser(int $idUsuarioAdmin, int $id): array
+    {
         $user = $this->gettersModel->getUserById($id);
         if ($user['status'] !== 'success') {
             return $user;
         }
     
-        $personId = $user['data']['id_persona'];
-        $idRol = (int) $user['data']['id_rol'];
+        $userData = $user['data'];
+        $personId = (int) $userData['id_persona'];
+        $idRol = (int) $userData['id_rol'];
+    
+        $softDeleteSuccess = true;
     
         switch ($idRol) {
-            case 3:
+            case 3: 
                 $guestResult = $this->guestModel->deleteGuestByPersonId($personId);
                 if ($guestResult['status'] === 'success') {
                     $this->auditModel->log(
                         $idUsuarioAdmin,
-                        'ELIMINAR',
+                        'DESACTIVAR',
                         'invitados',
-                        "Invitado eliminado para persona ID: {$personId}"
+                        "Invitado desactivado para persona ID: {$personId}"
                     );
+                } else {
+                    $softDeleteSuccess = false;
                 }
                 break;
     
-            case 2:
+            case 2: 
                 $speakerResult = $this->speakerModel->deleteSpeakerByPersonId($personId);
                 if ($speakerResult['status'] === 'success') {
                     $this->auditModel->log(
                         $idUsuarioAdmin,
-                        'ELIMINAR',
+                        'DESACTIVAR',
                         'ponentes',
-                        "Ponente eliminado para persona ID: {$personId}"
+                        "Ponente desactivado para persona ID: {$personId}"
                     );
+                } else {
+                    $softDeleteSuccess = false;
                 }
                 break;
     
-            case 4:
+            case 4: 
                 $this->auditModel->log(
                     $idUsuarioAdmin,
-                    'ELIMINAR',
+                    'DESACTIVAR',
                     'usuarios',
-                    "Usuario control eliminado para persona ID: {$personId}"
+                    "Usuario control desactivado para persona ID: {$personId}"
                 );
                 break;
     
@@ -72,13 +80,18 @@ class AdminDeleteUserService extends Service {
         if ($result['status'] === 'success') {
             $this->auditModel->log(
                 $idUsuarioAdmin,
-                'ELIMINAR',
+                'DESACTIVAR',
                 'usuarios',
-                "Usuario ID: {$id} desactivado correctamente"
+                "Usuario ID: {$id} y persona ID: {$personId} desactivados correctamente"
             );
+        } else {
+            $softDeleteSuccess = false;
         }
     
-        return $result;
+        return $softDeleteSuccess
+            ? ['status' => 'success', 'message' => 'Usuario y registros relacionados desactivados correctamente']
+            : ['status' => 'error', 'message' => 'Error al desactivar uno o más registros relacionados'];
     }
+    
 
 }

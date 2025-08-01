@@ -60,6 +60,11 @@ class AdminController extends Controller
         $this->userController->editarUsuario($id);
     }
 
+    public function activarUsuario(int $id)
+    {
+        $this->userController->activarUsuario($id);
+    }
+
     public function eliminarUsuario($id = null)
     {
         $this->userController->eliminarUsuario($id);

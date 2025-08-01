@@ -9,7 +9,8 @@ class ValidateAdminGuestData {
             throw new InvalidArgumentException('El ID de la persona es obligatorio y válido.');
         }
 
-        if (empty(trim($data['tipo_invitado'] ?? ''))) {
+        $tipo = trim($data['tipo_invitado'] ?? '');
+        if (empty($tipo)) {
             throw new InvalidArgumentException('El tipo de invitado es obligatorio.');
         }
 
@@ -17,24 +18,43 @@ class ValidateAdminGuestData {
             throw new InvalidArgumentException('El correo institucional es obligatorio.');
         }
 
-        if (empty(trim($data['programa_academico'] ?? ''))) {
-            throw new InvalidArgumentException('El programa académico es obligatorio.');
-        }
+        switch (strtolower($tipo)) {
+            case 'estudiante':
+                if (empty(trim($data['programa_academico'] ?? ''))) {
+                    throw new InvalidArgumentException('El programa académico es obligatorio para estudiantes.');
+                }
+                if (empty(trim($data['nombre_carrera'] ?? ''))) {
+                    throw new InvalidArgumentException('El nombre de la carrera es obligatorio para estudiantes.');
+                }
+                if (empty(trim($data['jornada'] ?? ''))) {
+                    throw new InvalidArgumentException('La jornada es obligatoria para estudiantes.');
+                }
+                break;
 
-        if (empty(trim($data['nombre_carrera'] ?? ''))) {
-            throw new InvalidArgumentException('El nombre de la carrera es obligatorio.');
-        }
+            case 'docente':
+                if (empty(trim($data['cargo'] ?? ''))) {
+                    throw new InvalidArgumentException('El cargo es obligatorio para docentes.');
+                }
+                if (empty(trim($data['programa_academico'] ?? ''))) {
+                    throw new InvalidArgumentException('El programa académico es obligatorio para docentes.');
+                }
+                if (empty(trim($data['nombre_carrera'] ?? ''))) {
+                    throw new InvalidArgumentException('El nombre de la carrera es obligatorio para docentes.');
+                }
+                break;
 
-        if (empty(trim($data['jornada'] ?? ''))) {
-            throw new InvalidArgumentException('La jornada es obligatoria.');
+            case 'administrativo':
+                if (empty(trim($data['cargo'] ?? ''))) {
+                    throw new InvalidArgumentException('El cargo es obligatorio para administrativos.');
+                }
+                break;
+
+            default:
+                throw new InvalidArgumentException('Tipo de invitado no reconocido.');
         }
 
         if (empty(trim($data['facultad'] ?? ''))) {
             throw new InvalidArgumentException('La facultad es obligatoria.');
-        }
-
-        if (empty(trim($data['cargo'] ?? ''))) {
-            throw new InvalidArgumentException('El cargo es obligatorio.');
         }
 
         if (empty(trim($data['sede_institucion'] ?? ''))) {
@@ -42,3 +62,4 @@ class ValidateAdminGuestData {
         }
     }
 }
+

@@ -84,68 +84,138 @@ class AdminUserCRUDModel extends Model
         try {
             $this->validateId($id);
             $this->validatePersonData->validate($personData);
-            $this->validateUserData->validate($userData);
-
+            $this->validateUserData->validate($userData, true);
+    
             $this->getDB()->beginTransaction();
-
+    
+            // Obtener ID de persona
             $sqlGetPerson = 'SELECT id_persona FROM usuarios WHERE id_usuario = :id';
-            $stmt = $this->query($sqlGetPerson, [':id' => $id]);
+            $stmt = $this->query($sqlGetPerson, ['id' => $id]);
             $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
+    
             if (!$row) {
+                $this->getDB()->rollBack();
                 return ['status' => 'error', 'message' => 'Usuario no encontrado'];
             }
-
+    
             $personId = $row['id_persona'];
-
-            $sqlPerson = 'UPDATE personas SET tipo_documento = :tipo_documento, numero_documento = :numero_documento, nombres = :nombres, 
-                          apellidos = :apellidos, telefono = :telefono, correo_personal = :correo_personal, departamento = :departamento, 
-                          municipio = :municipio, direccion = :direccion
+    
+            // Actualizar persona
+            $sqlPerson = 'UPDATE personas SET 
+                            tipo_documento = :tipo_documento, 
+                            numero_documento = :numero_documento, 
+                            nombres = :nombres,
+                            apellidos = :apellidos, 
+                            telefono = :telefono, 
+                            correo_personal = :correo_personal, 
+                            departamento = :departamento,
+                            municipio = :municipio, 
+                            direccion = :direccion
                           WHERE id_persona = :id_persona';
-            $personData['id_persona'] = $personId;
-            $this->query($sqlPerson, $personData);
-
-            $sqlUser = 'UPDATE usuarios SET usuario = :usuario, contrasenia = :contrasenia, activo = 1, 
-                        id_rol = :id_rol';
-            $params = [':usuario' => $userData['usuario'], ':contrasenia' => $userData['contrasenia'],
-                ':id_rol' => $userData['id_rol']];
-            $this->hashPasswordIfPresent($userData);
+    
+            $personParams = $personData;
+            $personParams['id_persona'] = $personId;
+            $this->query($sqlPerson, $personParams);
+    
+            // Preparar parámetros de usuario
+            $userParams = [
+                'id' => $id,
+                'usuario' => $userData['usuario'],
+                'id_rol' => $userData['id_rol']
+            ];
+    
+            $sqlUser = 'UPDATE usuarios SET usuario = :usuario, id_rol = :id_rol';
+    
+            if (!empty(trim($userData['contrasenia'] ?? ''))) {
+                $sqlUser .= ', contrasenia = :contrasenia';
+                $userParams['contrasenia'] = password_hash($userData['contrasenia'], PASSWORD_DEFAULT);
+            }
+    
             $sqlUser .= ' WHERE id_usuario = :id';
-            $params[':id'] = $id;
-
-            $this->query($sqlUser, $params);
-
+    
+            $this->query($sqlUser, $userParams);
+    
             $this->getDB()->commit();
-
+    
             return ['status' => 'success', 'message' => 'Usuario actualizado correctamente'];
         } catch (Exception $e) {
-            $this->getDB()->rollBack();
+            if ($this->getDB()->inTransaction()) {
+                $this->getDB()->rollBack();
+            }
             return ['status' => 'error', 'message' => $e->getMessage()];
         }
     }
+    
 
-    public function deleteUser(int $id)
+    public function deleteUser(int $id): array
     {
         try {
             $this->validateId($id);
             $this->getDB()->beginTransaction();
-
+    
             $sqlGetPerson = 'SELECT id_persona FROM usuarios WHERE id_usuario = :id';
             $stmt = $this->query($sqlGetPerson, [':id' => $id]);
             $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
+    
             if (!$row) {
+                $this->getDB()->rollBack();
                 return ['status' => 'error', 'message' => 'Usuario no encontrado'];
             }
-
+    
+            $id_persona = (int) $row['id_persona'];
+    
             $this->query('UPDATE usuarios SET activo = 0 WHERE id_usuario = :id', [':id' => $id]);
-
+    
+            $this->query('UPDATE personas SET activo = 0 WHERE id_persona = :id_persona', [':id_persona' => $id_persona]);
+    
             $this->getDB()->commit();
-
-            return ['status' => 'success', 'message' => 'Usuario desactivado correctamente'];
+    
+            return ['status' => 'success', 'message' => 'Usuario y persona desactivados correctamente'];
         } catch (Exception $e) {
             $this->getDB()->rollBack();
             return ['status' => 'error', 'message' => $e->getMessage()];
         }
     }
+    
+
+    public function activateUser(int $id): array
+    {
+        try {
+            $this->validateId($id);
+            $this->getDB()->beginTransaction();
+    
+            $sqlGetPerson = 'SELECT id_persona, id_rol FROM usuarios WHERE id_usuario = :id';
+            $stmt = $this->query($sqlGetPerson, [':id' => $id]);
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+    
+            if (!$row) {
+                $this->getDB()->rollBack();
+                return ['status' => 'error', 'message' => 'Usuario no encontrado'];
+            }
+    
+            $personId = (int)$row['id_persona'];
+            $rol = (int)$row['id_rol'];
+    
+            $this->query('UPDATE usuarios SET activo = 1 WHERE id_usuario = :id', [':id' => $id]);
+            $this->query('UPDATE personas SET activo = 1 WHERE id_persona = :person_id', [':person_id' => $personId]);
+    
+            if ($rol === 3) {
+                $this->query('UPDATE invitados SET activo = 1 WHERE id_persona = :person_id', [':person_id' => $personId]);
+            } elseif ($rol === 2) {
+                $this->query('UPDATE ponentes SET activo = 1 WHERE id_persona = :person_id', [':person_id' => $personId]);
+            }
+    
+            $this->getDB()->commit();
+    
+            return ['status' => 'success', 'message' => 'Usuario y registros relacionados activados correctamente'];
+        } catch (Exception $e) {
+            if ($this->getDB()->inTransaction()) {
+                $this->getDB()->rollBack();
+            }
+            error_log("Error en activateUser Model: " . $e->getMessage());
+            return ['status' => 'error', 'message' => $e->getMessage()];
+        }
+    }
+    
+    
 }

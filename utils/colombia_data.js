@@ -22,8 +22,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   const departamentoSelect = document.getElementById("departamento");
   const municipioSelect = document.getElementById("municipio");
-  const valorActualDepartamento = departamentoSelect.getAttribute("data-valor");
-  const valorActualMunicipio = municipioSelect.getAttribute("data-valor");
+  
+  const valorActualDepartamento = window.DEPARTAMENTO_SELECCIONADO || "";
+  const valorActualMunicipio = window.MUNICIPIO_SELECCIONADO || "";
 
   let colombiaData = [];
 

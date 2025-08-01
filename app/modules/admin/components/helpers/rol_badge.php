@@ -18,6 +18,6 @@ $rolNombre = match($usuario['id_rol']) {
 };
 ?>
 
-<span class="inline-flex px-2 py-1 text-xs font-semibold rounded-full <?= $rolClass ?>">
+<span class="inline-flex px-3 py-1.5 text-sm font-semibold rounded-full <?= $rolClass ?>">
     <?= $rolNombre ?>
 </span>

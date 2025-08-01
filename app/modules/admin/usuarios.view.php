@@ -12,4 +12,4 @@
     <?php include_once __DIR__ . '\components\usuarios\home\tabla.php'; ?>
 </div>
 
-<script type="module" src="<?= URL_PATH ?>/assets/js/admin/user/usuarios.js"></script>
+<script type="module" src="<?= URL_PATH ?>/assets/js/admin/user/home/usuarios.js"></script>
