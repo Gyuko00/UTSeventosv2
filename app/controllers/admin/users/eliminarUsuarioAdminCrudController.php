@@ -12,10 +12,14 @@ class eliminarUsuarioAdminCrudController extends Controller
 
     public function eliminarUsuario($id = null)
     {
-        error_log('Método llamado con ID: ' . var_export($id, true));
-        error_log('Es AJAX: ' . (isset($_SERVER['HTTP_X_REQUESTED_WITH']) ? 'SI' : 'NO'));
+        $isAjax = isset($_SERVER['HTTP_X_REQUESTED_WITH']) &&
+            $_SERVER['HTTP_X_REQUESTED_WITH'] === 'XMLHttpRequest';
 
-        $isAjax = isset($_SERVER['HTTP_X_REQUESTED_WITH']) && $_SERVER['HTTP_X_REQUESTED_WITH'] === 'XMLHttpRequest';
+        if (!$isAjax) {
+            $_SESSION['error_message'] = 'Acceso no permitido por URL directa';
+            $this->redirect('/admin/usuarios');
+            return;
+        }
 
         if ($isAjax) {
             if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -41,15 +45,21 @@ class eliminarUsuarioAdminCrudController extends Controller
                     return;
                 }
 
+                if ($id === 1) {
+                    http_response_code(403);
+                    echo json_encode(['status' => 'error', 'message' => 'No se puede eliminar al usuario administrador']);
+                    return;
+                }
+
                 $result = $this->userService->deleteUser($_SESSION['id_usuario'], $id);
 
+                header('Content-Type: application/json');
                 if ($result['status'] === 'success') {
                     http_response_code(200);
                 } else {
                     http_response_code(400);
                 }
 
-                header('Content-Type: application/json');
                 echo json_encode($result);
             } catch (Exception $e) {
                 http_response_code(500);
@@ -61,7 +71,7 @@ class eliminarUsuarioAdminCrudController extends Controller
         } else {
             if (!$id || !is_numeric($id)) {
                 $_SESSION['error_message'] = 'ID de usuario no válido';
-                $this->redirect('admin/usuarios');
+                $this->redirect('/admin/usuarios');
                 return;
             }
 
@@ -69,7 +79,13 @@ class eliminarUsuarioAdminCrudController extends Controller
 
             if ($_SESSION['id_usuario'] === $id) {
                 $_SESSION['error_message'] = 'No puedes eliminar tu propio usuario';
-                $this->redirect('admin/usuarios');
+                $this->redirect('/admin/usuarios');
+                return;
+            }
+
+            if ($id === 1) {
+                $_SESSION['error_message'] = 'No se puede eliminar al usuario administrador';
+                $this->redirect('/admin/usuarios');
                 return;
             }
 
@@ -85,7 +101,7 @@ class eliminarUsuarioAdminCrudController extends Controller
                 $_SESSION['error_message'] = 'Error interno del servidor';
             }
 
-            $this->redirect('admin/usuarios');
+            $this->redirect('/admin/usuarios');
         }
     }
 }

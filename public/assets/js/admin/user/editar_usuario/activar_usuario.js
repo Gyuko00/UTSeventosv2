@@ -53,8 +53,8 @@ async function manejarActivarUsuario(e) {
       }
     );
 
-    const raw = await response.text(); // Captura el texto crudo para depuración
-    console.log("Respuesta del servidor:", raw); // Debug en consola
+    const raw = await response.text(); 
+    console.log("Respuesta del servidor:", raw); 
 
     if (!response.ok) {
       throw new Error(`Error HTTP: ${response.status}`);
@@ -62,7 +62,7 @@ async function manejarActivarUsuario(e) {
 
     let result;
     try {
-      result = JSON.parse(raw); // Intenta parsear manualmente
+      result = JSON.parse(raw); 
     } catch (e) {
       console.error("Error al parsear JSON:", e);
       throw new Error("La respuesta no es un JSON válido");

@@ -49,7 +49,7 @@ class AdminDeleteUserService extends Service {
                 }
                 break;
     
-            case 2: 
+            case 2:
                 $speakerResult = $this->speakerModel->deleteSpeakerByPersonId($personId);
                 if ($speakerResult['status'] === 'success') {
                     $this->auditModel->log(
@@ -93,5 +93,5 @@ class AdminDeleteUserService extends Service {
             : ['status' => 'error', 'message' => 'Error al desactivar uno o más registros relacionados'];
     }
     
-
+    
 }

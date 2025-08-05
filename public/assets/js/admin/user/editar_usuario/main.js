@@ -32,7 +32,6 @@ export async function manejarSubmitFormulario(e) {
 
   const form = e.target;
 
-  // Helper para obtener valores seguros
   const getValue = (selector) => {
     const el = form.querySelector(selector);
     return el ? el.value : null;

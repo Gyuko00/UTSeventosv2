@@ -1,11 +1,8 @@
 <div class="space-y-10">
-  <!-- Header -->
   <?php include __DIR__ . '\components\usuarios\crud\crear\header.php'; ?>
 
-  <!-- Error -->
   <?php include __DIR__ . '\components\usuarios\crud\crear\alerta_error.php'; ?>
 
-  <!-- Formulario -->
   <form
     id="crearUsuarioForm"
     method="POST"
@@ -19,7 +16,6 @@
       include __DIR__ . '\components\usuarios\crud\crear\campos_invitado.php';
     ?>
 
-    <!-- Botones -->
     <?php include __DIR__ . '\components\usuarios\crud\crear\botones_accion.php'; ?>
   </form>
 </div>

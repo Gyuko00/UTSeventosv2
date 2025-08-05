@@ -81,7 +81,6 @@ class AuthModel extends Model
             ];
         }
     
-        // Validar que el usuario esté activo ANTES de verificar la contraseña
         if (!$user['activo']) {
             return [
                 'status' => 'error',

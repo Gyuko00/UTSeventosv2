@@ -7,7 +7,6 @@
   </h3>
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-    <!-- Usuario -->
     <div>
       <label class="block text-base font-medium text-gray-700 mb-2">Usuario *</label>
       <input
@@ -20,7 +19,6 @@
       <p class="text-sm text-gray-500 mt-1">Entre 4 y 20 caracteres alfanuméricos</p>
     </div>
 
-    <!-- Contraseña -->
     <div>
       <label class="block text-base font-medium text-gray-700 mb-2">Contraseña *</label>
       <div class="relative">
@@ -43,7 +41,6 @@
       <p class="text-sm text-gray-500 mt-1">Mínimo 6 caracteres</p>
     </div>
 
-    <!-- Rol -->
     <div class="md:col-span-2">
       <label class="block text-base font-medium text-gray-700 mb-2">Rol *</label>
       <select

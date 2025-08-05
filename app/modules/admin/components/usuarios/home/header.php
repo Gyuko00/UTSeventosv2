@@ -2,7 +2,6 @@
 // app/modules/admin/components/usuarios/header.php
 ?>
 
-<!-- Header -->
 <div class="bg-gradient-to-r from-lime-600 to-lime-700 rounded-xl shadow-lg p-6 mb-6">
   <div class="flex justify-between items-center">
     <div>

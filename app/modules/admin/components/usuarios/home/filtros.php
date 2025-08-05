@@ -2,11 +2,9 @@
 // app/modules/admin/components/usuarios/filtros.php
 ?>
 
-<!-- Filtros y búsqueda -->
 <div class="bg-white rounded-lg shadow-sm px-6 py-4">
     <div class="flex flex-wrap gap-4 items-center justify-between">
         
-        <!-- Input de búsqueda -->
         <div class="flex-1 min-w-[250px]">
             <label for="buscarUsuario" class="block text-sm text-gray-600 mb-1 font-medium">Buscar usuario</label>
             <input 
@@ -17,7 +15,6 @@
             >
         </div>
 
-        <!-- Filtro por Rol -->
         <div class="min-w-[200px]">
             <label for="filtroRol" class="block text-sm text-gray-600 mb-1 font-medium">Rol</label>
             <select 
@@ -32,7 +29,6 @@
             </select>
         </div>
 
-        <!-- Filtro por Estado -->
         <div class="min-w-[200px]">
             <label for="filtroEstado" class="block text-sm text-gray-600 mb-1 font-medium">Estado</label>
             <select 
@@ -45,7 +41,6 @@
             </select>
         </div>
 
-        <!-- Botón Limpiar -->
         <div class="mt-5 sm:mt-6">
             <button 
                 onclick="limpiarFiltros()" 

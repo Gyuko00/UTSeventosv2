@@ -2,7 +2,6 @@
 // app/modules/admin/components/usuarios/mensajes.php
 ?>
 
-<!-- Mensajes de éxito/error -->
 <?php if (isset($_SESSION['success_message'])): ?>
     <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
         <span class="block sm:inline"><?= $_SESSION['success_message'] ?></span>

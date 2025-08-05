@@ -1,14 +1,10 @@
 <div class="space-y-8">
-  <!-- Encabezado -->
   <?php include __DIR__ . '\components\usuarios\crud\editar\header.php'; ?>
 
-  <!-- Estado del Usuario -->
   <?php include __DIR__ . '\components\usuarios\crud\editar\estado_usuario.php'; ?>
 
-  <!-- Alerta de error -->
   <?php include __DIR__ . '\components\usuarios\crud\editar\alerta_error.php'; ?>
 
-  <!-- Formulario -->
   <form
     id="editarUsuarioForm"
     method="POST"
@@ -27,7 +23,6 @@
       }
     ?>
 
-    <!-- Botones -->
     <?php include __DIR__ . '\components\usuarios\crud\editar\botones_accion.php'; ?>
   </form>
 </div>

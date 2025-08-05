@@ -10,12 +10,10 @@ class ValidateUserData {
         }
 
         if (!$esActualizacion) {
-            // Creación: contraseña obligatoria
             if (empty($userData['contrasenia']) || strlen($userData['contrasenia']) < 8) {
                 throw new InvalidArgumentException('La contraseña es obligatoria y debe tener al menos 8 caracteres.');
             }
         } else {
-            // Edición: solo validar si hay contraseña
             if (!empty($userData['contrasenia']) && strlen($userData['contrasenia']) < 8) {
                 throw new InvalidArgumentException('Si vas a cambiar la contraseña, debe tener al menos 8 caracteres.');
             }
