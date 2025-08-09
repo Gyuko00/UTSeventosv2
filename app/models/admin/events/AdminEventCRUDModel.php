@@ -19,12 +19,12 @@ class AdminEventCRUDModel extends Model
 
     public function createEvent(array $eventData)
     {
-        $this->eventCreateCRUDModel->createEvent($eventData);
+        return $this->eventCreateCRUDModel->createEvent($eventData);
     }
 
     public function updateEvent(int $id, array $eventData)
     {
-        $this->eventUpdateCRUDModel->updateEvent($id, $eventData);
+        return $this->eventUpdateCRUDModel->updateEvent($id, $eventData);
     }
 
     public function deleteEvent(int $id)

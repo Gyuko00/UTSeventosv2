@@ -78,12 +78,10 @@ document.addEventListener("DOMContentLoaded", () => {
       let result;
 
       try {
-        console.log("Respuesta del servidor:", text);
         result = JSON.parse(text);
       } catch {
         throw new Error("Respuesta no es JSON válida");
       }
-      console.log(result);
 
       if (result.status === "success") {
         await Swal.fire({
@@ -94,7 +92,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         let redirectUrl = "/utseventos/public/auth/login";
-        console.log(parseInt(result.id_rol))
         switch (parseInt(result.id_rol)) {
           case 1:
             redirectUrl = "/utseventos/public/admin/home";
@@ -160,7 +157,6 @@ document.addEventListener("DOMContentLoaded", () => {
         Swal.fire(alertConfig);
       }
     } catch (err) {
-      console.error("Error en fetch:", err);
       Swal.fire({
         icon: "error",
         title: "Error de red",

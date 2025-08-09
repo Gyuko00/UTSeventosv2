@@ -1,10 +1,14 @@
+<?php
+// app/modules/admin/components/eventos/crud/crear/header.php
+?>
+
 <div class="bg-gradient-to-r from-lime-600 to-lime-700 rounded-xl shadow-lg p-6 mb-6 flex justify-between items-center">
   <div>
-    <h1 class="text-3xl font-bold text-white mb-2">Crear Usuario</h1>
+    <h1 class="text-3xl font-bold text-white mb-2">Crear Evento</h1>
     <p class="text-lime-100 opacity-90">Información completa del usuario seleccionado</p>
   </div>
   <a
-    href="<?= URL_PATH ?>/admin/listarUsuarios"
+    href="<?= URL_PATH ?>/admin/listarEventos"
     class="bg-white hover:bg-lime-50 text-lime-700 font-semibold px-6 py-3 rounded-lg transition duration-200 flex items-center gap-2 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
   >
     <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 640 640" fill="currentColor">

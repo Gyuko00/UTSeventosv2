@@ -14,7 +14,7 @@
  * 
  */ -->
 
- <?php require __DIR__ . '/header.layout.php'; ?>
+<?php require __DIR__ . '/header.layout.php'; ?>
 
 <main class="min-h-screen flex flex-col bg-gray-50">
   <div class="flex-grow flex items-center justify-center p-2 sm:p-4 lg:p-6">

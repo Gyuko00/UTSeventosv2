@@ -1,0 +1,208 @@
+EventData recibido: Array
+(
+    [titulo_evento] => otro eventoooooo
+    [tema] => Tecnología
+    [descripcion] => asdfadf
+    [fecha] => 2025-08-15
+    [hora_inicio] => 09:26
+    [hora_fin] => 10:26
+    [departamento_evento] => Arauca
+    [municipio_evento] => Arauquita
+    [institucion_evento] => asdfasdf
+    [lugar_detallado] => asdfasdfasdfggg
+    [cupo_maximo] => 1
+    [id_usuario_creador] => 10
+)
+
+EventData recibido: Array
+(
+    [titulo_evento] => eventooo
+    [tema] => aaaaaa
+    [descripcion] => asdfasdfasdf
+    [fecha] => 2025-08-08
+    [hora_inicio] => 09:47
+    [hora_fin] => 10:47
+    [departamento_evento] => Bolívar
+    [municipio_evento] => Arroyohondo
+    [institucion_evento] => asdfasdfasdf
+    [lugar_detallado] => asdfasdfasdfasdf123
+    [cupo_maximo] => 1234
+    [id_usuario_creador] => 10
+)
+
+EventData recibido: Array
+(
+    [titulo_evento] => eventico
+    [tema] => Tecnología
+    [descripcion] => asdfasdf
+    [fecha] => 2025-08-22
+    [hora_inicio] => 10:02
+    [hora_fin] => 11:02
+    [departamento_evento] => Chocó
+    [municipio_evento] => El Carmen de Atrato
+    [institucion_evento] => UTS
+    [lugar_detallado] => Salón 301B
+    [cupo_maximo] => 32
+    [id_usuario_creador] => 10
+)
+
+EventData recibido: Array
+(
+    [titulo_evento] => mas eventos
+    [tema] => asdfaf
+    [descripcion] => adfadsf
+    [fecha] => 2025-08-08
+    [hora_inicio] => 00:11
+    [hora_fin] => 02:11
+    [departamento_evento] => Bolívar
+    [municipio_evento] => Clemencia
+    [institucion_evento] => asdfasdfasdf
+    [lugar_detallado] => asdfasdfasdf
+    [cupo_maximo] => 1231
+    [id_usuario_creador] => 10
+)
+
+EventData recibido: Array
+(
+    [titulo_evento] => 11111111111
+    [tema] => asdfasdfasdf
+    [descripcion] => asdfasdfasdf
+    [fecha] => 2025-08-28
+    [hora_inicio] => 10:14
+    [hora_fin] => 11:12
+    [departamento_evento] => Boyacá
+    [municipio_evento] => Briceño
+    [institucion_evento] => asdfasdfasdf
+    [lugar_detallado] => asdfasdfasdf
+    [cupo_maximo] => 23
+    [id_usuario_creador] => 10
+)
+
+EventData recibido: Array
+(
+    [titulo_evento] => 12312312
+    [tema] => asdfasdf
+    [descripcion] => asdfasdf
+    [fecha] => 2025-08-09
+    [hora_inicio] => 10:15
+    [hora_fin] => 11:15
+    [departamento_evento] => Caldas
+    [municipio_evento] => Marulanda
+    [institucion_evento] => asdfadsf
+    [lugar_detallado] => 123123asdf
+    [cupo_maximo] => 23
+    [id_usuario_creador] => 10
+)
+
+EventData recibido: Array
+(
+    [titulo_evento] => que pereza
+    [tema] => hola
+    [descripcion] => asdfasdf
+    [fecha] => 2025-08-15
+    [hora_inicio] => 11:18
+    [hora_fin] => 12:18
+    [departamento_evento] => Casanare
+    [municipio_evento] => Nunchía
+    [institucion_evento] => asdfasdf
+    [lugar_detallado] => adsfasdfasdfasdfasdf
+    [cupo_maximo] => 123
+    [id_usuario_creador] => 10
+)
+
+EventData recibido: Array
+(
+    [titulo_evento] => otra vez
+    [tema] => hola
+    [descripcion] => asdfasdf
+    [fecha] => 2025-08-16
+    [hora_inicio] => 13:19
+    [hora_fin] => 14:19
+    [departamento_evento] => Bolívar
+    [municipio_evento] => Brazuelo de Papayal
+    [institucion_evento] => asdfasdf
+    [lugar_detallado] => 1231adsfadsf
+    [cupo_maximo] => 42
+    [id_usuario_creador] => 10
+)
+
+EventData recibido: Array
+(
+    [titulo_evento] => otra vezzzzzzz
+    [tema] => hola
+    [descripcion] => asdfasdf
+    [fecha] => 2025-08-20
+    [hora_inicio] => 00:20
+    [hora_fin] => 01:20
+    [departamento_evento] => Amazonas
+    [municipio_evento] => Leticia
+    [institucion_evento] => asdfasdfa
+    [lugar_detallado] => dsfasdf123123asdfasdf
+    [cupo_maximo] => 15
+    [id_usuario_creador] => 10
+)
+
+EventData recibido: Array
+(
+    [titulo_evento] => Primer Evento ahora sí
+    [tema] => Tecnología
+    [descripcion] => adsfadfadf
+    [fecha] => 2025-08-15
+    [hora_inicio] => 11:24
+    [hora_fin] => 12:24
+    [departamento_evento] => Arauca
+    [municipio_evento] => Puerto Rondón
+    [institucion_evento] => UTS
+    [lugar_detallado] => 123123asdf
+    [cupo_maximo] => 123
+    [id_usuario_creador] => 10
+)
+
+EventData recibido: Array
+(
+    [titulo_evento] => Segundo Evento Ahora sí
+    [tema] => Tecnología
+    [descripcion] => adsfadf
+    [fecha] => 2025-09-05
+    [hora_inicio] => 13:28
+    [hora_fin] => 14:28
+    [departamento_evento] => Boyacá
+    [municipio_evento] => Arcabuco
+    [institucion_evento] => asdfadsf
+    [lugar_detallado] => asdfasdfasdf
+    [cupo_maximo] => 13
+    [id_usuario_creador] => 10
+)
+
+EventData recibido: Array
+(
+    [titulo_evento] => Ahora sí primer evento
+    [tema] => Tecnología
+    [descripcion] => Hola
+    [fecha] => 2025-08-08
+    [hora_inicio] => 16:30
+    [hora_fin] => 17:31
+    [departamento_evento] => Amazonas
+    [municipio_evento] => Puerto Nariño
+    [institucion_evento] => UTS
+    [lugar_detallado] => 312B
+    [cupo_maximo] => 10
+    [id_usuario_creador] => 10
+)
+
+EventData recibido: Array
+(
+    [titulo_evento] => Nuevo Evento
+    [tema] => Tecnología
+    [descripcion] => Holaaa
+    [fecha] => 2025-08-08
+    [hora_inicio] => 11:13
+    [hora_fin] => 12:13
+    [departamento_evento] => Arauca
+    [municipio_evento] => Cravo Norte
+    [institucion_evento] => asdfadsf
+    [lugar_detallado] => Salón 301B
+    [cupo_maximo] => 14
+    [id_usuario_creador] => 10
+)
+

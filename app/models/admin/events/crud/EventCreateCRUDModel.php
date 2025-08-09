@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Modelo para crear eventos
  */
@@ -14,24 +15,41 @@ class EventCreateCRUDModel extends Model
 
     public function createEvent(array $eventData)
     {
+        file_put_contents('debug_log.txt',
+            'EventData recibido: ' . print_r($eventData, true) . "\n",
+            FILE_APPEND);
+
         try {
+            if (!$this->validateEventData) {
+                throw new Exception('validateEventData no está inicializado');
+            }
+
             $this->validateEventData->validate($eventData);
 
-            $this->getDB()->beginTransaction();
+            $db = $this->getDB();
+            if (!$db) {
+                throw new Exception('getDB() retornó null');
+            }
+
+            $db->beginTransaction();
 
             $sql = 'INSERT INTO eventos (titulo_evento, tema, descripcion, fecha, hora_inicio, hora_fin,
-                    departamento_evento, municipio_evento, institucion_evento, lugar_detallado, cupo_maximo,
-                    id_usuario_creador) VALUES (:titulo_evento, :tema, :descripcion, :fecha, :hora_inicio, :hora_fin,
-                    :departamento_evento, :municipio_evento, :institucion_evento, :lugar_detallado, :cupo_maximo,
-                    :id_usuario_creador)';
+                departamento_evento, municipio_evento, institucion_evento, lugar_detallado, cupo_maximo,
+                id_usuario_creador) VALUES (:titulo_evento, :tema, :descripcion, :fecha, :hora_inicio, :hora_fin,
+                :departamento_evento, :municipio_evento, :institucion_evento, :lugar_detallado, :cupo_maximo,
+                :id_usuario_creador)';
+
             $this->query($sql, $eventData);
 
-            $this->getDB()->commit();
+            $db->commit();
+            file_put_contents('debug_log2.txt', "Se llegó al final del modelo\n", FILE_APPEND);
             return ['status' => 'success', 'message' => 'Evento creado exitosamente'];
         } catch (InvalidArgumentException $e) {
             return ['status' => 'error', 'message' => $e->getMessage()];
         } catch (Exception $e) {
-            $this->getDB()->rollBack();
+            if ($this->getDB() && $this->getDB()->inTransaction()) {
+                $this->getDB()->rollBack();
+            }
             return ['status' => 'error', 'message' => $e->getMessage()];
         }
     }

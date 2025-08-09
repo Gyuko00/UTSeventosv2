@@ -17,29 +17,50 @@ class AdminCreateEventService extends Service
         $this->gettersModel = new AdminEventGettersModel($db);
     }
 
-    public function createEvent(int $idUsuarioAdmin, array $eventData): array
+    public function createEvent(array $eventData): array
     {
-        if (strtotime($eventData['fecha']) < strtotime(date('Y-m-d'))) {
-            return ['status' => 'error', 'message' => 'No se puede crear un evento en una fecha pasada.'];
-        }
+        try {
+            // Validación robusta
+            $required = ['titulo_evento', 'fecha', 'lugar_detallado', 'id_usuario_creador'];
+            foreach ($required as $field) {
+                if (!isset($eventData[$field])) {
+                    throw new InvalidArgumentException("Falta el campo requerido: $field");
+                }
+            }
     
-        $conflictos = $this->gettersModel->findConflictingEvent($eventData['fecha'], $eventData['lugar_detallado']);
-        if (!empty($conflictos)) {
-            return ['status' => 'error', 'message' => 'Ya existe un evento programado en ese lugar y fecha.'];
-        }
+            // Verificación de conflicto segura
+            $conflicto = $this->gettersModel->findConflictingEvent(
+                $eventData['fecha'],
+                $eventData['lugar_detallado']
+            );
     
-        $result = $this->crudModel->createEvent($eventData);
-        if ($result['status'] === 'success') {
-            $detalle = "Evento creado correctamente en fecha {$eventData['fecha']} en {$eventData['lugar_detallado']}";
+            if ($conflicto !== null) {
+                throw new InvalidArgumentException('Ya existe un evento en esa fecha/lugar');
+            }
+    
+            // Creación con manejo de errores
+            $result = $this->crudModel->createEvent($eventData);
+
+            file_put_contents('debug_log3.txt', "Respuesta desde crudModel: " . print_r($result, true) . "\n", FILE_APPEND);
+            
+            if (($result['status'] ?? '') !== 'success') {
+                return $result;
+            }
+            
             $this->auditModel->log(
-                $idUsuarioAdmin,
+                (int)$eventData['id_usuario_creador'],
                 'CREAR',
                 'eventos',
-                $detalle
+                "Evento creado: " . substr($eventData['titulo_evento'], 0, 100)
             );
+            
+
+            return $result;
+    
+        } catch (InvalidArgumentException $e) {
+            return ['status' => 'error', 'message' => $e->getMessage()];
+        } catch (Exception $e) {
+            return ['status' => 'error', 'message' => 'Error interno'];
         }
-    
-        return $result;
     }
-    
 }

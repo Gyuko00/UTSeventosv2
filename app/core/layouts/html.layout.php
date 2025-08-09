@@ -3,7 +3,6 @@ html.layout.php
 Layout principal del sistema.
 Es el inicio de la plantilla, donde se encuentra el header y el footer.
 -->
-
 <!DOCTYPE html>
 <html lang="es">
 <head>

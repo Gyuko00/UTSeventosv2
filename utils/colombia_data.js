@@ -20,8 +20,8 @@
  */
 
 document.addEventListener("DOMContentLoaded", () => {
-  const departamentoSelect = document.getElementById("departamento");
-  const municipioSelect = document.getElementById("municipio");
+  const departamentoSelect = document.getElementById("departamento") || document.getElementById("departamento_evento");
+  const municipioSelect = document.getElementById("municipio") || document.getElementById("municipio_evento");
   
   const valorActualDepartamento = window.DEPARTAMENTO_SELECCIONADO || "";
   const valorActualMunicipio = window.MUNICIPIO_SELECCIONADO || "";
