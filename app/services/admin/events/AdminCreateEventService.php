@@ -40,8 +40,6 @@ class AdminCreateEventService extends Service
     
             // Creación con manejo de errores
             $result = $this->crudModel->createEvent($eventData);
-
-            file_put_contents('debug_log3.txt', "Respuesta desde crudModel: " . print_r($result, true) . "\n", FILE_APPEND);
             
             if (($result['status'] ?? '') !== 'success') {
                 return $result;

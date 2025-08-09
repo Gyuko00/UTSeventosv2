@@ -15,9 +15,6 @@ class EventCreateCRUDModel extends Model
 
     public function createEvent(array $eventData)
     {
-        file_put_contents('debug_log.txt',
-            'EventData recibido: ' . print_r($eventData, true) . "\n",
-            FILE_APPEND);
 
         try {
             if (!$this->validateEventData) {
@@ -42,7 +39,6 @@ class EventCreateCRUDModel extends Model
             $this->query($sql, $eventData);
 
             $db->commit();
-            file_put_contents('debug_log2.txt', "Se llegó al final del modelo\n", FILE_APPEND);
             return ['status' => 'success', 'message' => 'Evento creado exitosamente'];
         } catch (InvalidArgumentException $e) {
             return ['status' => 'error', 'message' => $e->getMessage()];
