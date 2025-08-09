@@ -36,11 +36,12 @@ UTS Eventos es una solución integral para la gestión de eventos académicos, f
 - Asegúrate de tener instalado **PHP**, **MySQL** y **Composer**.
 - Configura tu base de datos en el archivo **config/database.php**.
 
-3. **Instalar Dependencias:**
+3. **Instalar Dependencias e Iniciar Tailwind:**
 
    ```bash
    composer install
    npm install
+   npm run tailwind
 
 4. **Configurar el Servidor**
 
