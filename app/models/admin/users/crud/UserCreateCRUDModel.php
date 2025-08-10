@@ -38,8 +38,6 @@ class UserCreateCRUDModel extends Model
 
     public function createUser(array $personData, array $userData)
     {
-        error_log('userData: ' . print_r($userData, true));
-        error_log('personData: ' . print_r($personData, true));
 
         try {
             $this->validatePersonData->validate($personData);

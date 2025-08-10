@@ -88,10 +88,6 @@ export async function manejarSubmitFormulario(e) {
 
     const responseText = await response.text();
 
-    console.log("📨 Enviando datos:", data);
-    console.log("📥 Respuesta cruda del servidor:", responseText);
-    console.log("📋 Status HTTP:", response.status);
-
     if (responseText.trim().startsWith("<")) {
       Swal.fire({
         icon: "error",

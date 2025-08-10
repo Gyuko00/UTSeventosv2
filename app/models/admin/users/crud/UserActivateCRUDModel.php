@@ -44,7 +44,6 @@ class UserActivateCRUDModel extends Model
             if ($this->getDB()->inTransaction()) {
                 $this->getDB()->rollBack();
             }
-            error_log('Error en activateUser Model: ' . $e->getMessage());
             return ['status' => 'error', 'message' => $e->getMessage()];
         }
     }

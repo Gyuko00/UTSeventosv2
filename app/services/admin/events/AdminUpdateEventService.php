@@ -18,6 +18,7 @@ class AdminUpdateEventService extends Service {
 
     public function updateEvent(int $idUsuarioAdmin, int $id, array $eventData): array
     {
+        
         $existe = $this->gettersModel->getEventById($id);
         if ($existe['status'] !== 'success') {
             return ['status' => 'error', 'message' => 'El evento a actualizar no existe.'];

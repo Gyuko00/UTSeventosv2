@@ -109,7 +109,6 @@ class AdminUserService
     
             return $result;
         } catch (Exception $e) {
-            error_log("Error en activateUser Service: " . $e->getMessage());
             return ['status' => 'error', 'message' => $e->getMessage()];
         }
     }

@@ -30,7 +30,6 @@ class AuthService extends Service {
         $_SESSION['id_rol'] = $userData['id_rol'];
         $_SESSION['nombre'] = $userData['nombre'];
         
-        error_log("Sesión iniciada: " . json_encode($_SESSION));
     }
     
     public function logout() {

@@ -31,15 +31,14 @@ class AdminEventService
         return $this->createEventService->createEvent($eventData);
     }
 
-    public function updateEvent(int $id, array $eventData): array
+    public function updateEvent(int $idUsuarioAdmin ,int $id, array $eventData): array
     {
-        return $this->updateEventService->updateEvent($id, $eventData);
+        return $this->updateEventService->updateEvent($idUsuarioAdmin, $id, $eventData);
     }
 
-
-    public function deleteEvent(int $id): array
+    public function deleteEvent(int $idUsuarioAdmin, int $id): array
     {
-        return $this->deleteEventService->deleteEvent($id);
+        return $this->deleteEventService->deleteEvent($idUsuarioAdmin, $id);
     }
 
     public function getAllEvents(): array

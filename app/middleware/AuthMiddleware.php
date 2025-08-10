@@ -23,7 +23,6 @@ class AuthMiddleware {
             session_start();
         }
 
-        error_log("AuthMiddleware - Datos de sesión: " . json_encode($_SESSION ?? 'NULL'));
 
         if (
             empty($_SESSION['id_usuario']) ||
