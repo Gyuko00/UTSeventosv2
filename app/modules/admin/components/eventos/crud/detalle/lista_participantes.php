@@ -103,7 +103,6 @@
             </table>
         </div>
         
-        <!-- Resumen de participantes -->
         <div class="mt-4 flex items-center justify-between text-sm text-gray-500">
             <span>
                 Total de participantes: <strong><?= count($evento['participantes']) ?></strong>

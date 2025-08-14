@@ -85,6 +85,11 @@ class AdminController extends Controller
         $this->eventController->crearEvento();
     }
 
+    public function getOccupiedSlots()
+    {
+        $this->eventController->getOccupiedSlots();
+    }
+
     public function editarEvento(int $id)
     {
         $this->eventController->editarEvento($id);

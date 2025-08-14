@@ -20,16 +20,16 @@ UTS Eventos es una solución integral para la gestión de eventos académicos, f
 ## 🛠️ Tecnologías Utilizadas
 
 - **Backend:** PHP
-- **Frontend:** HTML, CSS, JavaScript
+- **Frontend:** HTML, CSS, JavaScript, Tailwind CSS
 - **Base de Datos:** MySQL
-- **Otras Herramientas:** Composer, npm
+- **Otras Herramientas:** Composer, npm, XAMPP
 
 ## 🚀 Instalación
 
 1. **Clonar el Repositorio:**
 
    ```bash
-   git clone https://github.com/tu-usuario/utseventos.git
+   git clone https://github.com/Gyuko00/UTSeventosv2.git
 
 2. **Configurar el Entorno:**
 
@@ -50,7 +50,7 @@ UTS Eventos es una solución integral para la gestión de eventos académicos, f
 
 5. **Iniciar la Aplicación:**
 
-- Abre tu navegador y navega a **http://localhost/utseventos**.
+- Abre tu navegador y navega a **http://localhost/utseventos/public/**.
 
 ## 🤝 Contribución
 

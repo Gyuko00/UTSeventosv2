@@ -11,14 +11,12 @@
   </div>
 
   <div class="space-y-6">
-    <!-- Usuario Creador (Hidden - mantiene el original) -->
     <input 
       type="hidden" 
       name="id_usuario_creador" 
       value="<?= $evento['id_usuario_creador'] ?>"
     >
 
-    <!-- Información del Creador (Solo informativa) -->
     <div class="bg-gray-50 border border-gray-200 rounded-lg p-4">
       <div class="flex items-center gap-3">
         <div class="bg-gray-100 p-2 rounded-lg">
@@ -34,7 +32,6 @@
       </div>
     </div>
 
-    <!-- Información adicional -->
     <div class="bg-lime-50 border border-lime-200 rounded-lg p-4">
       <div class="flex items-start gap-3">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-lime-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">

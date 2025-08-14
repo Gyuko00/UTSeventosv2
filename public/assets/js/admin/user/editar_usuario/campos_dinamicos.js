@@ -61,7 +61,6 @@ function manejarCambioRol(esCargaInicial = false) {
 
   if (!esCargaInicial) {
     limpiarCamposEspecificos();
-    console.log("🧹 Limpiando campos porque cambió el rol");
   }
 
   switch (rolValue) {
@@ -69,7 +68,6 @@ function manejarCambioRol(esCargaInicial = false) {
       if (camposPonente) {
         camposPonente.classList.remove("hidden");
       }
-      console.log("👨‍🏫 Mostrando campos de ponente");
       break;
       
     case "3": 
@@ -90,15 +88,12 @@ function manejarCambioRol(esCargaInicial = false) {
           }
         }
       }
-      console.log("👥 Mostrando campos de invitado");
       break;
       
     case "4": 
-      console.log("⚙️ Rol de control seleccionado - sin campos específicos");
       break;
       
     default:
-      console.log("❓ Rol desconocido o sin seleccionar");
       break;
   }
 }
@@ -204,7 +199,6 @@ function manejarCambioProgramaAcademico(isEditar = false) {
       const valorAEstablecer = valorDataset || valorActual;
       if (valorAEstablecer) {
         nombreCarreraSelect.value = valorAEstablecer;
-        console.log(`✅ Establecido nombre_carrera: ${valorAEstablecer}`);
       }
     }
   }

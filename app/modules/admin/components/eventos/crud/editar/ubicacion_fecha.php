@@ -12,7 +12,6 @@
   </div>
 
   <div class="space-y-6">
-    <!-- Fecha del Evento -->
     <div>
       <label for="fecha" class="block text-sm font-medium text-gray-700 mb-2">
         Fecha del Evento <span class="text-red-500">*</span>
@@ -29,7 +28,6 @@
       <p class="text-sm text-gray-500 mt-1">Selecciona la fecha cuando se realizará el evento</p>
     </div>
 
-    <!-- Ubicación Administrativa -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <div>
         <label for="departamento_evento" class="block text-sm font-medium text-gray-700 mb-2">
@@ -60,7 +58,6 @@
       </div>
     </div>
 
-    <!-- Detalles de Ubicación -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <div>
         <label for="institucion_evento" class="block text-sm font-medium text-gray-700 mb-2">
@@ -95,7 +92,6 @@
       </div>
     </div>
 
-    <!-- Información adicional de ubicación -->
     <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
       <div class="flex items-start gap-3">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">

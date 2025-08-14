@@ -21,12 +21,10 @@ export async function eliminarEvento(idEvento) {
       body: JSON.stringify(payload),
     });
 
-    // Obtener el texto crudo primero
     const responseText = await response.text();
     
     Swal.close();
 
-    // Intentar parsear JSON
     let resultado;
     try {
       resultado = JSON.parse(responseText);

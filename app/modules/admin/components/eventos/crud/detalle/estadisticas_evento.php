@@ -38,7 +38,6 @@
         </div>
     </div>
     
-    <!-- Barra de progreso de ocupación -->
     <div class="mt-6">
         <div class="flex justify-between items-center mb-2">
             <span class="text-sm font-medium text-gray-700">Ocupación del Evento</span>
@@ -56,7 +55,6 @@
         </p>
     </div>
     
-    <!-- Métricas adicionales -->
     <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
         <div class="border-l-4 border-blue-400 pl-4">
             <dt class="text-sm font-medium text-gray-500">Tasa de Asistencia</dt>

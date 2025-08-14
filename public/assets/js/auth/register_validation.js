@@ -64,7 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
       let result;
 
       try {
-        console.log("Respuesta del servidor:", text);
         result = JSON.parse(text);
       } catch {
         throw new Error("Respuesta no es JSON válida");

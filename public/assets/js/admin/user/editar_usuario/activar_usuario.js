@@ -10,12 +10,6 @@ async function manejarActivarUsuario(e) {
   const usuarioId = btn.getAttribute("data-usuario-id");
   const usuarioNombre = btn.getAttribute("data-usuario-nombre");
 
-  console.log("🟢 ID que se enviará:", usuarioId, "Nombre:", usuarioNombre);
-  console.log(
-    "🟢 URL final:",
-    `${window.URL_PATH}/admin/activarUsuario/${usuarioId}`
-  );
-
   if (!usuarioId) {
     Swal.fire({
       icon: "error",
@@ -54,7 +48,6 @@ async function manejarActivarUsuario(e) {
     );
 
     const raw = await response.text(); 
-    console.log("Respuesta del servidor:", raw); 
 
     if (!response.ok) {
       throw new Error(`Error HTTP: ${response.status}`);

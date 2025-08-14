@@ -106,7 +106,6 @@ export function limpiarCamposEspecificos() {
     }
   });
   
-  console.log("🧹 Todos los campos específicos han sido limpiados");
 }
 
 export function limpiarCamposInvitado() {
@@ -132,7 +131,6 @@ export function limpiarCamposInvitado() {
     }
   });
 
-  console.log("🧽 Campos de invitado limpiados");
 }
 
 export function limpiarCamposPonente() {
@@ -150,7 +148,6 @@ export function limpiarCamposPonente() {
     }
   });
 
-  console.log("🧽 Campos de ponente limpiados");
 }
 
 export function limpiarCamposInvitadoEspecificos() {
@@ -173,5 +170,4 @@ export function limpiarCamposInvitadoEspecificos() {
     }
   });
   
-  console.log("🧽 Campos específicos de tipo invitado limpiados");
 }

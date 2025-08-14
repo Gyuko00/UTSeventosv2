@@ -11,7 +11,6 @@
   </div>
 
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-    <!-- Título del Evento -->
     <div class="lg:col-span-2">
       <label for="titulo_evento" class="block text-sm font-medium text-gray-700 mb-2">
         Título del Evento <span class="text-red-500">*</span>
@@ -29,7 +28,6 @@
       <p class="text-sm text-gray-500 mt-1">Máximo 150 caracteres</p>
     </div>
 
-    <!-- Tema -->
     <div>
       <label for="tema" class="block text-sm font-medium text-gray-700 mb-2">
         Tema <span class="text-red-500">*</span>
@@ -47,7 +45,6 @@
       <p class="text-sm text-gray-500 mt-1">Máximo 100 caracteres</p>
     </div>
 
-    <!-- Cupo Máximo -->
     <div>
       <label for="cupo_maximo" class="block text-sm font-medium text-gray-700 mb-2">
         Cupo Máximo

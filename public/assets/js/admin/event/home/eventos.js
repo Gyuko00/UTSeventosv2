@@ -1,4 +1,4 @@
-// eventos.js (tu archivo principal)
+// eventos.js 
 import { configurarEventListeners, limpiarFiltros } from "./filtros.js";
 import {
   confirmarEliminacion,
@@ -13,5 +13,3 @@ document.addEventListener("DOMContentLoaded", () => {
 window.eliminarEvento = confirmarEliminacion;
 window.limpiarFiltros = limpiarFiltros;
 window.recargarEventos = recargarEventos;
-
-// Debug final

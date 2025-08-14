@@ -20,7 +20,6 @@ class AdminCreateEventService extends Service
     public function createEvent(array $eventData): array
     {
         try {
-            // Validación robusta
             $required = ['titulo_evento', 'fecha', 'lugar_detallado', 'id_usuario_creador'];
             foreach ($required as $field) {
                 if (!isset($eventData[$field])) {
@@ -28,7 +27,6 @@ class AdminCreateEventService extends Service
                 }
             }
     
-            // Verificación de conflicto segura
             $conflicto = $this->gettersModel->findConflictingEvent(
                 $eventData['fecha'],
                 $eventData['lugar_detallado']
@@ -38,7 +36,6 @@ class AdminCreateEventService extends Service
                 throw new InvalidArgumentException('Ya existe un evento en esa fecha/lugar');
             }
     
-            // Creación con manejo de errores
             $result = $this->crudModel->createEvent($eventData);
             
             if (($result['status'] ?? '') !== 'success') {

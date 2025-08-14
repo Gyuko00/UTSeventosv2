@@ -11,7 +11,6 @@
   </div>
 
   <div class="space-y-6">
-    <!-- Descripción -->
     <div>
       <label for="descripcion" class="block text-sm font-medium text-gray-700 mb-2">
         Descripción del Evento
@@ -26,7 +25,6 @@
       <p class="text-sm text-gray-500 mt-1">Proporciona información detallada que ayude a los participantes a entender de qué se trata el evento</p>
     </div>
 
-    <!-- Horarios -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <div>
         <label for="hora_inicio" class="block text-sm font-medium text-gray-700 mb-2">

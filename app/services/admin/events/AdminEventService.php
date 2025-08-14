@@ -2,7 +2,7 @@
 
 /**
  * AdminEventService: servicio para gestión de eventos desde el administrador.
- * 
+ *
  * Incluye lógica para validar dependencias antes de eliminar.
  */
 class AdminEventService
@@ -10,15 +10,14 @@ class AdminEventService
     private AdminEventGettersModel $gettersModel;
     private AdminEventGuestCRUDModel $guestEventModel;
     private AdminEventSpeakerCRUDModel $speakerEventModel;
-
     private AdminCreateEventService $createEventService;
     private AdminUpdateEventService $updateEventService;
     private AdminDeleteEventService $deleteEventService;
 
     public function __construct(PDO $db)
     {
-        $this->gettersModel     = new AdminEventGettersModel($db);
-        $this->guestEventModel  = new AdminEventGuestCRUDModel($db);
+        $this->gettersModel = new AdminEventGettersModel($db);
+        $this->guestEventModel = new AdminEventGuestCRUDModel($db);
         $this->speakerEventModel = new AdminEventSpeakerCRUDModel($db);
 
         $this->createEventService = new AdminCreateEventService($db);
@@ -26,12 +25,52 @@ class AdminEventService
         $this->deleteEventService = new AdminDeleteEventService($db);
     }
 
+    public function getOccupiedTimeSlots(string $fecha, string $lugar, int $excludeEventId = null): array
+    {
+        $result = $this->gettersModel->getOccupiedTimeSlots($fecha, $lugar, $excludeEventId);
+
+        if ($result['status'] !== 'success') {
+            return ['status' => 'error', 'message' => $result['message']];
+        }
+
+        $eventos = $result['data'];
+        $occupiedSlots = [];
+
+        foreach ($eventos as $evento) {
+            $slots = $this->generateSlotsFromTimeRange($evento['hora_inicio'], $evento['hora_fin']);
+            $occupiedSlots = array_merge($occupiedSlots, $slots);
+        }
+
+        $occupiedSlots = array_unique($occupiedSlots);
+        sort($occupiedSlots);
+
+        return [
+            'status' => 'success',
+            'occupied_slots' => $occupiedSlots,
+            'events_info' => $eventos
+        ];
+    }
+
+    private function generateSlotsFromTimeRange(string $horaInicio, string $horaFin): array
+    {
+        $slots = [];
+        $current = new DateTime('1970-01-01 ' . $horaInicio);
+        $end = new DateTime('1970-01-01 ' . $horaFin);
+
+        while ($current < $end) {
+            $slots[] = $current->format('H:i');
+            $current->add(new DateInterval('PT30M'));
+        }
+
+        return $slots;
+    }
+
     public function createEvent(array $eventData): array
     {
         return $this->createEventService->createEvent($eventData);
     }
 
-    public function updateEvent(int $idUsuarioAdmin ,int $id, array $eventData): array
+    public function updateEvent(int $idUsuarioAdmin, int $id, array $eventData): array
     {
         return $this->updateEventService->updateEvent($idUsuarioAdmin, $id, $eventData);
     }
@@ -50,20 +89,19 @@ class AdminEventService
     {
         return $this->gettersModel->getEventById($id);
     }
-    
+
     public function getEventSpeaker(int $eventoId): array
     {
         return $this->gettersModel->getEventSpeaker($eventoId);
     }
-    
+
     public function getEventStats(int $eventoId): array
     {
         return $this->gettersModel->getEventStats($eventoId);
     }
-    
+
     public function getEventParticipants(int $eventoId): array
     {
         return $this->gettersModel->getEventParticipants($eventoId);
     }
-
 }
