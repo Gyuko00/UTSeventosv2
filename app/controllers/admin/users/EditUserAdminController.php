@@ -1,6 +1,6 @@
 <?php
 
-class editarUsuarioAdminCrudController extends Controller
+class EditUserAdminController extends Controller
 {
     private AdminUserService $userService;
 

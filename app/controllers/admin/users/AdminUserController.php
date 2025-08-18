@@ -6,76 +6,45 @@
 class AdminUserController extends Controller
 {
     private AdminUserService $userService;
-    private listarUsuariosAdminCrudController $listarUsuarios;
-    private crearUsuarioAdminCrudController $crearUsuario;
-    private editarUsuarioAdminCrudController $editarUsuario;
-    private eliminarUsuarioAdminCrudController $eliminarUsuario;
+    private ListUsersAdminController $listarUsuarios;
+    private CreateUserAdminController $crearUsuario;
+    private EditUserAdminController $editarUsuario;
+    private DeleteUserAdminController $eliminarUsuario;
+    private ActivateUserAdminController $activarUsuario;
+    private UserDetailAdminController $detalleUsuario;
 
     public function __construct(PDO $db)
     {
         parent::__construct($db);
         $this->userService = new AdminUserService($db);
-        $this->listarUsuarios = new listarUsuariosAdminCrudController($db);
-        $this->crearUsuario = new crearUsuarioAdminCrudController($db);
-        $this->editarUsuario = new editarUsuarioAdminCrudController($db);
-        $this->eliminarUsuario = new eliminarUsuarioAdminCrudController($db);
+        $this->listarUsuarios = new ListUsersAdminController ($db);
+        $this->crearUsuario = new CreateUserAdminController($db);
+        $this->editarUsuario = new EditUserAdminController($db);
+        $this->eliminarUsuario = new DeleteUserAdminController($db);
+        $this->activarUsuario = new ActivateUserAdminController($db);
+        $this->detalleUsuario = new UserDetailAdminController($db);
     }
 
     public function listarUsuarios()
     {
         $this->verificarAccesoConRoles([1]);
-        $this->listarUsuarios->listarUsuarios();
+
+        return $this->listarUsuarios->listarUsuarios();
     }
 
     public function detalleUsuario(int $id)
     {
         $this->verificarAccesoConRoles([1]);
-    
-        $usuario = $this->userService->getUserById($id);
-        if ($usuario['status'] !== 'success') {
-            $_SESSION['error_message'] = $usuario['message'];
-            $this->redirect('admin/listarUsuarios');
-        }
-    
-        $datos = $usuario['data'];
-    
-        if ((int)$datos['id_rol'] === 3) {
-            $invitado = $this->userService->getGuestByPersonId($datos['id_persona']);
-            if ($invitado['status'] === 'success') {
-                $datos = array_merge($datos, $invitado['data']);
-            }
-        }
-    
-        if ((int)$datos['id_rol'] === 2) {
-            $ponente = $this->userService->getSpeakerByPersonId($datos['id_persona']);
-            if ($ponente['status'] === 'success') {
-                $datos = array_merge($datos, $ponente['data']);
-            }
-        }
-    
-        $this->view('admin/detalle_usuario', ['usuario' => $datos], 'admin');
+
+        return $this->detalleUsuario->detalleUsuario($id);
     }
 
     public function activarUsuario(int $id)
     {
         $this->verificarAccesoConRoles([1]);
-    
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            ob_clean(); 
-    
-            $result = $this->userService->activateUser($_SESSION['id_usuario'], $id);
-    
-            header('Content-Type: application/json; charset=utf-8');
-            echo json_encode($result);
-            exit;
-        }
-    
-        http_response_code(405);
-        header('Content-Type: application/json; charset=utf-8');
-        echo json_encode(['status' => 'error', 'message' => 'Método no permitido']);
-        exit;
+
+        return $this->activarUsuario->activarUsuario($id);
     }
-    
 
     public function crearUsuario()
     {
@@ -88,13 +57,13 @@ class AdminUserController extends Controller
     {
         $this->verificarAccesoConRoles([1]);
 
-        $this->editarUsuario->editarUsuario($id);
+        return $this->editarUsuario->editarUsuario($id);
     }
 
     public function eliminarUsuario($id = null)
     {
         $this->verificarAccesoConRoles([1]);
 
-        $this->eliminarUsuario->eliminarUsuario($id);
+        return $this->eliminarUsuario->eliminarUsuario($id);
     }
 }

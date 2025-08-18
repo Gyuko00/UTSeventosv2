@@ -19,7 +19,7 @@ class AdminEventSpeakerController extends Controller
         $this->verificarAccesoConRoles([1]);
 
         $ponentes = $this->speakerService->listAllSpeakers();
-        $this->view('admin/listar_ponentes', ['ponentes' => $ponentes['data'] ?? []], 'admin');
+        $this->view('admin/ponentes_evento', ['ponentes' => $ponentes['data'] ?? []], 'admin');
     }
 
     public function detallePonente(int $id)

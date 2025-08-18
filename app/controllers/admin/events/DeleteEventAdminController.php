@@ -1,6 +1,6 @@
 <?php
 
-class eliminarEventoAdminCrudController extends Controller
+class DeleteEventAdminController extends Controller
 {
     private AdminEventService $eventService;
 

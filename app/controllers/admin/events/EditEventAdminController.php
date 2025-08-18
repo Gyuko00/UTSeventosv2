@@ -1,6 +1,6 @@
 <?php
 
-class editarEventoAdminCrudController extends Controller {
+class EditEventAdminController extends Controller {
 
     private AdminEventService $eventService;
 

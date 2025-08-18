@@ -104,4 +104,56 @@ class AdminEventService
     {
         return $this->gettersModel->getEventParticipants($eventoId);
     }
+
+    public function getEventInvitees(int $eventoId): array
+    {
+        try {
+            $result = $this->gettersModel->getEventInvitees($eventoId);
+            return $result;
+        } catch (Exception $e) {
+            throw $e;
+        }
+    }
+
+    public function getEventInviteesStats(int $eventoId): array
+    {
+
+        try {
+            $result = $this->gettersModel->getEventInviteesStats($eventoId);
+            return $result;
+        } catch (Exception $e) {
+            throw $e;
+        }
+    }
+
+    public function getEventCompleteStats(int $eventoId): array
+    {
+        try {
+            // Obtener estadísticas existentes de ponentes
+            $ponentesStats = $this->getEventStats($eventoId);
+
+            // Obtener estadísticas de invitados
+            $invitadosStats = $this->getEventInviteesStats($eventoId);
+
+            if ($ponentesStats['status'] !== 'success' || $invitadosStats['status'] !== 'success') {
+                return [
+                    'status' => 'error',
+                    'message' => 'Error al obtener estadísticas completas del evento'
+                ];
+            }
+
+            return [
+                'status' => 'success',
+                'data' => [
+                    'ponentes' => $ponentesStats['data'],
+                    'invitados' => $invitadosStats['data']
+                ]
+            ];
+        } catch (Exception $e) {
+            return [
+                'status' => 'error',
+                'message' => 'Error al obtener estadísticas completas: ' . $e->getMessage()
+            ];
+        }
+    }
 }

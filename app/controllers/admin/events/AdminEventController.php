@@ -5,18 +5,24 @@
  */
 class AdminEventController extends Controller
 {
-    protected crearEventoAdminCrudController $crearEventoController;
-    protected editarEventoAdminCrudController $editarEventoController;
-    protected eliminarEventoAdminCrudController $eliminarEventoController;
+    protected CreateEventAdminController $crearEvento;
+    protected EditEventAdminController $editarEvento;
+    protected DeleteEventAdminController $eliminarEvento;
+    protected EventDetailAdminController $detalleEvento;
+    protected CheckOccupiedSlotsAdminController $verificarFranjaOcupada;
     protected AdminEventService $eventService;
     protected AdminUserService $userService;
 
     public function __construct(PDO $db)
     {
         parent::__construct($db);
-        $this->crearEventoController = new crearEventoAdminCrudController($db);
-        $this->editarEventoController = new editarEventoAdminCrudController($db);
-        $this->eliminarEventoController = new eliminarEventoAdminCrudController($db);
+        $this->crearEvento = new CreateEventAdminController($db);
+        $this->editarEvento = new EditEventAdminController($db);
+        $this->eliminarEvento = new DeleteEventAdminController($db);
+
+        $this->detalleEvento = new EventDetailAdminController($db);
+        $this->verificarFranjaOcupada = new CheckOccupiedSlotsAdminController($db);
+
         $this->eventService = new AdminEventService($db);
         $this->userService = new AdminUserService($db);
     }
@@ -33,102 +39,34 @@ class AdminEventController extends Controller
     {
         $this->verificarAccesoConRoles([1]);
 
-        $evento = $this->eventService->getEventById($id);
-        if ($evento['status'] !== 'success') {
-            $_SESSION['error_message'] = $evento['message'];
-            $this->redirect('admin/listarEventos');
-        }
-
-        $datos = $evento['data'];
-
-        $creador = $this->userService->getUserById($datos['id_usuario_creador']);
-        if ($creador['status'] === 'success') {
-            $datos['creador'] = $creador['data'];
-        }
-
-        $ponente = $this->eventService->getEventSpeaker($id);
-        if ($ponente['status'] === 'success') {
-            $datos['ponente'] = $ponente['data'];
-        }
-
-        $estadisticas = $this->eventService->getEventStats($id);
-        if ($estadisticas['status'] === 'success') {
-            $datos['estadisticas'] = $estadisticas['data'];
-        }
-
-        $participantes = $this->eventService->getEventParticipants($id);
-        if ($participantes['status'] === 'success') {
-            $datos['participantes'] = $participantes['data'];
-        }
-
-        $this->view('admin/detalle_evento', ['evento' => $datos], 'admin');
+        return $this->detalleEvento->detalleEvento($id);
     }
 
     public function getOccupiedSlots()
     {
-        if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-            http_response_code(405);
-            header('Content-Type: application/json');
-            echo json_encode(['status' => 'error', 'message' => 'Método no permitido']);
-            return;
-        }
+        $this->verificarAccesoConRoles([1]);
 
-        $input = json_decode(file_get_contents('php://input'), true);
-
-        if (!$input) {
-            http_response_code(400);
-            header('Content-Type: application/json');
-            echo json_encode(['status' => 'error', 'message' => 'Datos inválidos']);
-            return;
-        }
-
-        $fecha = $input['fecha'] ?? '';
-        $lugar = $input['lugar'] ?? '';
-        $excludeEventId = isset($input['exclude_event_id']) ? (int) $input['exclude_event_id'] : null;
-
-        if (empty($fecha) || empty($lugar)) {
-            http_response_code(400);
-            header('Content-Type: application/json');
-            echo json_encode([
-                'status' => 'error',
-                'message' => 'Fecha y lugar son requeridos'
-            ]);
-            return;
-        }
-
-        try {
-            $result = $this->eventService->getOccupiedTimeSlots($fecha, $lugar, $excludeEventId);
-
-            header('Content-Type: application/json');
-            echo json_encode($result);
-        } catch (Exception $e) {
-            http_response_code(500);
-            header('Content-Type: application/json');
-            echo json_encode([
-                'status' => 'error',
-                'message' => 'Error interno del servidor'
-            ]);
-        }
+        return $this->verificarFranjaOcupada->getOccupiedSlots();
     }
 
     public function crearEvento()
     {
         $this->verificarAccesoConRoles([1]);
 
-        $this->crearEventoController->crearEvento();
+        $this->crearEvento->crearEvento();
     }
 
     public function editarEvento(int $id)
     {
         $this->verificarAccesoConRoles([1]);
 
-        return $this->editarEventoController->editarEvento($id);
+        return $this->editarEvento->editarEvento($id);
     }
 
     public function eliminarEvento(int $id)
     {
         $this->verificarAccesoConRoles([1]);
 
-        return $this->eliminarEventoController->eliminarEvento($id);
+        return $this->eliminarEvento->eliminarEvento($id);
     }
 }

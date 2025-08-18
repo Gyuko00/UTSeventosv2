@@ -20,6 +20,7 @@
         <a href="<?= URL_PATH ?>/admin/home" class="text-white font-medium hover:text-lime-100 transition">Inicio</a>
         <a href="<?= URL_PATH ?>/admin/listarUsuarios" class="text-white font-medium hover:text-lime-100 transition">Gestionar Usuarios</a>
         <a href="<?= URL_PATH ?>/admin/listarEventos" class="text-white font-medium hover:text-lime-100 transition">Gestionar Eventos</a>
+        <a href="<?= URL_PATH ?>/admin/listarPonentes" class="text-white font-medium hover:text-lime-100 transition">Gestionar Ponentes</a>
         <a href="<?= URL_PATH ?>/admin/cerrarSesion" class="text-red-200 font-medium hover:text-red-100 transition">Cerrar sesión</a>
       </nav>
 

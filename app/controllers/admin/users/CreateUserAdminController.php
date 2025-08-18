@@ -1,6 +1,6 @@
 <?php
 
-class crearUsuarioAdminCrudController extends Controller
+class CreateUserAdminController extends Controller
 {
     private AdminUserService $userService;
 

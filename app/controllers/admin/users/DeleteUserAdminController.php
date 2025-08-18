@@ -1,6 +1,6 @@
 <?php
 
-class eliminarUsuarioAdminCrudController extends Controller
+class DeleteUserAdminController extends Controller
 {
     private AdminUserService $userService;
 

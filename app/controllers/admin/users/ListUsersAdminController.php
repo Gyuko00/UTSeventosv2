@@ -1,6 +1,6 @@
 <?php
 
-class listarUsuariosAdminCrudController extends Controller
+class ListUsersAdminController extends Controller
 {
     private AdminUserService $userService;
 

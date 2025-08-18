@@ -8,25 +8,10 @@
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
       </svg>
     </div>
-    <h2 class="text-xl font-semibold text-gray-800">Ubicación y Fecha</h2>
+    <h2 class="text-xl font-semibold text-gray-800">Ubicación</h2>
   </div>
 
   <div class="space-y-6">
-    <div>
-      <label for="fecha" class="block text-sm font-medium text-gray-700 mb-2">
-        Fecha del Evento <span class="text-red-500">*</span>
-      </label>
-      <input
-        type="date"
-        id="fecha"
-        name="event[fecha]"
-        required
-        min="<?= date('Y-m-d') ?>"
-        class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-lime-500 focus:border-transparent transition-all duration-200"
-        value="<?= htmlspecialchars($evento['fecha'] ?? '') ?>"
-      >
-      <p class="text-sm text-gray-500 mt-1">Selecciona la fecha cuando se realizará el evento</p>
-    </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <div>

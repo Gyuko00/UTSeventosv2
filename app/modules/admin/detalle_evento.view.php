@@ -22,5 +22,6 @@
     <?php include_once __DIR__ . '\components\eventos\crud\detalle\lista_participantes.php'; ?>
     <?php endif; ?>
     
-    <?php // include_once __DIR__ . '\components\eventos\crud\detalle\botones_accion.php'; ?>
+    <?php include_once __DIR__ . '\components\eventos\crud\detalle\boton_reporte.php'; ?>
+    
 </div>
