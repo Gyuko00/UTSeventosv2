@@ -12,4 +12,7 @@
     <?php include_once __DIR__ . '\components\eventos\home\tabla.php'; ?>
 </div>
 
+<script>
+  const URL_PATH = "<?= URL_PATH ?>";
+</script>
 <script type="module" src="<?= URL_PATH ?>/assets/js/admin/event/home/eventos.js"></script>

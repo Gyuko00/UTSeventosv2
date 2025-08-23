@@ -13,7 +13,7 @@
   <div class="space-y-6">
     <input 
       type="hidden" 
-      name="id_usuario_creador" 
+      name="event[id_usuario_creador]" 
       value="<?= $_SESSION['id_usuario'] ?? 1 ?>"
     >
 

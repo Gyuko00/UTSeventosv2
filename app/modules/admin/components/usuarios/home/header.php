@@ -4,7 +4,6 @@
 
 <div class="bg-gradient-to-r from-lime-600 to-lime-700 rounded-xl shadow-lg p-8 text-white">
     <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
-        <!-- Información principal -->
         <div class="flex-1">
             <div class="flex items-center gap-3 mb-4">
                 <div class="bg-white/20 backdrop-blur-sm rounded-lg p-3">
@@ -54,7 +53,6 @@
             </div>
         </div>
 
-        <!-- Botón de acción principal -->
         <div class="flex-shrink-0">
             <a href="<?= URL_PATH ?>/admin/crearUsuario" 
                class="inline-flex items-center gap-3 bg-white text-lime-700 hover:bg-lime-50 font-semibold py-3 px-6 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">

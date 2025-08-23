@@ -1,8 +1,6 @@
 // filtros.config.js
-// Config y utilidades ligeras para el módulo de filtros
 
 export const SELECTORS = {
-  // Inputs de filtros
   buscar: "buscarEvento",
   fecha: "filtroFecha",
   institucion: "filtroInstitucion",
@@ -12,15 +10,12 @@ export const SELECTORS = {
   capacidad: "filtroCapacidad",
   horario: "filtroHorario",
 
-  // Tabla y contador
   tabla: "tablaEventos",
   contador: "contadorResultados",
 
-  // Navegación
   btnCalendario: "vistaCalendario",
 };
 
-// Rangos de capacidad (inclusive) para el filtro
 export const CAP_RANGOS = {
   pequeno: { min: 0, max: 50 },
   mediano: { min: 51, max: 150 },
@@ -28,7 +23,6 @@ export const CAP_RANGOS = {
   masivo: { min: 500, max: Infinity },
 };
 
-// Obtiene la base URL del sistema si se inyectó en la vista
 export function getUrlPath() {
   const base =
     typeof window !== "undefined" && typeof window.URL_PATH === "string"

@@ -70,12 +70,12 @@ class AdminUserService
 
     public function getAllSpeakers(): array
     {
-        return $this->speakerModel->getAllSpeakers();
+        return $this->speakerGettersModel->getAllSpeakers();
     }
 
     public function getSpeakerById(int $id): array
     {
-        return $this->speakerModel->getSpeakerById($id);
+        return $this->speakerGettersModel->getSpeakerById($id);
     }
 
     public function getGuestByPersonId(int $idPersona): array

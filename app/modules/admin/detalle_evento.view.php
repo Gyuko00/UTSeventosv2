@@ -24,4 +24,6 @@
     
     <?php include_once __DIR__ . '\components\eventos\crud\detalle\boton_reporte.php'; ?>
     
+    <?php include_once __DIR__ . '\components\eventos\crud\detalle\botones_accion.php'; ?>
+    
 </div>

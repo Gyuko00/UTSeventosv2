@@ -14,7 +14,6 @@ export async function recargarUsuarios() {
       window.location.reload();
     }
   } catch (error) {
-    console.error("Error al recargar usuarios:", error);
     window.location.reload();
   }
 }

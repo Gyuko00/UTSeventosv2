@@ -3,7 +3,7 @@
 /**
  * AdminController: controlador para gestión de eventos desde el administrador.
  */
- 
+
 use \Dompdf\Dompdf;
 use \Dompdf\Options;
 
@@ -15,7 +15,6 @@ class AdminController extends Controller
     private AdminEventSpeakerController $eventSpeakerController;
     private AdminEventReportService $eventReportService;
     private AdminGlobalReportService $globalReportService;
-
     private AdminEventService $eventService;
 
     public function __construct(PDO $db)
@@ -35,9 +34,11 @@ class AdminController extends Controller
     {
         $this->verificarAccesoConRoles([1]);
 
-        $data = [];
+        $eventos = $this->eventService->getAllEvents(); 
 
-        $this->view('admin/home', $data, 'admin');
+        $this->view('admin/home', [
+            'eventos' => $eventos['data'] ?? []
+        ], 'admin');
     }
 
     public function cerrarSesion()
@@ -137,9 +138,9 @@ class AdminController extends Controller
         $this->eventSpeakerController->listarPonentes();
     }
 
-    public function detallePonente(int $id)
+    public function detallePonenteEvento(int $id)
     {
-        $this->eventSpeakerController->detallePonente($id);
+        $this->eventSpeakerController->detallePonenteEvento($id);
     }
 
     public function asignarPonente()
@@ -170,7 +171,6 @@ class AdminController extends Controller
         $service = new AdminGlobalReportService($this->db);
         $service->generateGlobalReport();
     }
-
 
     public function report($eventoId = null)
     {
@@ -219,10 +219,9 @@ class AdminController extends Controller
             $fecha = $invitados[0]['fecha'];
 
             $this->generateAndDownloadPDF($evento, $fecha, $invitados, $stats);
-            
         } catch (Exception $e) {
             error_log('Error en reporte PDF: ' . $e->getMessage());
-            
+
             header('Content-Type: application/json');
             echo json_encode([
                 'success' => false,
@@ -404,7 +403,6 @@ class AdminController extends Controller
             <div class='section-title'>📊 Análisis por Categorías</div>
             <div class='charts-grid'>";
 
-        // Chart de carreras
         $html .= "<div class='chart-box'>
                 <div class='chart-title'>👨‍🎓 Distribución por Carrera</div>";
         foreach ($stats['stats_carreras'] as $carrera => $cantidad) {
@@ -416,7 +414,6 @@ class AdminController extends Controller
         }
         $html .= '</div>';
 
-        // Chart de programas
         $html .= "<div class='chart-box'>
                 <div class='chart-title'>🎓 Distribución por Programa</div>";
         foreach ($stats['stats_programas'] as $programa => $cantidad) {
@@ -430,11 +427,9 @@ class AdminController extends Controller
 
         $html .= '</div></div>';
 
-        // Segunda fila de charts
         $html .= "<div class='section'>
                 <div class='charts-grid'>";
 
-        // Chart de facultades
         $html .= "<div class='chart-box'>
                 <div class='chart-title'>🏛️ Distribución por Facultad</div>";
         foreach ($stats['stats_facultades'] as $facultad => $cantidad) {
@@ -446,7 +441,6 @@ class AdminController extends Controller
         }
         $html .= '</div>';
 
-        // Chart de asistencia
         $html .= "<div class='chart-box'>
                 <div class='chart-title'>✅ Estado de Asistencia</div>";
         foreach ($stats['stats_asistencia'] as $estado => $cantidad) {
@@ -465,7 +459,6 @@ class AdminController extends Controller
 
         $html .= '</div></div>';
 
-        // Tabla de invitados
         $html .= "<div class='section page-break'>
                 <div class='section-title'>📋 Listado Detallado de Invitados</div>
                 <table>
@@ -521,16 +514,10 @@ class AdminController extends Controller
         return $html;
     }
 
-
-    /**
-     * Genera y descarga el PDF
-     */
     public function generateAndDownloadPDF(string $evento, string $fecha, array $invitados, array $stats): void
     {
-
         $html = $this->generateReportHTML($evento, $fecha, $invitados, $stats);
 
-        // Configurar DomPDF
         $options = new Options();
         $options->set('isHtml5ParserEnabled', true);
         $options->set('isRemoteEnabled', true);
@@ -541,22 +528,22 @@ class AdminController extends Controller
         $dompdf->setPaper('A4', 'portrait');
         $dompdf->render();
 
-        // Nombre del archivo
         $fileName = 'Reporte_Invitados_' . preg_replace('/[^A-Za-z0-9\-_]/', '_', $evento) . '_' . date('Y-m-d') . '.pdf';
 
-        // Descargar PDF
         $dompdf->stream($fileName, ['Attachment' => true]);
         exit;
     }
 
-    /**
-     * Envía respuesta de error en JSON
-     */
     private function sendJsonError(string $message): void
     {
         http_response_code(400);
         header('Content-Type: application/json');
         echo json_encode(['success' => false, 'message' => $message]);
         exit;
+    }
+
+    public function getPonentesAsignados()
+    {
+        return $this->speakerService->getPonentesAsignados();
     }
 }

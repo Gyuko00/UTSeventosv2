@@ -59,7 +59,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
             
-            // Mostrar confirmación antes de generar
             Swal.fire({
                 title: '📊 Generar Reporte PDF',
                 text: '¿Deseas generar el reporte completo de invitados para este evento?',
@@ -72,15 +71,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 showLoaderOnConfirm: true,
                 preConfirm: () => {
                     return new Promise((resolve, reject) => {
-                        // Mostrar estado de carga en el botón
                         btnGenerar.disabled = true;
                         btnText.textContent = 'Generando...';
                         loadingSpinner.classList.remove('hidden');
                         
-                        // Crear URL del reporte usando el router
                         const reportUrl = URL_PATH + `/admin/report/${eventoId}`;
                         
-                        // Usar fetch para poder manejar tanto PDF como JSON
                         fetch(reportUrl, {
                             method: 'GET',
                             headers: {
@@ -90,7 +86,6 @@ document.addEventListener('DOMContentLoaded', function() {
                         .then(response => {
                             const contentType = response.headers.get('content-type');
                             
-                            // Si es PDF, descargar directamente
                             if (contentType && contentType.includes('application/pdf')) {
                                 return response.blob().then(blob => {
                                     const url = window.URL.createObjectURL(blob);
@@ -104,23 +99,19 @@ document.addEventListener('DOMContentLoaded', function() {
                                     resolve({ success: true, type: 'pdf' });
                                 });
                             }
-                            // Si es JSON, procesamos la respuesta
                             else if (contentType && contentType.includes('application/json')) {
                                 return response.json().then(data => {
                                     resolve({ success: data.success, data: data, type: 'json' });
                                 });
                             }
-                            // Respuesta inesperada
                             else {
                                 reject(new Error('Tipo de respuesta inesperado'));
                             }
                         })
                         .catch(error => {
-                            console.error('Error en fetch:', error);
                             reject(error);
                         })
                         .finally(() => {
-                            // Restaurar botón
                             setTimeout(() => {
                                 btnGenerar.disabled = false;
                                 btnText.textContent = 'Generar PDF';
@@ -134,7 +125,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (result.isConfirmed && result.value) {
                     const response = result.value;
                     
-                    // Si fue exitoso y es PDF
                     if (response.success && response.type === 'pdf') {
                         Swal.fire({
                             icon: 'success',
@@ -145,11 +135,9 @@ document.addEventListener('DOMContentLoaded', function() {
                             timerProgressBar: true
                         });
                     }
-                    // Si es respuesta JSON (error o warning)
                     else if (response.type === 'json') {
                         const data = response.data;
                         
-                        // Verificar si debe mostrar SweetAlert especial
                         if (data.show_sweetalert || data.show_alert) {
                             Swal.fire({
                                 icon: data.alert_type || 'warning',
@@ -159,7 +147,6 @@ document.addEventListener('DOMContentLoaded', function() {
                                 confirmButtonColor: data.alert_type === 'error' ? '#dc2626' : '#f59e0b'
                             });
                         } else {
-                            // Error normal
                             Swal.fire({
                                 icon: 'error',
                                 title: 'Error',
@@ -170,9 +157,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 }
             }).catch((error) => {
-                console.error('Error al generar reporte:', error);
                 
-                // Restaurar botón en caso de error
                 btnGenerar.disabled = false;
                 btnText.textContent = 'Generar PDF';
                 loadingSpinner.classList.add('hidden');

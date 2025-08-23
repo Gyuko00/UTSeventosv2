@@ -27,10 +27,9 @@ function setupFilters() {
 function setupNavigation() {
   const btnCal = el(SELECTORS.btnCalendario);
   if (!btnCal) return;
+
   btnCal.addEventListener('click', () => {
-    const base = getUrlPath();
-    const url = (base ? base : '') + '/admin/eventos/calendario';
-    window.location.href = url;
+    window.location.href = `${URL_PATH}/admin/home`;
   });
 }
 

@@ -61,3 +61,7 @@
     </table>
   </div>
 </div>
+
+<script>
+    const URL_PATH = "<?= URL_PATH ?>";
+</script>

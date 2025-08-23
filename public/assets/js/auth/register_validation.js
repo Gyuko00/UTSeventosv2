@@ -87,7 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
     } catch (err) {
-      console.error("Error en fetch:", err);
       Swal.fire({
         icon: "error",
         title: "Error de red",

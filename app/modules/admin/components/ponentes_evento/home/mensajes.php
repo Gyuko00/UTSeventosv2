@@ -2,7 +2,6 @@
 // app/modules/admin/components/ponentes_evento/home/mensajes.php 
 ?>
 
-<!-- Mensaje de éxito -->
 <?php if (isset($_GET['success'])): ?>
     <div id="mensajeExito" class="bg-green-50 border border-green-200 rounded-lg p-4 flex items-center gap-3 animate-fade-in">
         <div class="bg-green-100 rounded-full p-2">
@@ -41,7 +40,6 @@
     </div>
 <?php endif; ?>
 
-<!-- Mensaje de error -->
 <?php if (isset($_GET['error'])): ?>
     <div id="mensajeError" class="bg-red-50 border border-red-200 rounded-lg p-4 flex items-center gap-3 animate-fade-in">
         <div class="bg-red-100 rounded-full p-2">
@@ -83,7 +81,6 @@
     </div>
 <?php endif; ?>
 
-<!-- Mensaje informativo -->
 <?php if (isset($_GET['info'])): ?>
     <div id="mensajeInfo" class="bg-blue-50 border border-blue-200 rounded-lg p-4 flex items-center gap-3 animate-fade-in">
         <div class="bg-blue-100 rounded-full p-2">
@@ -124,7 +121,6 @@ function cerrarMensaje(idMensaje) {
         mensaje.style.transform = 'translateY(-10px)';
         setTimeout(() => {
             mensaje.remove();
-            // Limpiar URL de parámetros de mensaje
             const url = new URL(window.location);
             url.searchParams.delete('success');
             url.searchParams.delete('error');
@@ -134,7 +130,6 @@ function cerrarMensaje(idMensaje) {
     }
 }
 
-// Auto-cerrar mensajes después de 8 segundos
 document.addEventListener('DOMContentLoaded', function() {
     const mensajes = ['mensajeExito', 'mensajeError', 'mensajeInfo'];
     mensajes.forEach(id => {

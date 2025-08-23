@@ -89,18 +89,28 @@ class AdminEventGuestController extends Controller
         $this->view('admin/editar_asignacion_invitado', ['invitado' => $invitado['data']], 'admin');
     }
 
-    public function eliminarAsignacionInvitado(int $id)
+    public function eliminarAsignacionPonente(int $id) 
     {
         $this->verificarAccesoConRoles([1]);
-
-        $result = $this->eventGuestService->removeGuestFromEvent($_SESSION['id_usuario'], $id);
-
+    
+        $result = $this->eventSpeakerService->deleteSpeakerEvent($_SESSION['id_usuario'], $id);
+    
+        $isAjax = isset($_SERVER['HTTP_X_REQUESTED_WITH']) 
+                  && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest';
+    
+        if ($isAjax) {
+            header('Content-Type: application/json');
+            echo json_encode($result);
+            return;
+        }
+    
         if ($result['status'] === 'success') {
             $_SESSION['success_message'] = 'Asignación eliminada correctamente';
         } else {
-            $_SESSION['error_message'] = $result['message'];
+            $_SESSION['error_message'] = $result['message'] ?? 'Error al eliminar asignación';
         }
-
-        $this->redirect('admin/listar_invitados');
+    
+        $this->redirect('/admin/listarPonentes');
     }
+    
 }

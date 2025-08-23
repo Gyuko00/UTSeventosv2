@@ -15,7 +15,6 @@ export async function recargarEventos() {
       window.location.reload();
     }
   } catch (error) {
-    console.error("Error al recargar eventos:", error);
     window.location.reload();
   }
 }

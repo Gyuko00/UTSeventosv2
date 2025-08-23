@@ -57,7 +57,6 @@ async function manejarActivarUsuario(e) {
     try {
       result = JSON.parse(raw); 
     } catch (e) {
-      console.error("Error al parsear JSON:", e);
       throw new Error("La respuesta no es un JSON válido");
     }
 
@@ -73,7 +72,6 @@ async function manejarActivarUsuario(e) {
       throw new Error(result.message || "Error desconocido");
     }
   } catch (error) {
-    console.error("Error al activar usuario:", error);
 
     Swal.fire({
       icon: "error",

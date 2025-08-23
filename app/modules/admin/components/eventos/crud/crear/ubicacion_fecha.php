@@ -8,25 +8,10 @@
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
       </svg>
     </div>
-    <h2 class="text-xl font-semibold text-gray-800">Ubicación y Fecha</h2>
+    <h2 class="text-xl font-semibold text-gray-800">Ubicación</h2>
   </div>
 
   <div class="space-y-6">
-    <div>
-      <label for="fecha" class="block text-sm font-medium text-gray-700 mb-2">
-        Fecha del Evento <span class="text-red-500">*</span>
-      </label>
-      <input
-        type="date"
-        id="fecha"
-        name="fecha"
-        required
-        min="<?= date('Y-m-d') ?>"
-        class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-lime-500 focus:border-transparent transition-all duration-200"
-        value="<?= isset($_POST['fecha']) ? htmlspecialchars($_POST['fecha']) : '' ?>"
-      >
-      <p class="text-sm text-gray-500 mt-1">Selecciona la fecha cuando se realizará el evento</p>
-    </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <div>
@@ -64,27 +49,12 @@
         <input
           type="text"
           id="institucion_evento"
-          name="institucion_evento"
+          name="
+          event[institucion_evento]"
           maxlength="100"
           class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-lime-500 focus:border-transparent transition-all duration-200"
           placeholder="Nombre de la institución organizadora"
           value="<?= isset($_POST['institucion_evento']) ? htmlspecialchars($_POST['institucion_evento']) : '' ?>"
-        >
-        <p class="text-sm text-gray-500 mt-1">Máximo 100 caracteres</p>
-      </div>
-
-      <div>
-        <label for="lugar_detallado" class="block text-sm font-medium text-gray-700 mb-2">
-          Lugar Detallado
-        </label>
-        <input
-          type="text"
-          id="lugar_detallado"
-          name="lugar_detallado"
-          maxlength="100"
-          class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-lime-500 focus:border-transparent transition-all duration-200"
-          placeholder="Dirección, salón, auditorio, etc."
-          value="<?= isset($_POST['lugar_detallado']) ? htmlspecialchars($_POST['lugar_detallado']) : '' ?>"
         >
         <p class="text-sm text-gray-500 mt-1">Máximo 100 caracteres</p>
       </div>

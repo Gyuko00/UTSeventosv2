@@ -10,7 +10,6 @@ export function renderTimeline() {
   const timeSlots = getTimeSlots();
   const container = el(SELECTORS.timeline);
   if (!container) {
-    console.error("Container timeline-container no encontrado");
     return;
   }
 
@@ -37,11 +36,10 @@ export function renderTimeline() {
 
       const ocupado = isOccupied ? '<span class="text-xs">Ocupado</span>' : "";
 
-      // ✅ CAMBIO PRINCIPAL: Crear el intervalo de 30 minutos
-      const startTime = slot.display; // Hora de inicio (ej: "6:00 AM")
-      const endTimeHHMM = calculateEndTime(slot.time); // Calcular hora final en formato HHMM
-      const endTime = toDisplayFromHHMM(endTimeHHMM); // Convertir a formato display (ej: "6:30 AM")
-      const intervalDisplay = `${startTime} - ${endTime}`; // Formato final: "6:00 AM - 6:30 AM"
+      const startTime = slot.display; 
+      const endTimeHHMM = calculateEndTime(slot.time); 
+      const endTime = toDisplayFromHHMM(endTimeHHMM); 
+      const intervalDisplay = `${startTime} - ${endTime}`; 
 
       return `
       <div class="${cls}" data-index="${index}" data-time="${slot.time}" data-occupied="${isOccupied}">
@@ -73,7 +71,6 @@ export function updateSelectedDisplay() {
 
   const startTimeDisp = timeSlots[startIndex].display;
 
-  // ✅ FIX: Mostrar la hora FINAL del último slot, no la hora de inicio
   const endHHMM = calculateEndTime(timeSlots[endIndex].time);
   const endTimeDisp = toDisplayFromHHMM(endHHMM);
 

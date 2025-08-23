@@ -53,7 +53,6 @@
                 id="filtroDepartamento" 
                 class="w-full px-4 py-2 text-sm border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-lime-600 focus:border-transparent bg-white"
             >
-                <!-- Se llena dinámicamente por filtros.colombia.js -->
                 <option value="">Todos los departamentos</option>
             </select>
         </div>
@@ -64,7 +63,6 @@
                 id="filtroMunicipio" 
                 class="w-full px-4 py-2 text-sm border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-lime-600 focus:border-transparent bg-white"
             >
-                <!-- Se llena dinámicamente por filtros.colombia.js -->
                 <option value="">Todos los municipios</option>
             </select>
         </div>

@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }, 100);
     } catch (error) {
-      console.error("Error cargando datos de Colombia:", error);
+      showMessage("Error al cargar los datos de Colombia", "error");
     }
   };
 

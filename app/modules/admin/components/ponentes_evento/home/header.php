@@ -3,7 +3,6 @@
 ?>
 <div class="bg-gradient-to-r from-lime-600 to-lime-700 rounded-xl shadow-lg p-8 text-white">
     <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
-        <!-- Información principal -->
         <div class="flex-1">
             <div class="flex items-center gap-3 mb-4">
                 <div class="bg-white/20 backdrop-blur-sm rounded-lg p-3">
@@ -45,9 +44,8 @@
             </div>
         </div>
 
-        <!-- Botón de acción principal -->
         <div class="flex-shrink-0">
-            <a href="<?= URL_PATH ?>/admin/ponentes-evento/crear" 
+            <a href="<?= URL_PATH ?>/admin/asignarPonente" 
                class="inline-flex items-center gap-3 bg-white text-lime-700 hover:bg-lime-50 font-semibold py-3 px-6 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>

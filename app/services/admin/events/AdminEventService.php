@@ -129,10 +129,8 @@ class AdminEventService
     public function getEventCompleteStats(int $eventoId): array
     {
         try {
-            // Obtener estadísticas existentes de ponentes
             $ponentesStats = $this->getEventStats($eventoId);
 
-            // Obtener estadísticas de invitados
             $invitadosStats = $this->getEventInviteesStats($eventoId);
 
             if ($ponentesStats['status'] !== 'success' || $invitadosStats['status'] !== 'success') {

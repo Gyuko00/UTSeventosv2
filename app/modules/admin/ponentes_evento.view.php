@@ -10,4 +10,13 @@
     <?php include_once __DIR__ . '\components\ponentes_evento\home\tabla.php'; ?>
 </div>
 
-<script type="module" src="<?= URL_PATH ?>/assets/js/admin/ponentes_evento/home/ponentes_evento.js"></script>
+<script>
+  if (typeof window.URL_PATH === 'undefined') {
+    window.URL_PATH = "<?= URL_PATH ?>";
+  }
+</script>
+
+
+<script src="<?= URL_PATH ?>/assets/js/admin/event/ponentes_evento/eliminar_asignacion/eliminar.js"></script>
+
+

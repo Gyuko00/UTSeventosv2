@@ -1,5 +1,4 @@
 // filtros.core.js
-// Lógica de filtrado y limpieza
 import { SELECTORS, CAP_RANGOS } from './filtros.config.js';
 
 const el = (id) => document.getElementById(id);
@@ -80,7 +79,6 @@ function coincideFecha(celdaFechaHora, fechaFiltro) {
   return true;
 }
 
-// --- NUEVO: filtros por departamento y municipio (match sobre el texto de la fila) ---
 function coincideDepartamento(fila, departamentoFiltro) {
   if (!departamentoFiltro) return true;
   return low(fila.textContent).includes(low(departamentoFiltro));
@@ -95,8 +93,8 @@ export function aplicarFiltrosEventos() {
   const busqueda = val(SELECTORS.buscar).toLowerCase();
   const fechaFiltro = val(SELECTORS.fecha);
   const instFiltro = val(SELECTORS.institucion);
-  const depFiltro = val(SELECTORS.departamento);   // <- aplicado
-  const munFiltro = val(SELECTORS.municipio);      // <- aplicado
+  const depFiltro = val(SELECTORS.departamento);  
+  const munFiltro = val(SELECTORS.municipio);     
   const temaFiltro = val(SELECTORS.tema).toLowerCase();
   const capFiltro = val(SELECTORS.capacidad);
   const horarioFiltro = val(SELECTORS.horario);

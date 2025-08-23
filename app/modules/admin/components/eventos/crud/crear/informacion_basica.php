@@ -18,7 +18,7 @@
       <input
         type="text"
         id="titulo_evento"
-        name="titulo_evento"
+        name="event[titulo_evento]"
         required
         maxlength="150"
         class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-lime-500 focus:border-transparent transition-all duration-200"
@@ -35,7 +35,7 @@
       <input
         type="text"
         id="tema"
-        name="tema"
+        name="event[tema]"
         required
         maxlength="100"
         class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-lime-500 focus:border-transparent transition-all duration-200"
@@ -52,7 +52,7 @@
       <input
         type="number"
         id="cupo_maximo"
-        name="cupo_maximo"
+        name="event[cupo_maximo]"
         min="1"
         class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-lime-500 focus:border-transparent transition-all duration-200"
         placeholder="Número máximo de asistentes"

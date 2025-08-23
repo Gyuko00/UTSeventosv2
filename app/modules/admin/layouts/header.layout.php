@@ -35,6 +35,7 @@
       <a href="<?= URL_PATH ?>/admin/home" class="block text-white font-medium hover:bg-lime-600 px-3 py-2 rounded-md transition">Inicio</a>
       <a href="<?= URL_PATH ?>/admin/listarUsuarios" class="block text-white font-medium hover:bg-lime-600 px-3 py-2 rounded-md transition">Gestionar Usuarios</a>
       <a href="<?= URL_PATH ?>/admin/listarEventos" class="block text-white font-medium hover:bg-lime-600 px-3 py-2 rounded-md transition">Gestionar Eventos</a>
+      <a href="<?= URL_PATH ?>/admin/listarPonentes" class="block text-white font-medium hover:bg-lime-600 px-3 py-2 rounded-md transition">Gestionar Ponentes</a>
       <a href="<?= URL_PATH ?>/admin/cerrarSesion" class="block text-red-200 font-medium hover:bg-lime-600 hover:text-red-100 px-3 py-2 rounded-md transition">Cerrar sesión</a>
     </div>
   </div>

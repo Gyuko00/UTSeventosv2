@@ -4,7 +4,6 @@
 <div class="bg-white rounded-lg shadow-sm px-6 py-4 mb-6">
     <div class="flex flex-wrap gap-4 items-center justify-between">
         
-        <!-- Búsqueda general -->
         <div class="flex-1 min-w-[280px]">
             <label for="buscarPonenteEvento" class="block text-sm text-gray-600 mb-1 font-medium">Buscar ponente o evento</label>
             <input 
@@ -15,7 +14,6 @@
             >
         </div>
 
-        <!-- Filtro por evento -->
         <div class="min-w-[200px]">
             <label for="filtroEvento" class="block text-sm text-gray-600 mb-1 font-medium">Evento</label>
             <select 
@@ -33,7 +31,6 @@
             </select>
         </div>
 
-        <!-- Filtro por estado de asistencia -->
         <div class="min-w-[180px]">
             <label for="filtroEstado" class="block text-sm text-gray-600 mb-1 font-medium">Estado</label>
             <select 
@@ -47,7 +44,6 @@
             </select>
         </div>
 
-        <!-- Filtro por certificado -->
         <div class="min-w-[160px]">
             <label for="filtroCertificado" class="block text-sm text-gray-600 mb-1 font-medium">Certificado</label>
             <select 
@@ -60,7 +56,6 @@
             </select>
         </div>
 
-        <!-- Filtro por institución -->
         <div class="min-w-[200px]">
             <label for="filtroInstitucion" class="block text-sm text-gray-600 mb-1 font-medium">Institución</label>
             <select 
@@ -78,7 +73,6 @@
             </select>
         </div>
 
-        <!-- Filtro por fecha del evento -->
         <div class="min-w-[180px]">
             <label for="filtroFecha" class="block text-sm text-gray-600 mb-1 font-medium">Fecha evento</label>
             <select 
@@ -94,7 +88,6 @@
             </select>
         </div>
 
-        <!-- Botón limpiar -->
         <div class="mt-5 sm:mt-6">
             <button 
                 onclick="limpiarFiltrosPonentes()"
@@ -108,25 +101,9 @@
         </div>
     </div>
 
-    <!-- Contador de resultados -->
     <div class="mt-4 pt-3 border-t border-gray-100">
         <div class="flex items-center justify-between text-sm text-gray-600">
             <span id="contadorResultados">Mostrando todos los registros</span>
-            <div class="flex items-center gap-4">
-                <button 
-                    id="exportarPonentes"
-                    class="inline-flex items-center gap-1 text-lime-600 hover:text-lime-800 font-medium transition-colors"
-                >
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                    </svg>
-                    Exportar
-                </button>
-            </div>
         </div>
     </div>
 </div>
-
-<script>
-
-</script>

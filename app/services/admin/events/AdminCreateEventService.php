@@ -27,13 +27,16 @@ class AdminCreateEventService extends Service
                 }
             }
     
-            $conflicto = $this->gettersModel->findConflictingEvent(
+            $conflicto = $this->gettersModel->findTimeConflictingEvent(
                 $eventData['fecha'],
-                $eventData['lugar_detallado']
+                $eventData['lugar_detallado'],
+                $eventData['hora_inicio'],
+                $eventData['hora_fin'],
+                null
             );
-    
+            
             if ($conflicto !== null) {
-                throw new InvalidArgumentException('Ya existe un evento en esa fecha/lugar');
+                throw new InvalidArgumentException('Ya existe un evento que se cruza en esa fecha/lugar/horario');
             }
     
             $result = $this->crudModel->createEvent($eventData);

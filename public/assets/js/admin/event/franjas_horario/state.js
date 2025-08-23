@@ -9,7 +9,6 @@ let selectionStart = null;
 let currentEventId = null;
 let timeSlots = [];
 
-// Generar y cachear slots una sola vez
 export function generateTimeSlots() {
   const slots = [];
   for (let hour = HORARIO_INICIO; hour <= HORARIO_FIN; hour++) {

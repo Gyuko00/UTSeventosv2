@@ -60,7 +60,7 @@ function setupDependencias() {
 
   depSel.addEventListener('change', () => {
     llenarMunicipios(depSel.value);
-    munSel.dispatchEvent(new Event('change')); // re-aplica filtros
+    munSel.dispatchEvent(new Event('change')); 
   });
 }
 
@@ -75,7 +75,6 @@ export function initColombiaFilters() {
   if (_inicializado) return;
   _inicializado = true;
 
-  // 🔧 Ejecuta ya si el DOM está listo; si no, espera al DOMContentLoaded
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', run);
   } else {

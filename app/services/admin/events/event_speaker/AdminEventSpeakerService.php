@@ -3,7 +3,7 @@
 /**
  * AdminEventSpeakerService: servicio para la gestión de ponentes asignados a eventos, con auditoría
  */
-class AdminEventSpeakerService
+class AdminEventSpeakerService extends Service
 {
     private AdminEventSpeakerCRUDModel $crudModel;
     private AdminEventSpeakerGettersModel $gettersModel;
@@ -20,14 +20,14 @@ class AdminEventSpeakerService
     {
         if (empty($data['id_ponente']) || empty($data['id_evento'])) {
             return [
-                'status'  => 'error',
+                'status' => 'error',
                 'message' => 'El ID del ponente y del evento son obligatorios.'
             ];
         }
 
         if ($this->isSpeakerAlreadyAssigned($data['id_ponente'], $data['id_evento'])) {
             return [
-                'status'  => 'error',
+                'status' => 'error',
                 'message' => 'El ponente ya está asignado a este evento.'
             ];
         }
@@ -46,14 +46,14 @@ class AdminEventSpeakerService
     {
         if (empty($data['id_ponente']) || empty($data['id_evento'])) {
             return [
-                'status'  => 'error',
+                'status' => 'error',
                 'message' => 'El ID del ponente y del evento son obligatorios.'
             ];
         }
 
         if (!$this->assignmentExists($id)) {
             return [
-                'status'  => 'error',
+                'status' => 'error',
                 'message' => 'La asignación no existe.'
             ];
         }
@@ -72,7 +72,7 @@ class AdminEventSpeakerService
     {
         if (!$this->assignmentExists($id)) {
             return [
-                'status'  => 'error',
+                'status' => 'error',
                 'message' => 'La asignación no existe.'
             ];
         }
@@ -87,39 +87,29 @@ class AdminEventSpeakerService
         return $result;
     }
 
-    private function isSpeakerAlreadyAssigned(int $idPonente, int $idEvento): bool
+
+    private function isSpeakerAlreadyAssigned(int $idPonente, int $idEvento): bool 
     {
-        $sql = "SELECT COUNT(*) AS count
-                FROM ponentes_evento
-                WHERE id_ponente = :id_ponente AND id_evento = :id_evento";
-
-        $stmt = $this->crudModel->query($sql, [
-            ':id_ponente' => $idPonente,
-            ':id_evento'  => $idEvento
-        ]);
-
-        return ((int) ($stmt->fetchColumn())) > 0;
+        return $this->crudModel->checkSpeakerAssignment($idPonente, $idEvento);
     }
 
-    private function assignmentExists(int $id): bool
+    private function assignmentExists(int $id): bool 
     {
-        $sql = "SELECT COUNT(*) AS count
-                FROM ponentes_evento
-                WHERE id_ponente_evento = :id";
-
-        $stmt = $this->crudModel->query($sql, [':id' => $id]);
-
-        return ((int) ($stmt->fetchColumn())) > 0;
+        return $this->crudModel->checkAssignmentExists($id);
     }
 
-    public function listAllSpeakers(): array
+    public function listAllEventSpeakers(): array
     {
         return $this->gettersModel->getAllEventSpeakers();
     }
 
-    public function getSpeaker(int $id): array
+    public function getEventSpeaker(int $id): array
     {
         return $this->gettersModel->getEventSpeakerById($id);
     }
 
+    public function getPonentesDelEvento(int $idEvento): array 
+    {
+        return $this->crudModel->getSpeakersForEvent($idEvento);
+    }
 }

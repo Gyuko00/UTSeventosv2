@@ -193,7 +193,6 @@ class EventDetailsAdminModel extends Model
                 ];
             }
 
-            // Inicializar contadores
             $carreras = [];
             $programas = [];
             $facultades = [];
@@ -201,28 +200,22 @@ class EventDetailsAdminModel extends Model
             $asistencia = ['asistio' => 0, 'no_asistio' => 0, 'pendiente' => 0];
 
             foreach ($invitados as $inv) {
-                // Estadísticas por carrera
                 $carrera = $inv['carrera'] ?? 'No especificado';
                 $carreras[$carrera] = ($carreras[$carrera] ?? 0) + 1;
 
-                // Estadísticas por programa académico
                 $programa = $inv['programa_academico'] ?? 'No especificado';
                 $programas[$programa] = ($programas[$programa] ?? 0) + 1;
 
-                // Estadísticas por facultad
                 $facultad = $inv['facultad'] ?? 'No especificado';
                 $facultades[$facultad] = ($facultades[$facultad] ?? 0) + 1;
 
-                // Estadísticas por jornada
                 $jornada = $inv['jornada'] ?? 'No especificado';
                 $jornadas[$jornada] = ($jornadas[$jornada] ?? 0) + 1;
 
-                // Estadísticas de asistencia
                 $estadoAsistencia = $inv['estado_asistencia'] ?? 'pendiente';
                 $asistencia[$estadoAsistencia] = ($asistencia[$estadoAsistencia] ?? 0) + 1;
             }
 
-            // Encontrar tops
             $topCarrera = !empty($carreras) ? array_keys($carreras, max($carreras)) : [];
             $topPrograma = !empty($programas) ? array_keys($programas, max($programas)) : [];
             $topFacultad = !empty($facultades) ? array_keys($facultades, max($facultades)) : [];
