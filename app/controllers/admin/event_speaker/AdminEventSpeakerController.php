@@ -106,13 +106,11 @@ class AdminEventSpeakerController extends Controller
         $this->view('admin/editar_asignacion_ponente', ['ponente' => $ponente['data']], 'admin');
     }
 
-    // app/controllers/admin/event_speaker/AdminEventSpeakerController.php
 
     public function eliminarAsignacionPonente(int $id)
     {
         $this->verificarAccesoConRoles([1]);
 
-        // Detectar si es una llamada AJAX
         $isAjax = (
             isset($_SERVER['HTTP_X_REQUESTED_WITH']) &&
             strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest'
@@ -121,14 +119,12 @@ class AdminEventSpeakerController extends Controller
         $result = $this->eventSpeakerService->deleteSpeakerEvent($_SESSION['id_usuario'], $id);
 
         if ($isAjax) {
-            // Responder JSON para fetch()
-            // Evita cualquier salida previa
+
             while (ob_get_level() > 0) {
                 ob_end_clean();
             }
             header('Content-Type: application/json; charset=utf-8');
 
-            // Usa un código HTTP acorde
             if (($result['status'] ?? '') === 'success') {
                 http_response_code(200);
             } else {
@@ -136,10 +132,9 @@ class AdminEventSpeakerController extends Controller
             }
 
             echo json_encode($result, JSON_UNESCAPED_UNICODE);
-            return;  // ¡No continuar al redirect!
+            return; 
         }
 
-        // Flujo normal (no-AJAX): flash + redirect
         if (($result['status'] ?? '') === 'success') {
             $_SESSION['success_message'] = 'Asignación eliminada correctamente';
         } else {

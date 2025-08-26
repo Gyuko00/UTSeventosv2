@@ -12,7 +12,6 @@
     </div>
 
     <div class="space-y-6">
-        <!-- Información básica del evento -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
                 <label class="block text-sm font-medium text-gray-500 mb-1">Título del Evento</label>
@@ -29,7 +28,6 @@
             </div>
         </div>
 
-        <!-- Descripción -->
         <?php if (!empty($ponente['descripcion'])): ?>
         <div>
             <label class="block text-sm font-medium text-gray-500 mb-1">Descripción</label>
@@ -39,7 +37,6 @@
         </div>
         <?php endif; ?>
 
-        <!-- Fecha y horario -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div class="bg-purple-50 rounded-lg p-4 text-center">
                 <div class="text-lg font-bold text-purple-900">
@@ -63,7 +60,6 @@
             </div>
         </div>
 
-        <!-- Ubicación -->
         <div>
             <label class="block text-sm font-medium text-gray-500 mb-3">Ubicación</label>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -97,7 +93,6 @@
             </div>
         </div>
 
-        <!-- Información adicional -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div class="bg-gray-50 rounded-lg p-4">
                 <div class="flex items-center gap-2 mb-2">

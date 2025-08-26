@@ -13,7 +13,7 @@ abstract class Model
         $this->db = $db;
     }
 
-    protected function query(string $sql, array $params = []): PDOStatement
+    public function query(string $sql, array $params = []): PDOStatement
     {
         $stmt = $this->db->prepare($sql);
         if (!$stmt->execute($params)) {

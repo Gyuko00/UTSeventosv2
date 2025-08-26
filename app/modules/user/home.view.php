@@ -1,5 +1,5 @@
 <?php
-// app/modules/admin/home.view.php  (o el archivo que renderiza tu “inicio”)
+// app/modules/user/home.view.php  (o el archivo que renderiza tu “inicio”)
 ?>
 <div class="space-y-6">
 
@@ -11,11 +11,9 @@
         </svg>
       </div>
       <div>
-        <h1 class="text-2xl md:text-3xl font-bold text-gray-900">Bienvenido a UTSeventos</h1>
+        <h1 class="text-2xl md:text-3xl font-bold text-gray-900">Bienvenido <?php echo $_SESSION['nombre']; ?> a UTSeventos</h1>
         <p class="text-gray-600 mt-2">
-          Administra usuarios, eventos, invitados y ponentes desde un solo lugar. 
-          Aquí verás un calendario interactivo con todos los eventos. Puedes navegar por meses, 
-          ver los eventos de un día específico y abrir su detalle con un clic.
+            Explora eventos y haz parte de nuestra comunidad uteísta.
         </p>
       </div>
     </div>
@@ -66,7 +64,6 @@
 <script>
   const URL_PATH = "<?= URL_PATH ?>";
   window.EVENTS = <?= json_encode(array_values($eventos ?? []), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) ?>;
-  console.log('[Home] EVENTS cargados:', Array.isArray(window.EVENTS) ? window.EVENTS.length : 'no-array');
 </script>
-<script type="module" src="<?= URL_PATH ?>/assets/js/admin/home/calendar.js"></script>
 
+<script type="module" src="<?= URL_PATH ?>/assets/js/user/home/calendar.init.js"></script>

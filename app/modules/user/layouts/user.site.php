@@ -1,7 +1,7 @@
 <!-- /**
- * LAYOUT PRINCIPAL DE ADMINISTRADOR
+ * LAYOUT PRINCIPAL DE USUARIO
  * 
- * Layout centralizado para el módulo de administrador que estructura
+ * Layout centralizado para el módulo de usuario que estructura
  * el contenido del módulo. 
  * 
  * Características:
