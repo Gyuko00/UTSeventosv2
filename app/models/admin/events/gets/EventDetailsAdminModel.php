@@ -7,43 +7,59 @@ class EventDetailsAdminModel extends Model
         parent::__construct($db);
     }
 
-    public function getEventSpeaker(int $eventoId): array
+    // app/models/admin/EventModel.php (o donde tengas el modelo del admin)
+    public function getEventSpeakers(int $id_evento): array
     {
+        $sql = '
+        SELECT 
+            pe.id_ponente_evento,
+            pe.id_evento,
+            pe.hora_participacion,
+            pe.estado_asistencia,
+            pe.certificado_generado,
+            pe.fecha_registro,
+
+            p.id_ponente,
+            p.activo               AS ponente_activo,
+            p.tema                 AS ponente_tema,
+            p.descripcion_biografica,
+            p.especializacion,
+            p.institucion_ponente,
+
+            per.id_persona,
+            per.nombres            AS ponente_nombres,
+            per.apellidos          AS ponente_apellidos,
+            per.tipo_documento     AS ponente_tipo_documento,
+            per.numero_documento   AS ponente_numero_documento,
+            per.correo_personal    AS ponente_email,
+            per.telefono           AS ponente_telefono
+        FROM ponentes_evento pe
+        JOIN ponentes p        ON p.id_ponente   = pe.id_ponente
+        JOIN personas per      ON per.id_persona = p.id_persona
+        WHERE pe.id_evento = :id_evento
+        ORDER BY 
+            pe.hora_participacion IS NULL, 
+            pe.hora_participacion ASC,
+            per.nombres ASC, per.apellidos ASC
+    ';
         try {
-            $sql = 'SELECT 
-                        pe.id_ponente_evento,
-                        pe.id_ponente,
-                        pe.id_evento,
-                        pe.hora_participacion,
-                        pe.estado_asistencia,
-                        pe.certificado_generado,
-                        pe.fecha_registro,
-                        p.nombres as ponente_nombres,
-                        p.apellidos as ponente_apellidos,
-                        p.correo_personal as ponente_email,
-                        p.telefono as ponente_telefono,
-                        p.tipo_documento as ponente_tipo_documento,
-                        p.numero_documento as ponente_numero_documento,
-                        u.usuario as ponente_usuario
-                    FROM ponentes_evento pe
-                    INNER JOIN usuarios u ON pe.id_ponente = u.id_usuario
-                    INNER JOIN personas p ON u.id_persona = p.id_persona
-                    WHERE pe.id_evento = :evento_id';
+            $stmt = $this->query($sql, [':id_evento' => $id_evento]);
+            $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-            $stmt = $this->query($sql, ['evento_id' => $eventoId]);
-            $ponente = $stmt->fetch(PDO::FETCH_ASSOC);
-
-            if (!$ponente) {
-                return ['status' => 'error', 'message' => 'No hay ponente asignado a este evento'];
-            }
-
-            return ['status' => 'success', 'data' => $ponente];
+            return ['status' => 'success', 'data' => $rows];
         } catch (Exception $e) {
-            return [
-                'status' => 'error',
-                'message' => 'Error al obtener ponente del evento: ' . $e->getMessage()
-            ];
+            error_log('getEventSpeakers error: ' . $e->getMessage());
+            return ['status' => 'error', 'message' => 'No fue posible cargar los ponentes'];
         }
+    }
+
+    public function getEventSpeaker(int $id_evento): array
+    {
+        $all = $this->getEventSpeakers($id_evento);
+        if (($all['status'] ?? '') === 'success' && !empty($all['data'])) {
+            return ['status' => 'success', 'data' => $all['data'][0]];
+        }
+        return ['status' => 'error', 'message' => 'Sin ponentes asignados'];
     }
 
     public function getEventStats(int $eventoId): array
@@ -111,11 +127,9 @@ class EventDetailsAdminModel extends Model
         }
     }
 
-
     public function getEventInvitees(int $eventoId): array
     {
         try {
-            
             $sql = 'SELECT 
                     ie.id_invitado_evento,
                     ie.estado_asistencia,
@@ -148,14 +162,11 @@ class EventDetailsAdminModel extends Model
                 ORDER BY p.apellidos, p.nombres';
 
             $stmt = $this->query($sql, ['evento_id' => $eventoId]);
-            
+
             $invitados = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-
             return ['status' => 'success', 'data' => $invitados];
-            
         } catch (Exception $e) {
-            
             return [
                 'status' => 'error',
                 'message' => 'Error al obtener invitados del evento: ' . $e->getMessage()
@@ -166,7 +177,6 @@ class EventDetailsAdminModel extends Model
     public function getEventInviteesStats(int $eventoId): array
     {
         try {
-            
             $invitadosResult = $this->getEventInvitees($eventoId);
 
             if ($invitadosResult['status'] !== 'success') {
@@ -220,13 +230,6 @@ class EventDetailsAdminModel extends Model
             $topPrograma = !empty($programas) ? array_keys($programas, max($programas)) : [];
             $topFacultad = !empty($facultades) ? array_keys($facultades, max($facultades)) : [];
 
-            echo "Stats procesadas correctamente<br>";
-            echo "Carreras: " . count($carreras) . " tipos<br>";
-            echo "Programas: " . count($programas) . " tipos<br>";
-            echo "Facultades: " . count($facultades) . " tipos<br>";
-            echo "✅ SUCCESS en getEventInviteesStats<br>";
-            echo "</div>";
-
             return [
                 'status' => 'success',
                 'data' => [
@@ -251,7 +254,6 @@ class EventDetailsAdminModel extends Model
                 ]
             ];
         } catch (Exception $e) {
-            
             return [
                 'status' => 'error',
                 'message' => 'Error al obtener estadísticas de invitados: ' . $e->getMessage()

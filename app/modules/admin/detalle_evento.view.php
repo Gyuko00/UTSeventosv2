@@ -10,7 +10,7 @@
     
     <?php include_once __DIR__ . '\components\eventos\crud\detalle\informacion_creador.php'; ?>
     
-    <?php if (isset($evento['ponente']) && !empty($evento['ponente'])): ?>
+    <?php if (isset($evento['ponentes']) && !empty($evento['ponentes'])): ?>
         <?php include_once __DIR__ . '\components\eventos\crud\detalle\informacion_ponente.php'; ?>
     <?php endif; ?>
     

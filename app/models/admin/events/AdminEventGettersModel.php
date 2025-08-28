@@ -34,6 +34,10 @@ class AdminEventGettersModel extends Model
         return $this->eventDetails->getEventSpeaker($eventoId);
     }
 
+    public function getEventSpeakers(int $id_evento): array {
+        return $this->eventDetails->getEventSpeakers($id_evento);
+    }
+
     public function getEventStats(int $eventoId): array
     {
         return $this->eventDetails->getEventStats($eventoId);

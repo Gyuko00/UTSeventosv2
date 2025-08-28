@@ -80,7 +80,6 @@ export function attachLivePasswordValidation(doc = document) {
   $nueva?.addEventListener("input", function () {
     const len = this.value.length;
     paint(this, !(len > 0 && len < 6), true);
-    // Re-evaluar coincidencia si el usuario ya escribió confirmación
     const c = $confirmar?.value || "";
     if ($confirmar && c) paint($confirmar, this.value === c);
   });

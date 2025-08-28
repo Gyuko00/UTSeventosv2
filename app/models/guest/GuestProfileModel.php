@@ -26,7 +26,6 @@ class GuestProfileModel extends Model
         try {
             $this->getDB()->beginTransaction();
 
-            // Actualizar datos de persona
             $sqlPersona = 'UPDATE personas SET
                               tipo_documento = :tipo_documento,
                               numero_documento = :numero_documento,
@@ -52,7 +51,6 @@ class GuestProfileModel extends Model
                 ':id_persona' => $data['id_persona']
             ]);
 
-            // Actualizar usuario si es necesario
             if (!empty($data['usuario'])) {
                 $sqlUsuario = 'UPDATE usuarios SET usuario = :usuario
                               WHERE id_usuario = :id_usuario';
@@ -120,7 +118,6 @@ class GuestProfileModel extends Model
         return $stmt->rowCount() > 0;
     }
 
-    // En tu ProfileModel (o el model que uses para estos queries)
 
     public function getInvitadoIdByUsuario(int $id_usuario): ?int
     {

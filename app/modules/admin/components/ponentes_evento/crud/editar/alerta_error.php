@@ -1,14 +1,11 @@
 <?php
 // app/modules/admin/components/ponentes_evento/crud/editar/alerta_error.php
 
-// Verificar si hay mensajes de éxito o error en la sesión
 $success_message = $_SESSION['success_message'] ?? null;
 $error_message = $_SESSION['error_message'] ?? null;
 
-// Verificar si hay error pasado como parámetro
 $form_error = $error ?? null;
 
-// Limpiar mensajes de la sesión después de mostrarlos
 if ($success_message) {
     unset($_SESSION['success_message']);
 }

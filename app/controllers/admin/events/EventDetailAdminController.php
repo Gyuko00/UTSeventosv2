@@ -1,7 +1,7 @@
 <?php
 
-class EventDetailAdminController extends Controller {
-
+class EventDetailAdminController extends Controller
+{
     private AdminEventService $eventService;
     private AdminUserService $userService;
 
@@ -12,6 +12,7 @@ class EventDetailAdminController extends Controller {
         $this->userService = new AdminUserService($db);
     }
 
+    // app/controllers/admin/AdminController.php
     public function detalleEvento(int $id)
     {
         $evento = $this->eventService->getEventById($id);
@@ -27,9 +28,11 @@ class EventDetailAdminController extends Controller {
             $datos['creador'] = $creador['data'];
         }
 
-        $ponente = $this->eventService->getEventSpeaker($id);
-        if ($ponente['status'] === 'success') {
-            $datos['ponente'] = $ponente['data'];
+        $ponentes = $this->eventService->getEventSpeakers($id);
+        if ($ponentes['status'] === 'success') {
+            $datos['ponentes'] = $ponentes['data'];  
+        } else {
+            $datos['ponentes'] = [];  
         }
 
         $estadisticas = $this->eventService->getEventStats($id);

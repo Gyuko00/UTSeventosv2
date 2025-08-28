@@ -95,6 +95,10 @@ class AdminEventService
         return $this->gettersModel->getEventSpeaker($eventoId);
     }
 
+    public function getEventSpeakers(int $id_evento): array {
+        return $this->gettersModel->getEventSpeakers($id_evento);
+    }
+
     public function getEventStats(int $eventoId): array
     {
         return $this->gettersModel->getEventStats($eventoId);

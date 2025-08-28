@@ -48,25 +48,21 @@ function aplicarFiltrosPonentes() {
     let mostrar = true;
     const celdas = fila.querySelectorAll("td");
 
-    // Búsqueda global por texto
     if (busqueda && mostrar) {
       const textoFila = (fila.textContent || "").toLowerCase();
       if (!textoFila.includes(busqueda)) mostrar = false;
     }
 
-    // Por evento (usa data-evento-id en <tr>)
     if (eventoFiltro && mostrar) {
       const filaEventoId = (fila.dataset.eventoId || "").trim();
       if (String(filaEventoId) !== String(eventoFiltro)) mostrar = false;
     }
 
-    // Estado (columna 3, cero-based)
     if (estadoFiltro && mostrar) {
       const estadoTexto = (celdas[3]?.textContent || "").toLowerCase();
       if (!estadoTexto.includes(estadoFiltro)) mostrar = false;
     }
 
-    // Certificado (columna 3)
     if (certificadoFiltro && mostrar) {
       const certificadoTexto = (celdas[3]?.textContent || "").toLowerCase();
       const tieneCertificado = certificadoTexto.includes("certificado generado");
@@ -76,13 +72,11 @@ function aplicarFiltrosPonentes() {
       }
     }
 
-    // Institución (columna 0)
     if (institucionFiltro && mostrar) {
       const institucionTexto = (celdas[0]?.textContent || "").toLowerCase();
       if (!institucionTexto.includes(institucionFiltro)) mostrar = false;
     }
 
-    // Fecha del evento (columna 1)
     if (fechaFiltro && mostrar) {
       const fechaTxt = celdas[1]?.textContent || "";
       const f = parseFechaDMY(fechaTxt);

@@ -7,7 +7,7 @@ export function attachCertificateHandler(doc = document, baseUrl = URL_PATH) {
   };
 
   doc.addEventListener("click", handler);
-  return () => doc.removeEventListener("click", handler); // para limpiar si algún día lo necesitas
+  return () => doc.removeEventListener("click", handler); 
 }
 
 export async function descargarCertificado(button, baseUrl) {
@@ -28,7 +28,6 @@ export async function descargarCertificado(button, baseUrl) {
     link.click();
     document.body.removeChild(link);
   } catch {
-    // silencioso
   } finally {
     setTimeout(() => {
       button.innerHTML = original;

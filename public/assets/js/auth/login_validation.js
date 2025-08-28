@@ -102,6 +102,9 @@ document.addEventListener("DOMContentLoaded", () => {
           case 3:
             redirectUrl = "/utseventos/public/user/home";
             break;
+          case 4:
+            redirectUrl = "/utseventos/public/control/home";
+            break;
           default:
             redirectUrl = "/utseventos/public/auth/login";
         }

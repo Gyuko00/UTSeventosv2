@@ -3,8 +3,29 @@
 ?>
 <div class="bg-white shadow rounded-lg p-6">
     <h2 class="text-lg font-medium text-gray-900 mb-4">Información del Evento</h2>
-    
+
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+            <dt class="text-sm font-medium text-gray-500">Código Evento</dt>
+            <dd class="mt-1 text-sm text-gray-900">
+                <?= htmlspecialchars($evento['event_code']) ?>
+            </dd>
+        </div>
+
+        <div>
+            <dt class="text-sm font-medium text-gray-500">Evento</dt>
+            <dd class="mt-1 text-sm text-gray-900">
+                <?= htmlspecialchars($evento['titulo_evento']) ?>
+            </dd>
+        </div>
+
+        <div>
+            <dt class="text-sm font-medium text-gray-500">Tema</dt>
+            <dd class="mt-1 text-sm text-gray-900">
+                <?= htmlspecialchars($evento['tema']) ?>
+            </dd>
+        </div>
+
         <div>
             <dt class="text-sm font-medium text-gray-500">Descripción</dt>
             <dd class="mt-1 text-sm text-gray-900">

@@ -1,6 +1,5 @@
 <?php 
 // app/modules/user/components/perfil/evento_card.php
-// Este archivo debe ser incluido donde $evento esté definido
 ?>
 
 <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow bg-gray-50">

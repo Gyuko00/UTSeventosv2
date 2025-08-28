@@ -33,6 +33,7 @@ class EventQueryAdminModel extends Model{
                         e.lugar_detallado,
                         e.cupo_maximo,
                         e.id_usuario_creador,
+                        e.event_code,
                         p.nombres as creador_nombres,
                         p.apellidos as creador_apellidos,
                         p.correo_personal as creador_email,

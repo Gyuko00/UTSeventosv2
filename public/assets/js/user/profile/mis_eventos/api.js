@@ -13,7 +13,6 @@ export async function fetchMisEventos(baseUrl) {
       throw new Error(`Error ${res.status}: No se pudo cargar la información`);
     }
   
-    // Intentar parsear JSON
     let payload;
     try {
       payload = await res.json();

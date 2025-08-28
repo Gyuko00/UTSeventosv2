@@ -1,4 +1,4 @@
-// calendar.register.js
+// calendar.register.js corregido
 import { state, groupEvents } from "./calendar.core.js";
 import { renderDayList } from "./calendar.daylist.js";
 import { updateDayButtons } from "./calendar.ui.js";
@@ -10,6 +10,34 @@ export function escapeHtml(s = "") {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#39;");
+}
+
+export function renderActionButton(evento) {
+  if (!evento.inscrito) {
+    return `
+      <button 
+        class="inscribirse-btn bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+        data-evento-id="${evento.id_evento}"
+        data-evento-titulo="${escapeHtml(evento.titulo_evento)}"
+      >
+        Inscribirme
+      </button>
+    `;
+  } else {
+    return `
+      <div class="flex gap-2">
+        <span class="bg-green-100 text-green-800 px-3 py-2 rounded-lg text-sm font-medium">
+          ✓ Inscrito
+        </span>
+        <button 
+          class="cancelar-btn bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+          data-evento-id="${evento.id_evento}"
+        >
+          Cancelar
+        </button>
+      </div>
+    `;
+  }
 }
 
 export async function confirmarEInscripcion(idEvento, titulo) {
@@ -90,17 +118,16 @@ export async function confirmarEInscripcion(idEvento, titulo) {
         Accept: "application/json",
       },
       credentials: "same-origin",
-      body: JSON.stringify({}), // asegura POST con body
+      body: JSON.stringify({}), 
     });
 
     clearTimeout(timeoutId);
 
-    // Intenta parsear JSON SIEMPRE (aunque no sea ok) para leer 'message'
     let data = null;
     try {
       data = await response.json();
     } catch {
-      data = null; // dejar que caiga a mensaje genérico
+      data = null; 
     }
 
     Swal.close();
@@ -114,9 +141,8 @@ export async function confirmarEInscripcion(idEvento, titulo) {
         text: data.message || "Te has inscrito correctamente.",
       });
 
-      // Actualizar estado local
       state.events = (state.events || []).map((e) =>
-        e.id_evento == idEvento ? { ...e, inscrito: 1 } : e
+        e.id_evento == idEvento ? { ...e, inscrito: true } : e
       );
       state.eventsByDate = groupEvents(state.events);
 
@@ -126,7 +152,6 @@ export async function confirmarEInscripcion(idEvento, titulo) {
       return;
     }
 
-    // Manejo por códigos
     if (response.status === 409) {
       await Swal.fire({
         icon: "warning",
@@ -180,3 +205,77 @@ export async function confirmarEInscripcion(idEvento, titulo) {
     });
   }
 }
+
+export async function cancelarInscripcionCalendario(idEvento) {
+  const { value: confirmed } = await Swal.fire({
+    title: '¿Cancelar inscripción?',
+    text: 'Esta acción no se puede deshacer',
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonText: 'Sí, cancelar',
+    cancelButtonText: 'No, mantener',
+    confirmButtonColor: '#dc2626'
+  });
+  
+  if (!confirmed) return;
+
+  const loadingSwal = Swal.fire({
+    title: "Cancelando...",
+    html: "Por favor espera mientras procesamos tu solicitud",
+    allowOutsideClick: false,
+    allowEscapeKey: false,
+    showConfirmButton: false,
+    didOpen: () => Swal.showLoading(),
+  });
+
+  try {
+    const url = `${URL_PATH}/user/cancelarInscripcion/${idEvento}`;
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-Requested-With": "XMLHttpRequest",
+        Accept: "application/json",
+      },
+      credentials: "same-origin",
+    });
+
+    const data = await response.json();
+    Swal.close();
+
+    if (response.status === 200 && data?.status === "success") {
+      await Swal.fire({
+        icon: "success",
+        title: "Inscripción cancelada",
+        text: data.message || "Tu inscripción ha sido cancelada exitosamente.",
+      });
+
+      state.events = (state.events || []).map((e) =>
+        e.id_evento == idEvento ? { ...e, inscrito: false } : e
+      );
+      state.eventsByDate = groupEvents(state.events);
+
+      const day = state.selectedDate || state.today;
+      renderDayList(day);
+      updateDayButtons();
+      
+    } else {
+      await Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: data.message || "No se pudo cancelar la inscripción",
+      });
+    }
+
+  } catch (error) {
+    Swal.close();
+    await Swal.fire({
+      icon: "error",
+      title: "Error al cancelar",
+      text: error?.message || "No se pudo conectar con el servidor.",
+    });
+  }
+}
+
+window.confirmarEInscripcion = confirmarEInscripcion;
+window.cancelarInscripcionCalendario = cancelarInscripcionCalendario;

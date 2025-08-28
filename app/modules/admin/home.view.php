@@ -66,7 +66,6 @@
 <script>
   const URL_PATH = "<?= URL_PATH ?>";
   window.EVENTS = <?= json_encode(array_values($eventos ?? []), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) ?>;
-  console.log('[Home] EVENTS cargados:', Array.isArray(window.EVENTS) ? window.EVENTS.length : 'no-array');
 </script>
 <script type="module" src="<?= URL_PATH ?>/assets/js/admin/home/calendar.js"></script>
 

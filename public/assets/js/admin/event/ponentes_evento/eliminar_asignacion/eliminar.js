@@ -1,12 +1,10 @@
 // public/assets/js/admin/event/ponentes_evento/eliminar_asignacion/eliminar.js
 (function () {
-  // Usa URL_PATH si existe; si no, cae a /utseventos/public
   const BASE =
     (typeof window.URL_PATH === "string" && window.URL_PATH) 
       ? window.URL_PATH 
       : `${window.location.origin}/utseventos/public`;
 
-  // Exponer función global para usar en onclick=""
   window.eliminarPonenteEvento = async function (idPonenteEvento, tema, evento) {
     const id = parseInt(idPonenteEvento, 10);
 

@@ -12,6 +12,14 @@
               <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-lime-200" viewBox="0 0 640 640" fill="currentColor">
                 <path d="M152 24C152 10.7 162.7 0 176 0H336C349.3 0 360 10.7 360 24V64H512C533.5 64 552 80.5 552 104V560C552 583.5 533.5 600 512 600H128C105.5 600 88 583.5 88 560V104C88 80.5 105.5 64 128 64H280V24C280 10.7 290.7 0 304 0H456C469.3 0 480 10.7 480 24V64H512C533.5 64 552 80.5 552 104V560C552 583.5 533.5 600 512 600H128C105.5 600 88 583.5 88 560V104C88 80.5 105.5 64 128 64H280V24zM152 24H336V64H152V24z"/>
               </svg>
+              Código Evento
+            </div>
+          </th>
+          <th class="px-6 py-4 text-left text-sm font-semibold text-white uppercase tracking-wider border-r border-lime-600 last:border-r-0">
+            <div class="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-lime-200" viewBox="0 0 640 640" fill="currentColor">
+                <path d="M152 24C152 10.7 162.7 0 176 0H336C349.3 0 360 10.7 360 24V64H512C533.5 64 552 80.5 552 104V560C552 583.5 533.5 600 512 600H128C105.5 600 88 583.5 88 560V104C88 80.5 105.5 64 128 64H280V24C280 10.7 290.7 0 304 0H456C469.3 0 480 10.7 480 24V64H512C533.5 64 552 80.5 552 104V560C552 583.5 533.5 600 512 600H128C105.5 600 88 583.5 88 560V104C88 80.5 105.5 64 128 64H280V24zM152 24H336V64H152V24z"/>
+              </svg>
               Evento
             </div>
           </th>

@@ -6,6 +6,13 @@
   <td class="px-6 py-4 whitespace-nowrap">
     <div class="flex flex-col">
       <div class="text-sm font-medium text-gray-900 mb-1">
+        <?= htmlspecialchars($evento['event_code']) ?>
+      </div>
+    </div>
+  </td>
+  <td class="px-6 py-4 whitespace-nowrap">
+    <div class="flex flex-col">
+      <div class="text-sm font-medium text-gray-900 mb-1">
         <?= htmlspecialchars($evento['titulo_evento']) ?>
       </div>
       <div class="text-xs text-gray-500">

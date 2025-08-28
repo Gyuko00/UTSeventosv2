@@ -1,14 +1,17 @@
 <?php
 
-class UserEventDetailController extends Controller {
-    
+class UserEventDetailController extends Controller
+{
     private AdminEventService $eventService;
     private AdminUserService $userService;
+    private EventGuestService $guestService;
 
-    public function __construct(PDO $db){
+    public function __construct(PDO $db)
+    {
         parent::__construct($db);
         $this->eventService = new AdminEventService($db);
         $this->userService = new AdminUserService($db);
+        $this->guestService = new EventGuestService($db);
     }
 
     public function detalleEvento(int $id)
@@ -41,6 +44,21 @@ class UserEventDetailController extends Controller {
             $datos['participantes'] = $participantes['data'];
         }
 
-        $this->view('user/detalle_evento', ['evento' => $datos], 'user');
+        $inscripcion = ['inscrito' => false, 'datos_inscripcion' => null];
+
+        if (isset($_SESSION['id_usuario'])) {
+            $id_usuario = (int) $_SESSION['id_usuario'];
+
+            $verificacion = $this->guestService->verificarInscripcionUsuario($id, $id_usuario);
+            if ($verificacion['status'] === 'success') {
+                $inscripcion = $verificacion['data'];
+            }
+        }
+
+        $this->view('user/detalle_evento', [
+            'evento' => $datos,
+            'inscripcion' => $inscripcion,
+            'usuario_logueado' => $_SESSION['id_usuario'] ?? null
+        ], 'user');
     }
 }

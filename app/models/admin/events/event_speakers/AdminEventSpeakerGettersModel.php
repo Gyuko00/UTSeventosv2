@@ -48,7 +48,6 @@ class AdminEventSpeakerGettersModel extends Model {
         $this->validateId($id);
     
         $sql = "SELECT 
-                    -- Datos de ponentes_evento
                     pe.id_ponente_evento,
                     pe.id_ponente,
                     pe.id_evento,
@@ -57,12 +56,10 @@ class AdminEventSpeakerGettersModel extends Model {
                     pe.certificado_generado,
                     pe.fecha_registro,
                     
-                    -- Datos del ponente
                     p.tema,
                     p.institucion_ponente,
                     p.especializacion,
                     
-                    -- Datos de la persona
                     per.nombres,
                     per.apellidos,
                     per.correo_personal,
@@ -70,7 +67,6 @@ class AdminEventSpeakerGettersModel extends Model {
                     per.numero_documento,
                     per.tipo_documento,
                     
-                    -- Datos completos del evento
                     e.titulo_evento,
                     e.descripcion,
                     e.fecha,
@@ -83,7 +79,6 @@ class AdminEventSpeakerGettersModel extends Model {
                     e.cupo_maximo,
                     e.tema as tema_evento,
                     
-                    -- Datos del creador del evento
                     u.usuario as creador_usuario,
                     per_creador.nombres as creador_nombres,
                     per_creador.apellidos as creador_apellidos

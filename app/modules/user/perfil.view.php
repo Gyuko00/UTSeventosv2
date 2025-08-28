@@ -8,7 +8,6 @@ require_once __DIR__ . '/helpers/html.php';
     
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
       
-      <!-- Columna Principal (2/3) -->
       <div class="lg:col-span-2 space-y-6">
         <?php include_once __DIR__ . '/components/perfil/form_informacion_personal.php'; ?>
         
@@ -17,7 +16,6 @@ require_once __DIR__ . '/helpers/html.php';
         </div>
       </div>
       
-      <!-- Columna Lateral (1/3) -->
       <div class="space-y-6">
         <?php include_once __DIR__ . '/components/perfil/info_cuenta.php'; ?>
         <?php include_once __DIR__ . '/components/perfil/form_cambiar_contrasena.php'; ?>

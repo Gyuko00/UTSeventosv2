@@ -63,7 +63,7 @@ export function renderGrid(onDayClick) {
   grid.innerHTML = "";
 
   const first = new Date(state.year, state.month, 1);
-  const offset = (first.getDay() + 6) % 7; // lunes = 0
+  const offset = (first.getDay() + 6) % 7; 
   const daysInMonth = new Date(state.year, state.month + 1, 0).getDate();
 
   for (let i=0;i<offset;i++) {

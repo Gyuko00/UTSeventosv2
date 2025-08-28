@@ -1,4 +1,3 @@
-// Orquestación de UI + estado
 
 import { IDS, getEventoSelect, getHoraInput } from "./timeline.config.js";
 import { generateTimeSlots, findEventById } from "./timeline.core.js";
@@ -14,7 +13,7 @@ export class PonenteTimelineManager {
   init() {
     this.injectHTML();
     this.bindSelect();
-    this.autoOpenIfPreselected(); // 👈 abre automáticamente si ya hay evento seleccionado
+    this.autoOpenIfPreselected();
   }
 
   injectHTML() {
@@ -72,7 +71,7 @@ export class PonenteTimelineManager {
       this.selectedSlots = [];
       this.render();
       this.show();
-      this.preselectFromInput(); // 👈 si el input trae una hora, marcar el slot
+      this.preselectFromInput();
     });
   }
 
@@ -110,7 +109,6 @@ export class PonenteTimelineManager {
       })
       .join("");
 
-    // Clicks
     el.onclick = (ev) => {
       const node = ev.target.closest(".time-slot");
       if (!node) return;
@@ -152,9 +150,7 @@ export class PonenteTimelineManager {
       : "";
   }
 
-  // 🔽 NUEVO: abre solo en editar cuando ya existe un valor seleccionado
   autoOpenIfPreselected() {
-    // 1) ¿Hay select con valor?
     const sel =
       getEventoSelect() ||
       document.querySelector('select[name="speaker_event[id_evento]"]') ||
@@ -162,12 +158,10 @@ export class PonenteTimelineManager {
       document.getElementById("id_evento");
 
     if (sel && sel.value) {
-      // Simula el change para reutilizar el flujo
       sel.dispatchEvent(new Event("change"));
       return;
     }
 
-    // 2) Fallback: si no hay select (o viene vacío) pero sí hay datos globales
     if (Array.isArray(window.eventosData) && window.eventosData.length) {
       const ev = window.eventosData[0];
       if (ev?.hora_inicio && ev?.hora_fin) {
@@ -177,12 +171,11 @@ export class PonenteTimelineManager {
         this.selectedSlots = [];
         this.render();
         this.show();
-        this.preselectFromInput(); // intenta marcar la hora si el input ya trae valor
+        this.preselectFromInput(); 
       }
     }
   }
 
-  // 🔽 NUEVO: si el input time trae valor (editar), marca el slot correspondiente
   preselectFromInput() {
     const input = getHoraInput();
     if (!input || !input.value) return;

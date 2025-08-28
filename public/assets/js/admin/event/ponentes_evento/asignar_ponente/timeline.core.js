@@ -1,5 +1,3 @@
-// Lógica pura (sin tocar DOM)
-
 import { SLOT_MINUTES } from './timeline.config.js';
 
 export function simpleFormatTime(h, m) {

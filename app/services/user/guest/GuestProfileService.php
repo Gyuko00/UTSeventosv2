@@ -223,7 +223,6 @@ class GuestProfileService extends Service
         $id_invitado = $this->profileModel->getInvitadoIdByUsuario($id_usuario);
 
         if (!$id_invitado) {
-            // Si no existe relación en tabla invitados, devuelve vacío (o error claro)
             return [
                 'status' => 'success',
                 'data' => [
@@ -246,8 +245,6 @@ class GuestProfileService extends Service
         }
 
         try {
-            // (opcional) debug
-            $debugData = $this->debugUsuarioEventos($id_invitado);  // asegúrate de que este use id_invitado
 
             $eventos = $this->profileModel->getEventosInscritos($id_invitado);
             $estadisticas = $this->profileModel->getEstadisticasEventos($id_invitado);
@@ -298,7 +295,6 @@ class GuestProfileService extends Service
         }
     }
 
-    // Métodos helper
     private function truncateText(string $text, int $length): string
     {
         return strlen($text) > $length ? substr($text, 0, $length) . '...' : $text;
@@ -346,27 +342,4 @@ class GuestProfileService extends Service
         return max(0, (int) (($fechaEvento - $hoy) / (60 * 60 * 24)));
     }
 
-    public function debugUsuarioEventos(int $id_usuario): array
-    {
-        // Consultar todos los invitados para ver la estructura
-        $allInvitados = 'SELECT id_invitado_evento, id_invitado, id_evento FROM invitados_evento LIMIT 10';
-        $stmt1 = $this->profileModel->query($allInvitados);
-        $todosInvitados = $stmt1->fetchAll(PDO::FETCH_ASSOC);
-
-        // Contar registros para este usuario
-        $countSql = 'SELECT COUNT(*) as total FROM invitados_evento WHERE id_invitado = :id';
-        $stmt2 = $this->profileModel->query($countSql, [':id' => $id_usuario]);
-        $count = $stmt2->fetch(PDO::FETCH_ASSOC);
-
-        // Intentar encontrar eventos para este usuario
-        $userEventsSql = 'SELECT * FROM invitados_evento WHERE id_invitado = :id';
-        $stmt3 = $this->profileModel->query($userEventsSql, [':id' => $id_usuario]);
-        $userEvents = $stmt3->fetchAll(PDO::FETCH_ASSOC);
-
-        return [
-            'muestra_invitados' => $todosInvitados,
-            'count_para_usuario' => $count['total'],
-            'eventos_usuario' => $userEvents
-        ];
-    }
 }

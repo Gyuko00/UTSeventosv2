@@ -1,0 +1,996 @@
+2025-02-09 22:30:48: <br />
+<b>Deprecated</b>:  Implicit conversion from float 0.0625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.1875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.25 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.3125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.4375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.5 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.5625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.6875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.75 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.8125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.9375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.0625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.1875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.25 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.3125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.4375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.5 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.5625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.6875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.75 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.8125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.9375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.0625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.1875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.25 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.3125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.4375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.5 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.5625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.6875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.75 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.8125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.9375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.0625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.1875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.25 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.3125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.4375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.5 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.5625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.6875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.75 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.8125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.9375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.0625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.1875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.25 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.3125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.4375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.5 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.5625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.6875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.75 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.8125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.9375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.0625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.1875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.25 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.3125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.4375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.5 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.5625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.6875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.75 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.8125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.9375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.0625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.1875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.25 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.3125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.4375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.5 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.5625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.6875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.75 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.8125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.9375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.0625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.1875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.25 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.3125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.4375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.5 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.5625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.6875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.75 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.8125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.9375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.0625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.1875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.25 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.3125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.4375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.5 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.5625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.6875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.75 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.8125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.9375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.0625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.1875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.25 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.3125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.4375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.5 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.5625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.6875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.75 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.8125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.9375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.0625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.1875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.25 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.3125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.4375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.5 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.5625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.6875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.75 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.8125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.9375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.0625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.1875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>140</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.0625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.1875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.25 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.3125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.4375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.5 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.5625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.6875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.75 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.8125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 0.9375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.0625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.1875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.25 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.3125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.4375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.5 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.5625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.6875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.75 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.8125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 1.9375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.0625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.1875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.25 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.3125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.4375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.5 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.5625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.6875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.75 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.8125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 2.9375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.0625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.1875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.25 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.3125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.4375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.5 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.5625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.6875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.75 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.8125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 3.9375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.0625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.1875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.25 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.3125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.4375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.5 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.5625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.6875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.75 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.8125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 4.9375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.0625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.1875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.25 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.3125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.4375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.5 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.5625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.6875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.75 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.8125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 5.9375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.0625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.1875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.25 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.3125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.4375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.5 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.5625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.6875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.75 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.8125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 6.9375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.0625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.1875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.25 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.3125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.4375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.5 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.5625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.6875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.75 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.8125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 7.9375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.0625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.1875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.25 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.3125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.4375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.5 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.5625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.6875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.75 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.8125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 8.9375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.0625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.1875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.25 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.3125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.4375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.5 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.5625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.6875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.75 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.8125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 9.9375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.0625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.1875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.25 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.3125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.4375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.5 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.5625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.6875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.75 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.8125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 10.9375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.0625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.1875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.25 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.3125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.4375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.5 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.5625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.6875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.75 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.8125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 11.9375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.0625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.1875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.25 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.3125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.4375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.5 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.5625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.6875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.75 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.8125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 12.9375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 13.0625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 13.125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 13.1875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 13.25 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 13.3125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 13.375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 13.4375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 13.5 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 13.5625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 13.625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 13.6875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 13.75 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 13.8125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 13.875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 13.9375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 14.0625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 14.125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 14.1875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 14.25 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 14.3125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 14.375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 14.4375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 14.5 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 14.5625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 14.625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 14.6875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 14.75 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 14.8125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 14.875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 14.9375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 15.0625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 15.125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 15.1875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 15.25 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 15.3125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 15.375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 15.4375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 15.5 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 15.5625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 15.625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 15.6875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 15.75 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 15.8125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 15.875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 15.9375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 16.0625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 16.125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 16.1875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 16.25 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 16.3125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 16.375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 16.4375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 16.5 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 16.5625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 16.625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 16.6875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 16.75 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 16.8125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 16.875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 16.9375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 17.0625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 17.125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 17.1875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 17.25 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 17.3125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 17.375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 17.4375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 17.5 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 17.5625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 17.625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 17.6875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 17.75 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 17.8125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 17.875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 17.9375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 18.0625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 18.125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 18.1875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 18.25 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 18.3125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 18.375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 18.4375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 18.5 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 18.5625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 18.625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 18.6875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 18.75 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 18.8125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 18.875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 18.9375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 19.0625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 19.125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 19.1875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 19.25 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 19.3125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 19.375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 19.4375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 19.5 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 19.5625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 19.625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 19.6875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 19.75 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 19.8125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 19.875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 19.9375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 20.0625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 20.125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 20.1875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 20.25 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 20.3125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 20.375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 20.4375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 20.5 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 20.5625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 20.625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 20.6875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 20.75 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 20.8125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 20.875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 20.9375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 21.0625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 21.125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 21.1875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 21.25 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 21.3125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 21.375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 21.4375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 21.5 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 21.5625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 21.625 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 21.6875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 21.75 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 21.8125 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 21.875 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />
+<br />
+<b>Deprecated</b>:  Implicit conversion from float 21.9375 to int loses precision in <b>C:\xampp\htdocs\eventosuts\public\libs\phpqrcode\qrencode.php</b> on line <b>144</b><br />

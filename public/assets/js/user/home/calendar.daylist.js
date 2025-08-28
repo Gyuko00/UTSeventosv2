@@ -1,6 +1,6 @@
-// calendar.daylist.js
+// calendar.daylist.js actualizado
 import { state, ymd, formatDMY, qs } from "./calendar.core.js";
-import { confirmarEInscripcion, escapeHtml } from "./calendar.register.js";
+import { confirmarEInscripcion, cancelarInscripcionCalendario, renderActionButton, escapeHtml } from "./calendar.register.js";
 
 export function renderDayList(date) {
   const key   = ymd(date);
@@ -36,7 +36,8 @@ export function renderDayList(date) {
     card.style.opacity   = "0";
     card.style.transform = "translateY(10px)";
 
-    const inscrito = Number(ev.inscrito) === 1;
+    // Verificar estado de inscripción
+    const inscrito = Boolean(ev.inscrito);
 
     card.innerHTML = `
       <div class="flex items-start justify-between gap-3">
@@ -57,32 +58,80 @@ export function renderDayList(date) {
             </div>` : ""}
         </a>
 
-        <div class="flex-shrink-0">
-          ${inscrito
-            ? `<span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-lime-100 text-lime-700 border border-lime-200">Inscrito</span>`
-            : `<button class="ins-btn inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-semibold bg-lime-600 text-white hover:bg-lime-700 focus:ring-2 focus:ring-lime-400" data-id="${ev.id_evento}" data-title="${escapeHtml(ev.titulo_evento)}">Inscribirme</button>`
-          }
+        <!-- Usar la función renderActionButton que ya existe -->
+        <div class="flex-shrink-0 event-actions">
+          ${renderActionButton(ev)}
         </div>
       </div>
     `;
 
-    const btn = card.querySelector(".ins-btn");
-    if (btn) {
-      btn.addEventListener("click", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        const id    = Number(btn.dataset.id);
-        const title = btn.dataset.title || "";
-        confirmarEInscripcion(id, title);
-      });
-    }
+    // Agregar event listeners para los botones
+    attachEventListeners(card, ev);
 
     list.appendChild(card);
 
+    // Animación escalonada
     setTimeout(() => {
       card.style.transition = "all 0.3s ease-out";
       card.style.opacity = "1";
       card.style.transform = "translateY(0)";
     }, index * 100);
+  });
+}
+
+/**
+ * Agregar event listeners a los botones de acción
+ */
+function attachEventListeners(card, evento) {
+  // Botón de inscripción (usa las clases de renderActionButton)
+  const btnInscribirse = card.querySelector(".inscribirse-btn");
+  if (btnInscribirse) {
+    btnInscribirse.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      const eventoId = Number(btnInscribirse.dataset.eventoId);
+      const eventoTitulo = btnInscribirse.dataset.eventoTitulo || "";
+      
+      confirmarEInscripcion(eventoId, eventoTitulo);
+    });
+  }
+
+  // Botón de cancelar inscripción (usa las clases de renderActionButton)
+  const btnCancelar = card.querySelector(".cancelar-btn");
+  if (btnCancelar) {
+    btnCancelar.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      const eventoId = Number(btnCancelar.dataset.eventoId);
+      cancelarInscripcionCalendario(eventoId);
+    });
+  }
+}
+
+/**
+ * Función helper para actualizar el estado visual de un evento específico
+ */
+export function updateEventVisualState(eventoId, inscrito) {
+  const eventCards = document.querySelectorAll('[data-evento-id]');
+  
+  eventCards.forEach(card => {
+    const cardEventoId = Number(card.dataset.eventoId);
+    
+    if (cardEventoId === eventoId) {
+      const actionsContainer = card.querySelector('.event-actions');
+      if (actionsContainer) {
+        // Crear objeto evento temporal para renderizar
+        const eventoTemp = {
+          id_evento: eventoId,
+          titulo_evento: card.querySelector('[data-evento-titulo]')?.dataset.eventoTitulo || 'Evento',
+          inscrito: inscrito
+        };
+        
+        actionsContainer.innerHTML = renderActionButton(eventoTemp);
+        attachEventListeners(card, eventoTemp);
+      }
+    }
   });
 }
